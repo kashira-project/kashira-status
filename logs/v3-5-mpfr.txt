@@ -1,0 +1,118 @@
+==> build.log (last 80 lines)
+PASS: treldiff
+PASS: trndna
+PASS: tprintf
+PASS: trint
+PASS: troot
+PASS: trootn_si
+PASS: tsech
+PASS: tsec
+PASS: tset_f
+PASS: trootn_ui
+PASS: tset_d
+PASS: tset_q
+PASS: tset_sj
+PASS: tset_ld
+PASS: tset_si
+PASS: tset_str
+PASS: tset_z
+PASS: tsi_op
+PASS: tset_z_2exp
+PASS: tsin_cos
+PASS: tsinh_cosh
+PASS: terf
+FAIL: tsprintf
+PASS: tsinh
+PASS: tsqr
+PASS: tsqrt_ui
+PASS: tstckintc
+PASS: tstdint
+PASS: tsin
+PASS: tset_float128
+PASS: trec_sqrt
+PASS: tsinu
+PASS: tsub1sp
+PASS: tsubnormal
+PASS: tlog_ui
+PASS: tswap
+PASS: tsub_d
+PASS: tsqrt
+PASS: tsub_ui
+PASS: tstrtofr
+PASS: ttotal_order
+PASS: ttrunc
+PASS: ttanh
+PASS: tui_pow
+PASS: tui_sub
+PASS: tvalist
+PASS: turandom
+PASS: ttan
+PASS: ty0
+PASS: tyn
+PASS: tui_div
+PASS: ty1
+PASS: tsub
+PASS: ttanu
+PASS: tzeta_ui
+PASS: tget_str
+PASS: tzeta
+PASS: tsum
+============================================================================
+Testsuite summary for MPFR 4.2.2
+============================================================================
+# TOTAL: 198
+# PASS:  195
+# SKIP:  2
+# XFAIL: 0
+# FAIL:  1
+# XPASS: 0
+# ERROR: 0
+============================================================================
+See tests/test-suite.log for debugging.
+============================================================================
+make[3]: *** [Makefile:3028: test-suite.log] Error 1
+make[3]: Leaving directory '/build/mpfr/src/mpfr-4.2.2/tests'
+make[2]: *** [Makefile:3163: check-TESTS] Error 2
+make[2]: Leaving directory '/build/mpfr/src/mpfr-4.2.2/tests'
+make[1]: *** [Makefile:4616: check-am] Error 2
+make[1]: Leaving directory '/build/mpfr/src/mpfr-4.2.2/tests'
+make: *** [Makefile:538: check-recursive] Error 1
+==> ERROR: A failure occurred in check().
+    Aborting...
+==> unit.log (last 17 lines)
+Running as unit: run-p115871-i22508550.service
+==> Synchronizing chroot copy [/var/lib/kbuild/v3/root] -> [copy]...done
+    mpfr-4.2.2.tar.xz ... Passed
+    mpfr-4.2.2.tar.xz.sig ... Skipped
+    mpfr-4.2.2.tar.xz ... Passed
+    mpfr-4.2.2.tar.xz.sig ... Skipped
+    mpfr-4.2.2.tar.xz ... Passed
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+==> WARNING: Skipping all source file integrity checks.
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+==> WARNING: Using existing $srcdir/ tree
+==> ERROR: Build failed, check /var/lib/kbuild/v3/copy/build
+          Finished with result: exit-code
+Main processes terminated with: code=exited, status=255/EXCEPTION
+               Service runtime: 38.627s
+             CPU time consumed: 3.220s
+                   Memory peak: 15.5M (swap: 0B)
+==> chroot.log (last 18 lines)
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+gpg: Warning: using insecure memory!
+gpg: Warning: using insecure memory!
+==> Updating trust database...
+gpg: Warning: using insecure memory!
+gpg: next trustdb check due at 2026-12-31
+gpg: Warning: using insecure memory!
+  -> Locally signed 1 key.
+==> Updating trust database...
+gpg: Warning: using insecure memory!
+gpg: next trustdb check due at 2026-12-31
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+:: Synchronizing package databases...
+ train downloading...
+ kashira-v3-laptop downloading...
+ kashira-v3 downloading...
+:: Starting full system upgrade...
+ there is nothing to do

@@ -1,0 +1,124 @@
+==> build.log (last 80 lines)
+      subprocess.CalledProcessError: Command '['systemd-analyze', 'security', '--no-pager', '--offline', 'true', '--threshold', '2', '/build/malcontent/src/build/malcontent-webd-update/tests/../malcontent-webd-update.service']' returned non-zero exit status 1.
+  ...
+1..1
+――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+
+18/27 malcontent-webd - malcontent:systemd-analyze.py                                   FAIL            0.11s   exit status 1
+>>> MALLOC_CHECK_=2 MSAN_OPTIONS=halt_on_error=1:abort_on_error=1:print_summary=1:print_stacktrace=1 G_TEST_SRCDIR=/build/malcontent/src/malcontent/malcontent-webd/tests PYTHONPATH=/build/malcontent/src/build/tests/lib:/build/malcontent/src/malcontent/tests/lib MESON_TEST_ITERATION=1 G_ENABLE_DIAGNOSTIC=1 LC_ALL=C.UTF-8 G_DEBUG=gc-friendly,fatal-warnings ASAN_OPTIONS=halt_on_error=1:abort_on_error=1:print_summary=1 MALLOC_PERTURB_=252 UBSAN_OPTIONS=halt_on_error=1:abort_on_error=1:print_summary=1:print_stacktrace=1 G_TEST_BUILDDIR=/build/malcontent/src/build/malcontent-webd/tests /usr/bin/python -B /build/malcontent/src/build/../malcontent/malcontent-webd/tests/systemd-analyze.py
+――――――――――――――――――――――――――――――――――――― ✀  ―――――――――――――――――――――――――――――――――――――
+TAP version 13
+not ok 1 __main__.TestSystemdAnalyze.test_security_score
+  ---
+    message: |
+      Traceback (most recent call last):
+        File "/build/malcontent/src/malcontent/tests/lib/systemdanalyze.py", line 71, in test_security_score
+          out = subprocess.check_output(
+              [
+          ...<9 lines>...
+              stderr=subprocess.STDOUT,
+          )
+        File "/usr/lib/python3.14/subprocess.py", line 473, in check_output
+          return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+                 ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                     **kwargs).stdout
+                     ^^^^^^^^^
+        File "/usr/lib/python3.14/subprocess.py", line 578, in run
+          raise CalledProcessError(retcode, process.args,
+                                   output=stdout, stderr=stderr)
+      subprocess.CalledProcessError: Command '['systemd-analyze', 'security', '--no-pager', '--offline', 'true', '--threshold', '11', '/build/malcontent/src/build/malcontent-webd/tests/../malcontent-webd.service']' returned non-zero exit status 1.
+  ...
+1..1
+――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+
+19/27 nss - malcontent:nss-malcontent                                                   FAIL            0.10s   killed by signal 6 SIGABRT
+>>> MALLOC_CHECK_=2 MSAN_OPTIONS=halt_on_error=1:abort_on_error=1:print_summary=1:print_stacktrace=1 MESON_TEST_ITERATION=1 UBSAN_OPTIONS=halt_on_error=1:abort_on_error=1:print_summary=1:print_stacktrace=1 G_ENABLE_DIAGNOSTIC=1 LC_ALL=C.UTF-8 G_DEBUG=gc-friendly,fatal-warnings ASAN_OPTIONS=halt_on_error=1:abort_on_error=1:print_summary=1 G_TEST_SRCDIR=/build/malcontent/src/malcontent/nss/tests MALLOC_PERTURB_=242 LD_LIBRARY_PATH=/build/malcontent/src/build/nss:/build/malcontent/src/build/nss/tests G_TEST_BUILDDIR=/build/malcontent/src/build/nss/tests /build/malcontent/src/build/nss/tests/nss-malcontent --tap
+――――――――――――――――――――――――――――――――――――― ✀  ―――――――――――――――――――――――――――――――――――――
+stdout:
+TAP version 14
+# random seed: R02S1166cc4b1b5d27e6f9a9e5f6f62fbf08
+1..9
+# Start of nss-malcontent tests
+# GLib-DEBUG: g_set_user_dirs: Setting HOME to /tmp/test_nss-malcontent_ZAROZ3/nss-malcontent/basic-blocklist/.dirs/home
+# GLib-DEBUG: g_set_user_dirs: Setting XDG_CACHE_HOME to /tmp/test_nss-malcontent_ZAROZ3/nss-malcontent/basic-blocklist/.dirs/cache
+# GLib-DEBUG: g_set_user_dirs: Setting XDG_CONFIG_DIRS to /tmp/test_nss-malcontent_ZAROZ3/nss-malcontent/basic-blocklist/.dirs/system-config1:/tmp/test_nss-malcontent_ZAROZ3/nss-malcontent/basic-blocklist/.dirs/system-config2
+# GLib-DEBUG: g_set_user_dirs: Setting XDG_CONFIG_HOME to /tmp/test_nss-malcontent_ZAROZ3/nss-malcontent/basic-blocklist/.dirs/config
+# GLib-DEBUG: g_set_user_dirs: Setting XDG_DATA_DIRS to /tmp/test_nss-malcontent_ZAROZ3/nss-malcontent/basic-blocklist/.dirs/system-data1:/tmp/test_nss-malcontent_ZAROZ3/nss-malcontent/basic-blocklist/.dirs/system-data2
+# GLib-DEBUG: g_set_user_dirs: Setting XDG_DATA_HOME to /tmp/test_nss-malcontent_ZAROZ3/nss-malcontent/basic-blocklist/.dirs/data
+# GLib-DEBUG: g_set_user_dirs: Setting XDG_STATE_HOME to /tmp/test_nss-malcontent_ZAROZ3/nss-malcontent/basic-blocklist/.dirs/state
+# GLib-DEBUG: g_set_user_dirs: Setting XDG_RUNTIME_DIR to /tmp/test_nss-malcontent_ZAROZ3/nss-malcontent/basic-blocklist/.dirs/runtime
+# /nss-malcontent/basic-blocklist summary: Test a basic blocklist filter
+# GLib-GIO-DEBUG: _g_io_module_get_default: Found default implementation local (GLocalVfs) for ‘gio-vfs’
+not ok /nss-malcontent/basic-blocklist - ERROR:../malcontent/nss/tests/nss-malcontent.c:152:assert_lookup_is_sinkhole: assertion failed (getaddrinfo (hostname, NULL, &hints, &res) == 0): (-5 == 0)
+Bail out!
+stderr:
+**
+ERROR:../malcontent/nss/tests/nss-malcontent.c:152:assert_lookup_is_sinkhole: assertion failed (getaddrinfo (hostname, NULL, &hints, &res) == 0): (-5 == 0)
+――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+
+20/27 nss - malcontent:nss-objdump.py                                                   OK              0.16s
+21/27 libmalcontent-timer - malcontent:extension-agent-polkit                           OK              0.28s
+22/27 malcontent-timer-extension-agent - malcontent:malcontent-timer-extension-agent.py OK              0.24s
+23/27 malcontent-timerd - malcontent:malcontent-timerd.py                               OK              0.35s
+24/27 malcontent-webd - malcontent:malcontent-webd.py                                   OK              0.37s
+25/27 malcontent-webd-update - malcontent:malcontent-webd-update.py                     OK              0.37s
+26/27 docs - malcontent:libmalcontent-docs                                              OK              1.25s
+27/27 docs - malcontent:libmalcontent-ui-docs                                           OK              2.87s
+
+Summary of Failures:
+
+15/27 malcontent-timerd - malcontent:systemd-analyze.py                                 FAIL            0.11s   exit status 1
+16/27 malcontent-timer-extension-agent - malcontent:systemd-analyze.py                  FAIL            0.11s   exit status 1
+17/27 malcontent-webd-update - malcontent:systemd-analyze.py                            FAIL            0.09s   exit status 1
+18/27 malcontent-webd - malcontent:systemd-analyze.py                                   FAIL            0.11s   exit status 1
+19/27 nss - malcontent:nss-malcontent                                                   FAIL            0.10s   killed by signal 6 SIGABRT
+
+Ok:                22  
+Fail:              5   
+
+Full log written to /build/malcontent/src/build/meson-logs/testlog.txt
+==> ERROR: A failure occurred in check().
+    Aborting...
+==> unit.log (last 23 lines)
+Running as unit: run-p17735-i21961308.service
+==> Synchronizing chroot copy [/var/lib/kbuild/v3/root] -> [copy]...done
+    malcontent ... Passed
+    gvdb ... Skipped
+    tinycdb-0.81.tar.gz ... Passed
+    0001-meson-Statically-link-against-libgcc.patch ... Passed
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+warning: directory permissions differ on /var/log/journal/
+filesystem: 755  package: 2755
+==> WARNING: Skipping all source file integrity checks.
+Cloning into 'malcontent'...
+done.
+Switched to a new branch 'makepkg'
+Cloning into 'gvdb'...
+done.
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+==> WARNING: Using existing $srcdir/ tree
+==> ERROR: Build failed, check /var/lib/kbuild/v3/copy/build
+          Finished with result: exit-code
+Main processes terminated with: code=exited, status=255/EXCEPTION
+               Service runtime: 36.654s
+             CPU time consumed: 3.912s
+                   Memory peak: 19.1M (swap: 0B)
+==> chroot.log (last 18 lines)
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+gpg: Warning: using insecure memory!
+gpg: Warning: using insecure memory!
+==> Updating trust database...
+gpg: Warning: using insecure memory!
+gpg: next trustdb check due at 2026-12-31
+gpg: Warning: using insecure memory!
+  -> Locally signed 1 key.
+==> Updating trust database...
+gpg: Warning: using insecure memory!
+gpg: next trustdb check due at 2026-12-31
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+:: Synchronizing package databases...
+ train downloading...
+ kashira-v3-laptop downloading...
+ kashira-v3 downloading...
+:: Starting full system upgrade...
+ there is nothing to do

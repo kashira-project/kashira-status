@@ -1,0 +1,120 @@
+==> build.log (last 80 lines)
+( 7/11) Compiling GSettings XML schema files...
+( 8/11) Updating GTK 3 input method module cache...
+( 9/11) Updating icon theme caches...
+(10/11) Updating the info directory file...
+(11/11) Updating the desktop file MIME type cache...
+==> Retrieving sources...
+==> Extracting sources...
+  -> Creating working copy of minizip-ng git repo...
+==> Sources are ready.
+==> Making package: minizip-ng 4.2.2-4 (Fri Nov 27 09:24:49 2026)
+==> Checking runtime dependencies...
+==> Checking buildtime dependencies...
+==> Starting build()...
+-- The C compiler identification is Clang 23.1.5
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/lib/ccache/bin/clang - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Using CMake version 4.4.4
+-- Looking for dirent.h
+-- Looking for dirent.h - found
+-- Looking for sys/dirent.h
+-- Looking for sys/dirent.h - not found
+-- Looking for inttypes.h
+-- Looking for inttypes.h - found
+-- Looking for stdint.h
+-- Looking for stdint.h - found
+-- Looking for sys/types.h
+-- Looking for sys/types.h - found
+-- Looking for stddef.h
+-- Looking for stddef.h - found
+-- Check size of DIR*
+-- Check size of DIR* - done
+-- Check size of off64_t
+-- Check size of off64_t - failed
+-- Looking for fseeko
+-- Looking for fseeko - found
+-- Looking for symlink
+-- Looking for symlink - found
+-- Looking for readlink
+-- Looking for readlink - found
+-- Using ZLIB-NG
+-- Using BZIP2 1.0.8
+-- Using LZMA 5.8.4
+-- Using PPMD
+-- Fetching ppmd https://github.com/ip7z/7zip 26.00
+[ 11%] Creating directories for 'ppmd-populate'
+[ 22%] Performing download step (git clone) for 'ppmd-populate'
+Cloning into 'ppmd'...
+fatal: unable to access 'https://github.com/ip7z/7zip/': Could not resolve host: github.com
+Cloning into 'ppmd'...
+fatal: unable to access 'https://github.com/ip7z/7zip/': Could not resolve host: github.com
+Cloning into 'ppmd'...
+fatal: unable to access 'https://github.com/ip7z/7zip/': Could not resolve host: github.com
+Had to git clone more than once: 3 times.
+CMake Error at /build/minizip-ng/src/build/_deps/ppmd-subbuild/ppmd-populate-prefix/tmp/ppmd-populate-gitclone.cmake:55 (message):
+  Failed to clone repository:
+
+    'https://github.com/ip7z/7zip'
+
+
+make[2]: *** [CMakeFiles/ppmd-populate.dir/build.make:102: ppmd-populate-prefix/src/ppmd-populate-stamp/ppmd-populate-download] Error 1
+make[1]: *** [CMakeFiles/Makefile2:87: CMakeFiles/ppmd-populate.dir/all] Error 2
+make: *** [Makefile:91: all] Error 2
+
+CMake Error at /usr/share/cmake/Modules/FetchContent.cmake:1933 (message):
+  Build step for ppmd failed: 2
+Call Stack (most recent call first):
+  /usr/share/cmake/Modules/FetchContent.cmake:1622 (__FetchContent_populateSubbuild)
+  /usr/share/cmake/Modules/FetchContent.cmake:2160:EVAL:2 (__FetchContent_doPopulation)
+  /usr/share/cmake/Modules/FetchContent.cmake:2160 (cmake_language)
+  /usr/share/cmake/Modules/FetchContent.cmake:2401 (__FetchContent_Populate)
+  cmake/clone-repo.cmake:52 (FetchContent_MakeAvailable)
+  CMakeLists.txt:366 (clone_repo)
+
+
+-- Configuring incomplete, errors occurred!
+==> ERROR: A failure occurred in build().
+    Aborting...
+==> unit.log (last 19 lines)
+Running as unit: run-p91220-i22244577.service
+==> Synchronizing chroot copy [/var/lib/kbuild/v3/root] -> [copy]...done
+    minizip-ng ... Passed
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+error: command failed to execute correctly
+error: command failed to execute correctly
+error: command failed to execute correctly
+==> WARNING: Skipping all source file integrity checks.
+Cloning into 'minizip-ng'...
+done.
+Switched to a new branch 'makepkg'
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+==> WARNING: Using existing $srcdir/ tree
+==> ERROR: Build failed, check /var/lib/kbuild/v3/copy/build
+          Finished with result: exit-code
+Main processes terminated with: code=exited, status=255/EXCEPTION
+               Service runtime: 21.125s
+             CPU time consumed: 4.990s
+                   Memory peak: 14.8M (swap: 0B)
+==> chroot.log (last 18 lines)
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+gpg: Warning: using insecure memory!
+gpg: Warning: using insecure memory!
+==> Updating trust database...
+gpg: Warning: using insecure memory!
+gpg: next trustdb check due at 2026-12-31
+gpg: Warning: using insecure memory!
+  -> Locally signed 1 key.
+==> Updating trust database...
+gpg: Warning: using insecure memory!
+gpg: next trustdb check due at 2026-12-31
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+:: Synchronizing package databases...
+ train downloading...
+ kashira-v3-laptop downloading...
+ kashira-v3 downloading...
+:: Starting full system upgrade...
+ there is nothing to do

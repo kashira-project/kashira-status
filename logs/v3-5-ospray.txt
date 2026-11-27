@@ -1,0 +1,117 @@
+==> build.log (last 80 lines)
+( 7/11) Compiling GSettings XML schema files...
+( 8/11) Updating GTK 3 input method module cache...
+( 9/11) Updating icon theme caches...
+(10/11) Updating the info directory file...
+(11/11) Updating the desktop file MIME type cache...
+==> Retrieving sources...
+  -> Found ospray-3.2.0.tar.gz
+==> Extracting sources...
+  -> Extracting ospray-3.2.0.tar.gz with bsdtar
+==> Starting prepare()...
+==> Sources are ready.
+==> Making package: ospray 3.2.0-9 (Fri Nov 27 12:11:52 2026)
+==> Checking runtime dependencies...
+==> Checking buildtime dependencies...
+==> Starting build()...
+The no-dev option is deprecated.  Use -Wno-author instead.
+-- The C compiler identification is Clang 23.1.5
+-- The CXX compiler identification is Clang 23.1.5
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/lib/ccache/bin/clang - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/lib/ccache/bin/clang++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ISPC v1.32.0: /usr/bin/ispc
+-- ISPC supports: x86, x86-64, arm, aarch64, xe64
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE
+-- Found Embree v4.4.1: /usr/lib/libembree4.so.4
+-- Found Open VKL v2.0.2: /usr/lib/libopenvkl.so.2.0.2
+-- OSPRay SSE4 ISA target enabled.
+-- OSPRay AVX ISA target enabled.
+-- OSPRay AVX2 ISA target enabled.
+-- OSPRay AVX512SKX ISA target enabled.
+-- Performing Test COMPILER_HAS_HIDDEN_VISIBILITY
+-- Performing Test COMPILER_HAS_HIDDEN_VISIBILITY - Success
+-- Performing Test COMPILER_HAS_HIDDEN_INLINE_VISIBILITY
+-- Performing Test COMPILER_HAS_HIDDEN_INLINE_VISIBILITY - Success
+-- Performing Test COMPILER_HAS_DEPRECATED_ATTR
+-- Performing Test COMPILER_HAS_DEPRECATED_ATTR - Success
+-- Found MPI_C: /usr/lib/libmpi.so (found version "3.1")
+-- Found MPI_CXX: /usr/lib/libmpi.so (found version "3.1")
+-- Found MPI: TRUE (found version "3.1")
+[1/9] Creating directories for 'stb-populate'
+[1/9] Performing download step (git clone) for 'stb-populate'
+Cloning into 'stb-src'...
+fatal: unable to access 'https://github.com/nothings/stb/': Could not resolve host: github.com
+Cloning into 'stb-src'...
+fatal: unable to access 'https://github.com/nothings/stb/': Could not resolve host: github.com
+Cloning into 'stb-src'...
+fatal: unable to access 'https://github.com/nothings/stb/': Could not resolve host: github.com
+Had to git clone more than once: 3 times.
+CMake Error at stb-subbuild/stb-populate-prefix/tmp/stb-populate-gitclone.cmake:55 (message):
+  Failed to clone repository:
+
+    'https://github.com/nothings/stb'
+
+
+FAILED: [code=1] stb-populate-prefix/src/stb-populate-stamp/stb-populate-download /build/ospray/src/build/_deps/stb-subbuild/stb-populate-prefix/src/stb-populate-stamp/stb-populate-download 
+cd /build/ospray/src/build/_deps && /usr/bin/cmake -DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE -P /build/ospray/src/build/_deps/stb-subbuild/stb-populate-prefix/tmp/stb-populate-gitclone.cmake && /usr/bin/cmake -E touch /build/ospray/src/build/_deps/stb-subbuild/stb-populate-prefix/src/stb-populate-stamp/stb-populate-download
+ninja: build stopped: subcommand failed.
+
+CMake Error at /usr/share/cmake/Modules/FetchContent.cmake:1933 (message):
+  Build step for stb failed: 1
+Call Stack (most recent call first):
+  /usr/share/cmake/Modules/FetchContent.cmake:1622 (__FetchContent_populateSubbuild)
+  /usr/share/cmake/Modules/FetchContent.cmake:2160:EVAL:2 (__FetchContent_doPopulation)
+  /usr/share/cmake/Modules/FetchContent.cmake:2160 (cmake_language)
+  /usr/share/cmake/Modules/FetchContent.cmake:2401 (__FetchContent_Populate)
+  apps/common/external/stb_image/CMakeLists.txt:16 (FetchContent_MakeAvailable)
+
+
+-- Configuring incomplete, errors occurred!
+==> ERROR: A failure occurred in build().
+    Aborting...
+==> unit.log (last 16 lines)
+Running as unit: run-p768557-i32026222.service
+==> Synchronizing chroot copy [/var/lib/kbuild/v3/root] -> [copy]...done
+    ospray-3.2.0.tar.gz ... Passed
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+error: command failed to execute correctly
+error: command failed to execute correctly
+error: command failed to execute correctly
+==> WARNING: Skipping all source file integrity checks.
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+==> WARNING: Using existing $srcdir/ tree
+==> ERROR: Build failed, check /var/lib/kbuild/v3/copy/build
+          Finished with result: exit-code
+Main processes terminated with: code=exited, status=255/EXCEPTION
+               Service runtime: 14.541s
+             CPU time consumed: 3.107s
+                   Memory peak: 15.7M (swap: 0B)
+==> chroot.log (last 18 lines)
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+gpg: Warning: using insecure memory!
+gpg: Warning: using insecure memory!
+==> Updating trust database...
+gpg: Warning: using insecure memory!
+gpg: next trustdb check due at 2026-12-31
+gpg: Warning: using insecure memory!
+  -> Locally signed 1 key.
+==> Updating trust database...
+gpg: Warning: using insecure memory!
+gpg: next trustdb check due at 2026-12-31
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+:: Synchronizing package databases...
+ train downloading...
+ kashira-v3-laptop downloading...
+ kashira-v3 downloading...
+:: Starting full system upgrade...
+ there is nothing to do

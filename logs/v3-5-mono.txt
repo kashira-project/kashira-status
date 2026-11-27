@@ -1,0 +1,181 @@
+==> build.log (last 80 lines)
+Submodule 'external/Newtonsoft.Json' (https://github.com/mono/Newtonsoft.Json.git) registered for path 'external/Newtonsoft.Json'
+Submodule 'external/api-doc-tools' (https://github.com/mono/api-doc-tools.git) registered for path 'external/api-doc-tools'
+Submodule 'external/api-snapshot' (https://github.com/mono/api-snapshot.git) registered for path 'external/api-snapshot'
+Submodule 'external/aspnetwebstack' (https://github.com/mono/aspnetwebstack.git) registered for path 'external/aspnetwebstack'
+Submodule 'external/bdwgc' (https://github.com/Unity-Technologies/bdwgc.git) registered for path 'external/bdwgc'
+Submodule 'external/reference-assemblies' (https://github.com/mono/reference-assemblies.git) registered for path 'external/binary-reference-assemblies'
+Submodule 'external/bockbuild' (https://github.com/mono/bockbuild.git) registered for path 'external/bockbuild'
+Submodule 'external/boringssl' (https://github.com/mono/boringssl.git) registered for path 'external/boringssl'
+Submodule 'external/cecil' (https://github.com/mono/cecil.git) registered for path 'external/cecil'
+Submodule 'external/cecil-legacy' (https://github.com/mono/cecil.git) registered for path 'external/cecil-legacy'
+Submodule 'external/corefx' (https://github.com/mono/corefx.git) registered for path 'external/corefx'
+Submodule 'external/corert' (https://github.com/mono/corert.git) registered for path 'external/corert'
+Submodule 'external/helix-binaries' (https://github.com/mono/helix-binaries.git) registered for path 'external/helix-binaries'
+Submodule 'external/ikdasm' (https://github.com/mono/ikdasm.git) registered for path 'external/ikdasm'
+Submodule 'external/ikvm' (https://github.com/mono/ikvm-fork.git) registered for path 'external/ikvm'
+Submodule 'external/illinker-test-assets' (https://github.com/mono/illinker-test-assets.git) registered for path 'external/illinker-test-assets'
+Submodule 'external/linker' (https://github.com/mono/linker.git) registered for path 'external/linker'
+Submodule 'external/llvm-project' (https://github.com/dotnet/llvm-project.git) registered for path 'external/llvm-project'
+Submodule 'external/nuget-buildtasks' (https://github.com/mono/NuGet.BuildTasks) registered for path 'external/nuget-buildtasks'
+Submodule 'external/nunit-lite' (https://github.com/mono/NUnitLite.git) registered for path 'external/nunit-lite'
+Submodule 'external/roslyn-binaries' (https://github.com/mono/roslyn-binaries.git) registered for path 'external/roslyn-binaries'
+Submodule 'external/rx' (https://github.com/mono/rx.git) registered for path 'external/rx'
+Submodule 'external/xunit-binaries' (https://github.com/mono/xunit-binaries.git) registered for path 'external/xunit-binaries'
+Cloning into '/build/mono/src/mono/external/Newtonsoft.Json'...
+done.
+Cloning into '/build/mono/src/mono/external/api-doc-tools'...
+done.
+Cloning into '/build/mono/src/mono/external/api-snapshot'...
+done.
+Cloning into '/build/mono/src/mono/external/aspnetwebstack'...
+done.
+Cloning into '/build/mono/src/mono/external/bdwgc'...
+Cloning into '/build/mono/src/mono/external/binary-reference-assemblies'...
+done.
+Cloning into '/build/mono/src/mono/external/bockbuild'...
+done.
+Cloning into '/build/mono/src/mono/external/boringssl'...
+done.
+Cloning into '/build/mono/src/mono/external/cecil'...
+done.
+Cloning into '/build/mono/src/mono/external/cecil-legacy'...
+done.
+Cloning into '/build/mono/src/mono/external/corefx'...
+done.
+Cloning into '/build/mono/src/mono/external/corert'...
+done.
+Cloning into '/build/mono/src/mono/external/helix-binaries'...
+Cloning into '/build/mono/src/mono/external/ikdasm'...
+done.
+Cloning into '/build/mono/src/mono/external/ikvm'...
+done.
+Cloning into '/build/mono/src/mono/external/illinker-test-assets'...
+Cloning into '/build/mono/src/mono/external/linker'...
+done.
+Cloning into '/build/mono/src/mono/external/llvm-project'...
+error: 3855 bytes of body are still expected
+fetch-pack: unexpected disconnect while reading sideband packet
+fatal: early EOF
+fatal: fetch-pack: invalid index-pack output
+fatal: clone of 'https://github.com/dotnet/llvm-project.git' into submodule path '/build/mono/src/mono/external/llvm-project' failed
+Failed to clone 'external/llvm-project'. Retry scheduled
+Cloning into '/build/mono/src/mono/external/nuget-buildtasks'...
+done.
+Cloning into '/build/mono/src/mono/external/nunit-lite'...
+done.
+Cloning into '/build/mono/src/mono/external/roslyn-binaries'...
+done.
+Cloning into '/build/mono/src/mono/external/rx'...
+done.
+Cloning into '/build/mono/src/mono/external/xunit-binaries'...
+done.
+Cloning into '/build/mono/src/mono/external/llvm-project'...
+error: 14505 bytes of body are still expected
+fetch-pack: unexpected disconnect while reading sideband packet
+fatal: early EOF
+fatal: fetch-pack: invalid index-pack output
+fatal: clone of 'https://github.com/dotnet/llvm-project.git' into submodule path '/build/mono/src/mono/external/llvm-project' failed
+Failed to clone 'external/llvm-project' a second time, aborting
+==> ERROR: A failure occurred in prepare().
+    Aborting...
+==> unit.log (last 80 lines)
+Cloning into 'Newtonsoft.Json'...
+done.
+Cloning into 'cecil'...
+done.
+Cloning into 'rx'...
+done.
+Cloning into 'ikvm-fork'...
+done.
+Cloning into 'ikdasm'...
+done.
+Cloning into 'reference-assemblies'...
+done.
+Updating files:  90% (3052/3381)
+Updating files:  91% (3077/3381)
+Updating files:  92% (3111/3381)
+Updating files:  93% (3145/3381)
+Updating files:  94% (3179/3381)
+Updating files:  95% (3212/3381)
+Updating files:  96% (3246/3381)
+Updating files:  97% (3280/3381)
+Updating files:  98% (3314/3381)
+Updating files:  99% (3348/3381)
+Updating files: 100% (3381/3381)
+Updating files: 100% (3381/3381), done.
+Cloning into 'NUnitLite'...
+done.
+Cloning into 'NuGet.BuildTasks'...
+done.
+Cloning into 'boringssl'...
+done.
+Cloning into 'corefx'...
+done.
+Cloning into 'bockbuild'...
+done.
+Cloning into 'linker'...
+done.
+Cloning into 'roslyn-binaries'...
+done.
+Updating files:  74% (370/497)
+Updating files:  75% (373/497)
+Updating files:  76% (378/497)
+Updating files:  77% (383/497)
+Updating files:  78% (388/497)
+Updating files:  79% (393/497)
+Updating files:  80% (398/497)
+Updating files:  81% (403/497)
+Updating files:  82% (408/497)
+Updating files:  83% (413/497)
+Updating files:  84% (418/497)
+Updating files:  85% (423/497)
+Updating files:  86% (428/497)
+Updating files:  87% (433/497)
+Updating files:  88% (438/497)
+Updating files:  89% (443/497)
+Updating files:  90% (448/497)
+Updating files:  91% (453/497)
+Updating files:  92% (458/497)
+Updating files:  93% (463/497)
+Updating files:  94% (468/497)
+Updating files:  95% (473/497)
+Updating files:  96% (478/497)
+Updating files:  97% (483/497)
+Updating files:  98% (488/497)
+Updating files:  99% (493/497)
+Updating files: 100% (497/497)
+Updating files: 100% (497/497), done.
+Cloning into 'corert'...
+done.
+Cloning into 'xunit-binaries'...
+done.
+Cloning into 'api-doc-tools'...
+done.
+Cloning into 'api-snapshot'...
+done.
+==> ERROR: Build failed, check /var/lib/kbuild/v3/copy/build
+          Finished with result: exit-code
+Main processes terminated with: code=exited, status=255/EXCEPTION
+               Service runtime: 3h 5min 9.549s
+             CPU time consumed: 41.693s
+                   Memory peak: 607.3M (swap: 27.7M)
+==> chroot.log (last 18 lines)
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+gpg: Warning: using insecure memory!
+gpg: Warning: using insecure memory!
+==> Updating trust database...
+gpg: Warning: using insecure memory!
+gpg: next trustdb check due at 2026-12-31
+gpg: Warning: using insecure memory!
+  -> Locally signed 1 key.
+==> Updating trust database...
+gpg: Warning: using insecure memory!
+gpg: next trustdb check due at 2026-12-31
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+:: Synchronizing package databases...
+ train downloading...
+ kashira-v3-laptop downloading...
+ kashira-v3 downloading...
+:: Starting full system upgrade...
+ there is nothing to do

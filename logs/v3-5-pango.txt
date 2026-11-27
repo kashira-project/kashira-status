@@ -1,0 +1,120 @@
+==> build.log (last 80 lines)
+[59/176] Compiling C object pango/libpangocairo-1.0.so.0.5800.2.p/pangocairo-fcfont.c.o
+[60/176] Compiling C object utils/pango-view.p/viewer-render.c.o
+[61/176] Compiling C object pango/libpango-1.0.so.0.5800.2.p/pango-layout.c.o
+[62/176] Compiling C object utils/pango-view.p/viewer-main.c.o
+[63/176] Compiling C object pango/libpangocairo-1.0.so.0.5800.2.p/pangocairo-render.c.o
+[64/176] Compiling C object utils/pango-view.p/viewer-pangoft2.c.o
+[65/176] Compiling C object utils/pango-view.p/viewer-pangoxft.c.o
+[66/176] Compiling C object tools/gen-script-for-lang.p/gen-script-for-lang.c.o
+[67/176] Compiling C object utils/pango-view.p/viewer-x.c.o
+[68/176] Compiling C object pango/libpangoft2-1.0.so.0.5800.2.p/pangofc-fontmap.c.o
+../pango/pango/pangofc-fontmap.c:3334:17: warning: cast from 'gchar *' (aka 'char *') to 'int *' increases required alignment from 1 to 4 [-Wcast-align]
+ 3334 |               *sizes = (int *) size_array->data;
+      |                        ^~~~~~~~~~~~~~~~~~~~~~~~
+1 warning generated.
+[69/176] Compiling C object tests/testboundaries.p/testboundaries.c.o
+FAILED: [code=1] tests/testboundaries.p/testboundaries.c.o 
+clang -Itests/testboundaries.p -Itests -I../pango/tests -I. -I../pango -Ipango -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/sysprof-6 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/cairo -I/usr/include/pixman-1 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=gnu11 -D_POSIX_C_SOURCE=200809L -D_POSIX_THREAD_SAFE_FUNCTIONS -D_GNU_SOURCE -DG_LOG_USE_STRUCTURED=1 -DGLIB_VERSION_MIN_REQUIRED=GLIB_VERSION_2_88 -DGLIB_VERSION_MAX_ALLOWED=GLIB_VERSION_2_88 -march=x86-64-v3 -O3 -pipe -fno-plt -fexceptions -Wp,-D_FORTIFY_SOURCE=3 -Wformat -Werror=format-security -fstack-clash-protection -fcf-protection -mtls-dialect=gnu2 -Wno-error=unknown-warning-option -Wno-error=unused-command-line-argument -Wno-error=unused-but-set-variable -Wno-error=unused-but-set-global -Wno-error=deprecated-declarations -Wno-error=c2y-extensions -Wno-error=incompatible-pointer-types-discards-qualifiers -g -ffile-prefix-map=/build/pango/src=/usr/src/debug/pango -flto=thin -fPIE -pthread -DWITH_GZFILEOP -Wno-c++11-extensions -Wno-missing-include-dirs -Wno-typedef-redefinition -Wformat=2 -Wformat-nonliteral -Wformat-security -Wignored-qualifiers -Wimplicit-function-declaration -Wmisleading-indentation -Wmissing-format-attribute -Wmissing-include-dirs -Wmissing-noreturn -Wnested-externs -Wold-style-definition -Wpointer-arith -Wshadow -Wstrict-prototypes -Wswitch-default -Wswitch-enum -Wundef -Wuninitialized -Wunused -Werror=address -Werror=empty-body -Werror=implicit -Werror=implicit-fallthrough -Werror=init-self -Werror=int-to-pointer-cast -Werror=main -Werror=missing-braces -Werror=missing-declarations -Werror=missing-prototypes -Werror=nonnull -Werror=pointer-to-int-cast -Werror=redundant-decls -Werror=return-type -Werror=sequence-point -Werror=trigraphs -Werror=vla -Werror=write-strings -fno-strict-aliasing -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wformat-nonliteral -Wformat-security -Wunused -Wcast-align -Wmissing-noreturn -Wmissing-format-attribute -Wmissing-include-dirs -Wno-uninitialized -Wno-shadow -Werror=implicit-fallthrough -Werror=nonnull -Werror=init-self -Werror=main -Werror=missing-braces -Werror=sequence-point -Werror=return-type -Werror=trigraphs -Werror=write-strings -Werror=address -Werror=int-to-pointer-cast -Werror=empty-body -Werror=write-strings -Werror=unused-but-set-variable -Wundef -Werror=redundant-decls -fvisibility=hidden -DSRCDIR=/build/pango/src/pango/tests -DHAVE_X -DHAVE_XFT -DHAVE_FREETYPE -DHAVE_CAIRO -MD -MQ tests/testboundaries.p/testboundaries.c.o -MF tests/testboundaries.p/testboundaries.c.o.d -o tests/testboundaries.p/testboundaries.c.o -c ../pango/tests/testboundaries.c
+../pango/tests/testboundaries.c:43:12: error: variable 'offset' set but not used [-Werror,-Wunused-but-set-global]
+   43 | static int offset = 0;
+      |            ^
+../pango/tests/testboundaries.c:44:12: error: variable 'line' set but not used [-Werror,-Wunused-but-set-global]
+   44 | static int line = 0;
+      |            ^
+../pango/tests/testboundaries.c:45:17: error: variable 'current_wc' set but not used [-Werror,-Wunused-but-set-global]
+   45 | static gunichar current_wc = 0;
+      |                 ^
+../pango/tests/testboundaries.c:46:20: error: variable 'line_start' set but not used [-Werror,-Wunused-but-set-global]
+   46 | static const char *line_start = NULL;
+      |                    ^
+../pango/tests/testboundaries.c:47:20: error: variable 'line_end' set but not used [-Werror,-Wunused-but-set-global]
+   47 | static const char *line_end = NULL;
+      |                    ^
+5 errors generated.
+[70/176] Compiling C object tests/testcolor.p/testcolor.c.o
+[71/176] Compiling C object utils/pango-list.p/pango-list.c.o
+[72/176] Compiling C object utils/pango-segmentation.p/pango-segmentation.c.o
+[73/176] Compiling C object tests/test-ot-tags.p/test-ot-tags.c.o
+[74/176] Compiling C object utils/pango-view.p/viewer-cairo.c.o
+[75/176] Compiling C object utils/pango-view.p/viewer-pangocairo.c.o
+[76/176] Compiling C object tests/testlanguage.p/testlanguage.c.o
+[77/176] Compiling C object tests/testmatrix.p/testmatrix.c.o
+../pango/tests/testmatrix.c:197:27: warning: implicit conversion from 'double' to 'guint64' (aka 'unsigned long') changes value from 0.2 to 0 [-Wliteral-conversion]
+  197 |   g_assert_cmphex (r, ==, 0.2);
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~^~~~
+/usr/include/glib-2.0/glib/gtestutils.h:66:73: note: expanded from macro 'g_assert_cmphex'
+   66 |                                              guint64 _n1 = (n1), _n2 = (n2); \
+      |                                                                  ~~~    ^~
+../pango/tests/testmatrix.c:202:27: warning: implicit conversion from 'double' to 'guint64' (aka 'unsigned long') changes value from 0.2 to 0 [-Wliteral-conversion]
+  202 |   g_assert_cmphex (r, ==, 0.2);
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~^~~~
+/usr/include/glib-2.0/glib/gtestutils.h:66:73: note: expanded from macro 'g_assert_cmphex'
+   66 |                                              guint64 _n1 = (n1), _n2 = (n2); \
+      |                                                                  ~~~    ^~
+../pango/tests/testmatrix.c:207:27: warning: implicit conversion from 'double' to 'guint64' (aka 'unsigned long') changes value from 0.2 to 0 [-Wliteral-conversion]
+  207 |   g_assert_cmphex (r, ==, 0.2);
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~^~~~
+/usr/include/glib-2.0/glib/gtestutils.h:66:73: note: expanded from macro 'g_assert_cmphex'
+   66 |                                              guint64 _n1 = (n1), _n2 = (n2); \
+      |                                                                  ~~~    ^~
+../pango/tests/testmatrix.c:210:27: warning: implicit conversion from 'double' to 'guint64' (aka 'unsigned long') changes value from 0.4 to 0 [-Wliteral-conversion]
+  210 |   g_assert_cmphex (r, ==, 0.4);
+      |   ~~~~~~~~~~~~~~~~~~~~~~~~^~~~
+/usr/include/glib-2.0/glib/gtestutils.h:66:73: note: expanded from macro 'g_assert_cmphex'
+   66 |                                              guint64 _n1 = (n1), _n2 = (n2); \
+      |                                                                  ~~~    ^~
+4 warnings generated.
+[78/176] Compiling C object tests/testboundaries_ucd.p/testboundaries_ucd.c.o
+[79/176] Compiling C object tests/test-coverage.p/test-coverage.c.o
+[80/176] Compiling C object tests/testscript.p/testscript.c.o
+[81/176] Compiling C object tests/testtabs.p/testtabs.c.o
+[82/176] Compiling C object tests/test-font-data.p/test-common.c.o
+[83/176] Compiling C object tests/test-bidi.p/test-bidi.c.o
+[84/176] Compiling C object tests/testcontext.p/testcontext.c.o
+[85/176] Compiling C object tests/test-font-data.p/test-font-data.c.o
+[86/176] Linking target pango/libpango-1.0.so.0.5800.2
+ninja: build stopped: subcommand failed.
+INFO: autodetecting backend as ninja
+INFO: calculating backend command to run: /usr/bin/ninja -C /build/pango/src/build
+==> ERROR: A failure occurred in build().
+    Aborting...
+==> unit.log (last 19 lines)
+Running as unit: run-p799646-i32143925.service
+==> Synchronizing chroot copy [/var/lib/kbuild/v3/root] -> [copy]...done
+    pango ... Passed
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+error: command failed to execute correctly
+error: command failed to execute correctly
+error: command failed to execute correctly
+==> WARNING: Skipping all source file integrity checks.
+Cloning into 'pango'...
+done.
+Switched to a new branch 'makepkg'
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+==> WARNING: Using existing $srcdir/ tree
+==> ERROR: Build failed, check /var/lib/kbuild/v3/copy/build
+          Finished with result: exit-code
+Main processes terminated with: code=exited, status=255/EXCEPTION
+               Service runtime: 25.767s
+             CPU time consumed: 4.505s
+                   Memory peak: 20.6M (swap: 0B)
+==> chroot.log (last 18 lines)
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+gpg: Warning: using insecure memory!
+gpg: Warning: using insecure memory!
+==> Updating trust database...
+gpg: Warning: using insecure memory!
+gpg: next trustdb check due at 2026-12-31
+gpg: Warning: using insecure memory!
+  -> Locally signed 1 key.
+==> Updating trust database...
+gpg: Warning: using insecure memory!
+gpg: next trustdb check due at 2026-12-31
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+:: Synchronizing package databases...
+ train downloading...
+ kashira-v3-laptop downloading...
+ kashira-v3 downloading...
+:: Starting full system upgrade...
+ there is nothing to do

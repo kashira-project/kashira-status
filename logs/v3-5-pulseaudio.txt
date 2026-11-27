@@ -1,0 +1,78 @@
+==> build.log (last 43 lines)
+==> Making package: pulseaudio 17.0+r134+g77d25a1e6-4 (Fri Nov 27 13:17:56 2026)
+==> Retrieving sources...
+  -> Updating pulseaudio git repo...
+  -> Found 0001-alsa-ucm-Fix-segfault-from-recursion-due-to-too-many.patch
+==> Validating source files with b2sums...
+==> Making package: pulseaudio 17.0+r134+g77d25a1e6-4 (Fri Nov 27 13:18:00 2026)
+==> Checking runtime dependencies...
+==> Checking buildtime dependencies...
+==> Installing missing dependencies...
+==> Missing dependencies:
+  -> alsa-lib
+  -> avahi
+  -> bluez
+  -> bluez-libs
+  -> check
+  -> dbus
+  -> doxygen
+  -> fftw
+  -> git
+  -> gst-plugins-base
+  -> gst-plugins-base-libs
+  -> gst-plugins-good
+  -> gstreamer
+  -> gtk3
+  -> jack2
+  -> libasyncns
+  -> libcap
+  -> libsndfile
+  -> libsoxr
+  -> libxtst
+  -> lirc
+  -> meson
+  -> orc
+  -> python-dbus
+  -> python-pyqt5
+  -> rtkit
+  -> sbc
+  -> speexdsp
+  -> systemd
+  -> tdb
+  -> valgrind
+  -> webrtc-audio-processing-1
+  -> xmltoman
+==> unit.log (last 14 lines)
+Running as unit: run-p828601-i33987575.service
+==> Synchronizing chroot copy [/var/lib/kbuild/v3/root] -> [copy]...done
+    pulseaudio ... Passed
+    0001-alsa-ucm-Fix-segfault-from-recursion-due-to-too-many.patch ... Passed
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+error: target not found: jack2
+==> ERROR: 'pacman' failed to install missing dependencies.
+==> ERROR: Could not resolve all dependencies.
+==> ERROR: Build failed, check /var/lib/kbuild/v3/copy/build
+          Finished with result: exit-code
+Main processes terminated with: code=exited, status=255/EXCEPTION
+               Service runtime: 8.204s
+             CPU time consumed: 4.498s
+                   Memory peak: 37.8M (swap: 0B)
+==> chroot.log (last 18 lines)
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+gpg: Warning: using insecure memory!
+gpg: Warning: using insecure memory!
+==> Updating trust database...
+gpg: Warning: using insecure memory!
+gpg: next trustdb check due at 2026-12-31
+gpg: Warning: using insecure memory!
+  -> Locally signed 1 key.
+==> Updating trust database...
+gpg: Warning: using insecure memory!
+gpg: next trustdb check due at 2026-12-31
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+:: Synchronizing package databases...
+ train downloading...
+ kashira-v3-laptop downloading...
+ kashira-v3 downloading...
+:: Starting full system upgrade...
+ there is nothing to do

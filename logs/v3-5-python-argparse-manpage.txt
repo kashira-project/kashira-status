@@ -1,0 +1,114 @@
+==> build.log (last 80 lines)
+  - toml; python_version < '3'
+  - tomli; python_version >= '3' and python_version < '3.11'
+> /usr/bin/python -m pip --python /tmp/build-env-65pw4p9w/bin/python install
+  --ignore-installed --use-pep517 --no-warn-script-location --no-compile --no-
+  input -r /tmp/build-requirements-fnnerqc1.txt
+< Ignoring toml: markers 'python_version < "3"' don't match your environment
+< Ignoring tomli: markers 'python_version >= "3" and python_version < "3.11"'
+  don't match your environment
+< WARNING: Retrying (Retry(total=4, connect=None, read=None, redirect=None,
+  status=None)) after connection broken by
+  'NameResolutionError("HTTPSConnection(host='pypi.org', port=443): Failed to
+  resolve 'pypi.org' ([Errno -3] Temporary failure in name resolution)")':
+  /simple/packaging/
+< WARNING: Retrying (Retry(total=3, connect=None, read=None, redirect=None,
+  status=None)) after connection broken by
+  'NameResolutionError("HTTPSConnection(host='pypi.org', port=443): Failed to
+  resolve 'pypi.org' ([Errno -3] Temporary failure in name resolution)")':
+  /simple/packaging/
+< WARNING: Retrying (Retry(total=2, connect=None, read=None, redirect=None,
+  status=None)) after connection broken by
+  'NameResolutionError("HTTPSConnection(host='pypi.org', port=443): Failed to
+  resolve 'pypi.org' ([Errno -3] Temporary failure in name resolution)")':
+  /simple/packaging/
+< WARNING: Retrying (Retry(total=1, connect=None, read=None, redirect=None,
+  status=None)) after connection broken by
+  'NameResolutionError("HTTPSConnection(host='pypi.org', port=443): Failed to
+  resolve 'pypi.org' ([Errno -3] Temporary failure in name resolution)")':
+  /simple/packaging/
+< WARNING: Retrying (Retry(total=0, connect=None, read=None, redirect=None,
+  status=None)) after connection broken by
+  'NameResolutionError("HTTPSConnection(host='pypi.org', port=443): Failed to
+  resolve 'pypi.org' ([Errno -3] Temporary failure in name resolution)")':
+  /simple/packaging/
+< ERROR: Could not find a version that satisfies the requirement packaging
+  (from versions: none)
+< ERROR: No matching distribution found for packaging
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.14/site-packages/build/__main__.py", line 289, in _handle_build_error
+    yield
+  File "/usr/lib/python3.14/site-packages/build/__main__.py", line 755, in main
+    built = run_build(args.srcdir, outdir)
+  File "/usr/lib/python3.14/site-packages/build/__main__.py", line 361, in build_package
+    out = _build(
+        isolation,
+    ...<7 lines>...
+        env_dir,
+    )
+  File "/usr/lib/python3.14/site-packages/build/__main__.py", line 272, in _build
+    with _bootstrap_build_env(
+         ~~~~~~~~~~~~~~~~~~~~^
+        isolation,
+        ^^^^^^^^^^
+    ...<7 lines>...
+        pyproject_hooks.quiet_subprocess_runner if _ctx.verbosity < 0 else None,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ) as builder:
+    ^
+  File "/usr/lib/python3.14/contextlib.py", line 141, in __enter__
+    return next(self.gen)
+  File "/usr/lib/python3.14/site-packages/build/__main__.py", line 233, in _bootstrap_build_env
+    install(builder.build_system_requires, _fresh=True)
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/site-packages/build/env.py", line 234, in install
+    self._env_backend.install_dependencies(requirements, constraints, _fresh=_fresh)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/site-packages/build/env.py", line 436, in install_dependencies
+    run_subprocess(cmd, env=_pip_env())
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/site-packages/build/_ctx.py", line 68, in run_subprocess
+    subprocess.run(cmd, capture_output=True, check=True, cwd=cwd, env=env)  # noqa: S603
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/subprocess.py", line 578, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '['/usr/bin/python', '-m', 'pip', '--python', '/tmp/build-env-65pw4p9w/bin/python', 'install', '--ignore-installed', '--use-pep517', '--no-warn-script-location', '--no-compile', '--no-input', '-r', '/tmp/build-requirements-fnnerqc1.txt']' returned non-zero exit status 1.
+
+ERROR Command '['/usr/bin/python', '-m', 'pip', '--python', '/tmp/build-env-65pw4p9w/bin/python', 'install', '--ignore-installed', '--use-pep517', '--no-warn-script-location', '--no-compile', '--no-input', '-r', '/tmp/build-requirements-fnnerqc1.txt']' returned non-zero exit status 1.
+==> ERROR: A failure occurred in build().
+    Aborting...
+==> unit.log (last 13 lines)
+Running as unit: run-p362474-i34467222.service; invocation ID: 26735f825e154edabab1daef2f05ec11
+==> Synchronizing chroot copy [/var/lib/kbuild/v3/root] -> [copy]...done
+    argparse_manpage-4.8.tar.gz ... Passed
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+==> WARNING: Skipping all source file integrity checks.
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+==> WARNING: Using existing $srcdir/ tree
+==> ERROR: Build failed, check /var/lib/kbuild/v3/copy/build
+          Finished with result: exit-code
+Main processes terminated with: code=exited, status=255/EXCEPTION
+               Service runtime: 46.695s
+             CPU time consumed: 6.794s
+                   Memory peak: 13.8M (swap: 0B)
+==> chroot.log (last 18 lines)
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+gpg: Warning: using insecure memory!
+gpg: Warning: using insecure memory!
+==> Updating trust database...
+gpg: Warning: using insecure memory!
+gpg: next trustdb check due at 2026-12-31
+gpg: Warning: using insecure memory!
+  -> Locally signed 1 key.
+==> Updating trust database...
+gpg: Warning: using insecure memory!
+gpg: next trustdb check due at 2026-12-31
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+:: Synchronizing package databases...
+ train downloading...
+ kashira-v3-laptop downloading...
+ kashira-v3 downloading...
+:: Starting full system upgrade...
+ there is nothing to do

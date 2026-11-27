@@ -1,0 +1,117 @@
+==> build.log (last 80 lines)
+262/295 Test #262: sigv4_get_unreserved_test ...........................................................   Passed    0.01 sec
+        Start 263: sigv4_get_utf8_test
+263/295 Test #263: sigv4_get_utf8_test .................................................................   Passed    0.01 sec
+        Start 264: sigv4_get_vanilla_test
+264/295 Test #264: sigv4_get_vanilla_test ..............................................................   Passed    0.01 sec
+        Start 265: sigv4_get_vanilla_with_session_token_test
+265/295 Test #265: sigv4_get_vanilla_with_session_token_test ...........................................   Passed    0.01 sec
+        Start 266: sigv4_get_vanilla_empty_query_key_test
+266/295 Test #266: sigv4_get_vanilla_empty_query_key_test ..............................................   Passed    0.01 sec
+        Start 267: sigv4_get_vanilla_query_test
+267/295 Test #267: sigv4_get_vanilla_query_test ........................................................   Passed    0.01 sec
+        Start 268: sigv4_get_vanilla_query_order_key_case_test
+268/295 Test #268: sigv4_get_vanilla_query_order_key_case_test .........................................   Passed    0.01 sec
+        Start 269: sigv4_get_vanilla_query_order_encoded_test
+269/295 Test #269: sigv4_get_vanilla_query_order_encoded_test ..........................................   Passed    0.01 sec
+        Start 270: sigv4_get_vanilla_unreserved_test
+270/295 Test #270: sigv4_get_vanilla_unreserved_test ...................................................   Passed    0.01 sec
+        Start 271: sigv4_get_vanilla_utf8_query_test
+271/295 Test #271: sigv4_get_vanilla_utf8_query_test ...................................................   Passed    0.01 sec
+        Start 272: sigv4_post_header_key_case_test
+272/295 Test #272: sigv4_post_header_key_case_test .....................................................   Passed    0.01 sec
+        Start 273: sigv4_post_header_key_sort_test
+273/295 Test #273: sigv4_post_header_key_sort_test .....................................................   Passed    0.01 sec
+        Start 274: sigv4_post_header_value_case_test
+274/295 Test #274: sigv4_post_header_value_case_test ...................................................   Passed    0.01 sec
+        Start 275: sigv4_post_vanilla_test
+275/295 Test #275: sigv4_post_vanilla_test .............................................................   Passed    0.01 sec
+        Start 276: sigv4_post_vanilla_empty_query_value_test
+276/295 Test #276: sigv4_post_vanilla_empty_query_value_test ...........................................   Passed    0.01 sec
+        Start 277: sigv4_post_vanilla_query_test
+277/295 Test #277: sigv4_post_vanilla_query_test .......................................................   Passed    0.01 sec
+        Start 278: sigv4_post_x_www_form_urlencoded_test
+278/295 Test #278: sigv4_post_x_www_form_urlencoded_test ...............................................   Passed    0.01 sec
+        Start 279: sigv4_post_x_www_form_urlencoded_parameters_test
+279/295 Test #279: sigv4_post_x_www_form_urlencoded_parameters_test ....................................   Passed    0.01 sec
+        Start 280: sigv4_post_sts_header_after_test
+280/295 Test #280: sigv4_post_sts_header_after_test ....................................................   Passed    0.01 sec
+        Start 281: sigv4_post_sts_header_before_test
+281/295 Test #281: sigv4_post_sts_header_before_test ...................................................   Passed    0.01 sec
+        Start 282: sigv4_get_relative_normalized_test
+282/295 Test #282: sigv4_get_relative_normalized_test ..................................................   Passed    0.01 sec
+        Start 283: sigv4_get_relative_unnormalized_test
+283/295 Test #283: sigv4_get_relative_unnormalized_test ................................................   Passed    0.03 sec
+        Start 284: sigv4_get_relative_relative_normalized_test
+284/295 Test #284: sigv4_get_relative_relative_normalized_test .........................................   Passed    0.01 sec
+        Start 285: sigv4_get_relative_relative_unnormalized_test
+285/295 Test #285: sigv4_get_relative_relative_unnormalized_test .......................................   Passed    0.01 sec
+        Start 286: sigv4_get_slash_normalized_test
+286/295 Test #286: sigv4_get_slash_normalized_test .....................................................   Passed    0.01 sec
+        Start 287: sigv4_get_slash_unnormalized_test
+287/295 Test #287: sigv4_get_slash_unnormalized_test ...................................................   Passed    0.03 sec
+        Start 288: sigv4_get_slash_dot_slash_normalized_test
+288/295 Test #288: sigv4_get_slash_dot_slash_normalized_test ...........................................   Passed    0.01 sec
+        Start 289: sigv4_get_slash_dot_slash_unnormalized_test
+289/295 Test #289: sigv4_get_slash_dot_slash_unnormalized_test .........................................   Passed    0.01 sec
+        Start 290: sigv4_get_slash_pointless_dot_normalized_test
+290/295 Test #290: sigv4_get_slash_pointless_dot_normalized_test .......................................   Passed    0.01 sec
+        Start 291: sigv4_get_slash_pointless_dot_unnormalized_test
+291/295 Test #291: sigv4_get_slash_pointless_dot_unnormalized_test .....................................   Passed    0.01 sec
+        Start 292: sigv4_get_slashes_normalized_test
+292/295 Test #292: sigv4_get_slashes_normalized_test ...................................................   Passed    0.01 sec
+        Start 293: sigv4_get_slashes_unnormalized_test
+293/295 Test #293: sigv4_get_slashes_unnormalized_test .................................................   Passed    0.01 sec
+        Start 294: sigv4_get_space_normalized_test
+294/295 Test #294: sigv4_get_space_normalized_test .....................................................   Passed    0.01 sec
+        Start 295: sigv4_get_space_unnormalized_test
+295/295 Test #295: sigv4_get_space_unnormalized_test ...................................................   Passed    0.01 sec
+
+99% tests passed, 1 tests failed out of 295
+
+Total Test time (real) =  24.62 sec
+
+The following tests FAILED:
+	 43 - credentials_provider_ecs_bad_host_failure (Failed)
+Errors while running CTest
+Output from these tests are in: /build/aws-c-auth/src/aws-c-auth-1.0.0/build/Testing/Temporary/LastTest.log
+Use "--rerun-failed --output-on-failure" to re-run the failed cases verbosely.
+make: *** [Makefile:71: test] Error 8
+==> ERROR: A failure occurred in check().
+    Aborting...
+==> unit.log (last 16 lines)
+Running as unit: run-p63101-i21477209.service
+==> Synchronizing chroot copy [/var/lib/kbuild/v3/root] -> [copy]...done
+    aws-c-auth-1.0.0.tar.gz ... Passed
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+error: command failed to execute correctly
+error: command failed to execute correctly
+error: command failed to execute correctly
+==> WARNING: Skipping all source file integrity checks.
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+==> WARNING: Using existing $srcdir/ tree
+==> ERROR: Build failed, check /var/lib/kbuild/v3/copy/build
+          Finished with result: exit-code
+Main processes terminated with: code=exited, status=255/EXCEPTION
+               Service runtime: 41.462s
+             CPU time consumed: 3.211s
+                   Memory peak: 16.1M (swap: 0B)
+==> chroot.log (last 18 lines)
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+gpg: Warning: using insecure memory!
+gpg: Warning: using insecure memory!
+==> Updating trust database...
+gpg: Warning: using insecure memory!
+gpg: next trustdb check due at 2026-12-31
+gpg: Warning: using insecure memory!
+  -> Locally signed 1 key.
+==> Updating trust database...
+gpg: Warning: using insecure memory!
+gpg: next trustdb check due at 2026-12-31
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+:: Synchronizing package databases...
+ train downloading...
+ kashira-v3-laptop downloading...
+ kashira-v3 downloading...
+:: Starting full system upgrade...
+ there is nothing to do

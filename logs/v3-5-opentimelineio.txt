@@ -1,0 +1,123 @@
+==> build.log (last 80 lines)
+    ~~~~^^^^^^^^^^^^^^^^
+  File "<string>", line 295, in <module>
+  File "/usr/lib/python3.14/site-packages/setuptools/__init__.py", line 117, in setup
+    return distutils.core.setup(**attrs)  # type: ignore[return-value]
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/lib/python3.14/site-packages/setuptools/_distutils/core.py", line 168, in setup
+    return run_commands(dist)
+  File "/usr/lib/python3.14/site-packages/setuptools/_distutils/core.py", line 184, in run_commands
+    dist.run_commands()
+    ~~~~~~~~~~~~~~~~~^^
+  File "/usr/lib/python3.14/site-packages/setuptools/_distutils/dist.py", line 1028, in run_commands
+    self.run_command(cmd)
+    ~~~~~~~~~~~~~~~~^^^^^
+  File "/usr/lib/python3.14/site-packages/setuptools/dist.py", line 1106, in run_command
+    super().run_command(command)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/lib/python3.14/site-packages/setuptools/_distutils/dist.py", line 1047, in run_command
+    cmd_obj.run()
+    ~~~~~~~~~~~^^
+  File "/usr/lib/python3.14/site-packages/setuptools/command/bdist_wheel.py", line 454, in run
+    self.run_command("build")
+    ~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/lib/python3.14/site-packages/setuptools/_distutils/cmd.py", line 342, in run_command
+    self.distribution.run_command(command)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/lib/python3.14/site-packages/setuptools/dist.py", line 1106, in run_command
+    super().run_command(command)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/lib/python3.14/site-packages/setuptools/_distutils/dist.py", line 1047, in run_command
+    cmd_obj.run()
+    ~~~~~~~~~~~^^
+  File "/usr/lib/python3.14/site-packages/setuptools/_distutils/command/build.py", line 137, in run
+    self.run_command(cmd_name)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/usr/lib/python3.14/site-packages/setuptools/_distutils/cmd.py", line 342, in run_command
+    self.distribution.run_command(command)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/lib/python3.14/site-packages/setuptools/dist.py", line 1106, in run_command
+    super().run_command(command)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/lib/python3.14/site-packages/setuptools/_distutils/dist.py", line 1047, in run_command
+    cmd_obj.run()
+    ~~~~~~~~~~~^^
+  File "<string>", line 63, in run
+  File "/usr/lib/python3.14/site-packages/setuptools/command/build_ext.py", line 108, in run
+    _build_ext.run(self)
+    ~~~~~~~~~~~~~~^^^^^^
+  File "/usr/lib/python3.14/site-packages/setuptools/_distutils/command/build_ext.py", line 382, in run
+    self.build_extensions()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/lib/python3.14/site-packages/setuptools/_distutils/command/build_ext.py", line 498, in build_extensions
+    self._build_extensions_serial()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/lib/python3.14/site-packages/setuptools/_distutils/command/build_ext.py", line 524, in _build_extensions_serial
+    self.build_extension(ext)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "<string>", line 70, in build_extension
+  File "<string>", line 85, in build
+  File "<string>", line 166, in cmake_preflight_check
+RuntimeError: Submodule 'src/deps/Imath' (https://github.com/AcademySoftwareFoundation/Imath) registered for path 'src/deps/Imath'
+Submodule 'src/deps/pybind11' (https://github.com/pybind/pybind11.git) registered for path 'src/deps/pybind11'
+Cloning into '/build/opentimelineio/src/OpenTimelineIO/src/deps/Imath'...
+fatal: unable to access 'https://github.com/AcademySoftwareFoundation/Imath/': Could not resolve host: github.com
+fatal: clone of 'https://github.com/AcademySoftwareFoundation/Imath' into submodule path '/build/opentimelineio/src/OpenTimelineIO/src/deps/Imath' failed
+Failed to clone 'src/deps/Imath'. Retry scheduled
+Cloning into '/build/opentimelineio/src/OpenTimelineIO/src/deps/pybind11'...
+fatal: unable to access 'https://github.com/pybind/pybind11.git/': Could not resolve host: github.com
+fatal: clone of 'https://github.com/pybind/pybind11.git' into submodule path '/build/opentimelineio/src/OpenTimelineIO/src/deps/pybind11' failed
+Failed to clone 'src/deps/pybind11'. Retry scheduled
+Cloning into '/build/opentimelineio/src/OpenTimelineIO/src/deps/Imath'...
+fatal: unable to access 'https://github.com/AcademySoftwareFoundation/Imath/': Could not resolve host: github.com
+fatal: clone of 'https://github.com/AcademySoftwareFoundation/Imath' into submodule path '/build/opentimelineio/src/OpenTimelineIO/src/deps/Imath' failed
+Failed to clone 'src/deps/Imath' a second time, aborting
+CMake Error at CMakeLists.txt:225 (message):
+  git submodule update --init --recursive failed with 1
+
+TIP pass --env-dir and --sdist-extract-dir to keep the build environment and sources, then see https://build.pypa.io/en/stable/how-to/troubleshooting.html#debug-a-failed-build for help debugging a failed build
+ERROR Backend subprocess exited when trying to invoke build_wheel
+==> ERROR: A failure occurred in build().
+    Aborting...
+==> unit.log (last 22 lines)
+Running as unit: run-p309084-i31870887.service
+==> Synchronizing chroot copy [/var/lib/kbuild/v3/root] -> [copy]...done
+    OpenTimelineIO ... Passed
+    opentimelineio-rapidjson ... Skipped
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+error: command failed to execute correctly
+error: command failed to execute correctly
+error: command failed to execute correctly
+==> WARNING: Skipping all source file integrity checks.
+Cloning into 'OpenTimelineIO'...
+done.
+Switched to a new branch 'makepkg'
+Cloning into 'opentimelineio-rapidjson'...
+done.
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+==> WARNING: Using existing $srcdir/ tree
+==> ERROR: Build failed, check /var/lib/kbuild/v3/copy/build
+          Finished with result: exit-code
+Main processes terminated with: code=exited, status=255/EXCEPTION
+               Service runtime: 36.550s
+             CPU time consumed: 3.128s
+                   Memory peak: 41.4M (swap: 0B)
+==> chroot.log (last 18 lines)
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+gpg: Warning: using insecure memory!
+gpg: Warning: using insecure memory!
+==> Updating trust database...
+gpg: Warning: using insecure memory!
+gpg: next trustdb check due at 2026-12-31
+gpg: Warning: using insecure memory!
+  -> Locally signed 1 key.
+==> Updating trust database...
+gpg: Warning: using insecure memory!
+gpg: next trustdb check due at 2026-12-31
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+:: Synchronizing package databases...
+ train downloading...
+ kashira-v3-laptop downloading...
+ kashira-v3 downloading...
+:: Starting full system upgrade...
+ there is nothing to do

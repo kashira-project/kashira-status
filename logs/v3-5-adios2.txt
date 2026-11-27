@@ -1,0 +1,142 @@
+==> build.log (last 80 lines)
+   17 |                ADIOS2_ATTRIBUTE_NAME_F2C)(char *name, const adios2_attribute **attribute, int *ierr)
+      |                                          ^
+      |                                          ;
+/build/adios2/src/ADIOS2-2.12.1/bindings/Fortran/f2c/adios2_f2c_attribute.cpp:23:16: error: unknown type name 'adios2_attribute_name_length_f2c'
+   23 | void FC_GLOBAL(adios2_attribute_name_length_f2c,
+      |                ^
+/build/adios2/src/ADIOS2-2.12.1/bindings/Fortran/f2c/adios2_f2c_attribute.cpp:24:16: error: unknown type name 'ADIOS2_ATTRIBUTE_NAME_LENGTH_F2C'
+   24 |                ADIOS2_ATTRIBUTE_NAME_LENGTH_F2C)(int *size, const adios2_attribute **attribute,
+      |                ^
+/build/adios2/src/ADIOS2-2.12.1/bindings/Fortran/f2c/adios2_f2c_attribute.cpp:23:15: error: function cannot return function type 'void (int *, const adios2_attribute **, int *)' (aka 'void (int *, const struct adios2_attribute **, int *)')
+   23 | void FC_GLOBAL(adios2_attribute_name_length_f2c,
+      |               ^
+/build/adios2/src/ADIOS2-2.12.1/bindings/Fortran/f2c/adios2_f2c_attribute.cpp:27:6: error: use of undeclared identifier 'size'; did you mean 'sched_attr::size'?
+   27 |     *size = -1;
+      |      ^~~~
+      |      sched_attr::size
+/usr/include/linux/sched/types.h:99:8: note: 'sched_attr::size' declared here
+   99 |         __u32 size;
+      |               ^
+/build/adios2/src/ADIOS2-2.12.1/bindings/Fortran/f2c/adios2_f2c_attribute.cpp:27:6: error: invalid use of non-static data member 'size'
+   27 |     *size = -1;
+      |      ^~~~
+/build/adios2/src/ADIOS2-2.12.1/bindings/Fortran/f2c/adios2_f2c_attribute.cpp:29:6: error: use of undeclared identifier 'ierr'
+   29 |     *ierr = static_cast<int>(adios2_attribute_name(nullptr, &sizeC, *attribute));
+      |      ^~~~
+/build/adios2/src/ADIOS2-2.12.1/bindings/Fortran/f2c/adios2_f2c_attribute.cpp:29:70: error: use of undeclared identifier 'attribute'; did you mean 'adios2::core::Attribute'?
+   29 |     *ierr = static_cast<int>(adios2_attribute_name(nullptr, &sizeC, *attribute));
+      |                                                                      ^~~~~~~~~
+/build/adios2/src/ADIOS2-2.12.1/source/adios2/core/Attribute.h:19:7: note: 'adios2::core::Attribute' declared here
+   19 | class Attribute : public AttributeBase
+      |       ^
+/build/adios2/src/ADIOS2-2.12.1/bindings/Fortran/f2c/adios2_f2c_attribute.cpp:30:10: error: use of undeclared identifier 'ierr'
+   30 |     if (*ierr == static_cast<int>(adios2_error_none))
+      |          ^~~~
+/build/adios2/src/ADIOS2-2.12.1/bindings/Fortran/f2c/adios2_f2c_attribute.cpp:32:10: error: use of undeclared identifier 'size'; did you mean 'sizeC'?
+   32 |         *size = static_cast<int>(sizeC);
+      |          ^~~~
+      |          sizeC
+/build/adios2/src/ADIOS2-2.12.1/bindings/Fortran/f2c/adios2_f2c_attribute.cpp:28:12: note: 'sizeC' declared here
+   28 |     size_t sizeC;
+      |            ^
+/build/adios2/src/ADIOS2-2.12.1/bindings/Fortran/f2c/adios2_f2c_attribute.cpp:32:9: error: indirection requires pointer operand ('size_t' (aka 'unsigned long') invalid)
+   32 |         *size = static_cast<int>(sizeC);
+      |         ^~~~~
+/build/adios2/src/ADIOS2-2.12.1/bindings/Fortran/f2c/adios2_f2c_attribute.cpp:36:16: error: use of undeclared identifier 'adios2_attribute_is_value_f2c'; did you mean 'adios2_attribute_is_value'?
+   36 | void FC_GLOBAL(adios2_attribute_is_value_f2c,
+      |                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                adios2_attribute_is_value
+/build/adios2/src/ADIOS2-2.12.1/bindings/C/adios2/c/adios2_c_attribute.h:57:14: note: 'adios2_attribute_is_value' declared here
+   57 | adios2_error adios2_attribute_is_value(adios2_bool *result, const adios2_attribute *attribute);
+      |              ^
+/build/adios2/src/ADIOS2-2.12.1/bindings/Fortran/f2c/adios2_f2c_attribute.cpp:36:6: error: variable has incomplete type 'void'
+   36 | void FC_GLOBAL(adios2_attribute_is_value_f2c,
+      |      ^
+/build/adios2/src/ADIOS2-2.12.1/bindings/Fortran/f2c/adios2_f2c_attribute.cpp:37:16: error: use of undeclared identifier 'ADIOS2_ATTRIBUTE_IS_VALUE_F2C'
+   37 |                ADIOS2_ATTRIBUTE_IS_VALUE_F2C)(int *is_value, const adios2_attribute **attribute,
+      |                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/build/adios2/src/ADIOS2-2.12.1/bindings/Fortran/f2c/adios2_f2c_attribute.cpp:37:46: error: expected ';' after top level declarator
+   37 |                ADIOS2_ATTRIBUTE_IS_VALUE_F2C)(int *is_value, const adios2_attribute **attribute,
+      |                                              ^
+      |                                              ;
+/build/adios2/src/ADIOS2-2.12.1/bindings/Fortran/f2c/adios2_f2c_attribute.cpp:48:16: error: use of undeclared identifier 'adios2_attribute_type_f2c'; did you mean 'adios2_attribute_type'?
+   48 | void FC_GLOBAL(adios2_attribute_type_f2c,
+      |                ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |                adios2_attribute_type
+/build/adios2/src/ADIOS2-2.12.1/bindings/C/adios2/c/adios2_c_attribute.h:35:14: note: 'adios2_attribute_type' declared here
+   35 | adios2_error adios2_attribute_type(adios2_type *type, const adios2_attribute *attribute);
+      |              ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+20 errors generated.
+[325/433] Building CXX object bindings/CXX/CMakeFiles/adios2_cxx.dir/adios2/cxx/IO.cpp.o
+[326/433] Building CXX object bindings/CXX/CMakeFiles/adios2_cxx.dir/adios2/cxx/fstream/ADIOS2fstream.cpp.o
+[327/433] Building CXX object source/adios2/CMakeFiles/adios2_core.dir/toolkit/format/bp/bp4/BP4Deserializer.cpp.o
+[328/433] Building CXX object source/adios2/CMakeFiles/adios2_core.dir/toolkit/format/dataman/DataManSerializer.cpp.o
+[329/433] Building CXX object bindings/CXX/CMakeFiles/adios2_cxx.dir/adios2/cxx/Engine.cpp.o
+[330/433] Building CXX object bindings/CXX/CMakeFiles/adios2_cxx.dir/adios2/cxx/Variable.cpp.o
+[331/433] Building CXX object source/adios2/CMakeFiles/adios2_core.dir/operator/compress/CompressSZ3.cpp.o
+ninja: build stopped: subcommand failed.
+==> ERROR: A failure occurred in build().
+    Aborting...
+==> unit.log (last 17 lines)
+Running as unit: run-p1506-i20986325.service
+==> Synchronizing chroot copy [/var/lib/kbuild/v3/root] -> [copy]...done
+    adios2-2.12.1.tar.gz ... Passed
+    InlineWriter.patch ... Passed
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+error: command failed to execute correctly
+error: command failed to execute correctly
+error: command failed to execute correctly
+==> WARNING: Skipping all source file integrity checks.
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+==> WARNING: Using existing $srcdir/ tree
+==> ERROR: Build failed, check /var/lib/kbuild/v3/copy/build
+          Finished with result: exit-code
+Main processes terminated with: code=exited, status=255/EXCEPTION
+               Service runtime: 2min 23.026s
+             CPU time consumed: 3.697s
+                   Memory peak: 67.8M (swap: 0B)
+==> chroot.log (last 42 lines)
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+gpg: Warning: using insecure memory!
+gpg: Warning: using insecure memory!
+==> Updating trust database...
+gpg: Warning: using insecure memory!
+gpg: next trustdb check due at 2026-12-31
+gpg: Warning: using insecure memory!
+  -> Locally signed 1 key.
+==> Updating trust database...
+gpg: Warning: using insecure memory!
+gpg: next trustdb check due at 2026-12-31
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+:: Synchronizing package databases...
+ train downloading...
+ kashira-v3-laptop downloading...
+ kashira-v3 downloading...
+:: Starting full system upgrade...
+warning: iana-etc: downgrading from version 20261119-1 to version 20261015-2
+warning: tzdata: downgrading from version 2026f-1 to version 2026e-2
+resolving dependencies...
+looking for conflicting packages...
+
+Package (2)          Old Version  New Version  Net Change  Download Size
+
+kashira-v3/iana-etc  20261119-1   20261015-2     0.00 MiB       0.12 MiB
+kashira-v3/tzdata    2026f-1      2026e-2        0.00 MiB       0.39 MiB
+
+Total Download Size:   0.51 MiB
+Total Installed Size:  2.40 MiB
+Net Upgrade Size:      0.00 MiB
+
+:: Proceed with installation? [Y/n] 
+:: Retrieving packages...
+ tzdata-2026e-2-x86_64 downloading...
+ iana-etc-20261015-2-any downloading...
+checking keyring...
+checking package integrity...
+loading package files...
+checking for file conflicts...
+:: Processing package changes...
+downgrading iana-etc...
+downgrading tzdata...

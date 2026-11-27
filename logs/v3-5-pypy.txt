@@ -1,0 +1,48 @@
+==> build.log (last 13 lines)
+==> Making package: pypy 8.0.1-2 (Fri Nov 27 13:22:11 2026)
+==> Retrieving sources...
+  -> Found pypy2.7-v8.0.1-src.tar.gz
+  -> Found pypy-openssl-4.patch
+==> Validating source files with sha512sums...
+==> Making package: pypy 8.0.1-2 (Fri Nov 27 13:22:13 2026)
+==> Checking runtime dependencies...
+==> Checking buildtime dependencies...
+==> Installing missing dependencies...
+==> Missing dependencies:
+  -> pypy
+  -> tk
+  -> mercurial
+==> unit.log (last 14 lines)
+Running as unit: run-p1155470-i34222688.service
+==> Synchronizing chroot copy [/var/lib/kbuild/v3/root] -> [copy]...done
+    pypy2.7-v8.0.1-src.tar.gz ... Passed
+    pypy-openssl-4.patch ... Passed
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+error: target not found: pypy
+==> ERROR: 'pacman' failed to install missing dependencies.
+==> ERROR: Could not resolve all dependencies.
+==> ERROR: Build failed, check /var/lib/kbuild/v3/copy/build
+          Finished with result: exit-code
+Main processes terminated with: code=exited, status=255/EXCEPTION
+               Service runtime: 2.574s
+             CPU time consumed: 1.819s
+                   Memory peak: 16.8M (swap: 0B)
+==> chroot.log (last 18 lines)
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+gpg: Warning: using insecure memory!
+gpg: Warning: using insecure memory!
+==> Updating trust database...
+gpg: Warning: using insecure memory!
+gpg: next trustdb check due at 2026-12-31
+gpg: Warning: using insecure memory!
+  -> Locally signed 1 key.
+==> Updating trust database...
+gpg: Warning: using insecure memory!
+gpg: next trustdb check due at 2026-12-31
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+:: Synchronizing package databases...
+ train downloading...
+ kashira-v3-laptop downloading...
+ kashira-v3 downloading...
+:: Starting full system upgrade...
+ there is nothing to do

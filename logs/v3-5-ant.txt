@@ -1,0 +1,117 @@
+==> build.log (last 80 lines)
+Building jar: /build/ant/src/apache-ant-1.10.18/build/lib/ant-antlr.jar
+Building jar: /build/ant/src/apache-ant-1.10.18/build/lib/ant-imageio.jar
+Building jar: /build/ant/src/apache-ant-1.10.18/build/lib/ant-jmf.jar
+Building jar: /build/ant/src/apache-ant-1.10.18/build/lib/ant-jai.jar
+Building jar: /build/ant/src/apache-ant-1.10.18/build/lib/ant-swing.jar
+Building jar: /build/ant/src/apache-ant-1.10.18/build/lib/ant-jsch.jar
+Building jar: /build/ant/src/apache-ant-1.10.18/build/lib/ant-jdepend.jar
+Building jar: /build/ant/src/apache-ant-1.10.18/build/lib/ant-apache-xalan2.jar
+Building jar: /build/ant/src/apache-ant-1.10.18/build/lib/ant-xz.jar
+
+compile-tests:
+Created dir: /build/ant/src/apache-ant-1.10.18/build/testcases
+Compiling 329 source files to /build/ant/src/apache-ant-1.10.18/build/testcases
+Ignoring source, target and bootclasspath as release has been set
+warning: [options] source value 8 is obsolete and will be removed in a future release
+warning: [options] target value 8 is obsolete and will be removed in a future release
+warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+3 warnings
+Building jar: /build/ant/src/apache-ant-1.10.18/build/testcases/org/apache/tools/ant/taskdefs/test2-antlib.jar
+
+test-jar:
+Building jar: /build/ant/src/apache-ant-1.10.18/build/lib/ant-testutil.jar
+
+-init-cyclonedx:
+
+component-boms:
+
+-ant-dist-warn-jdk9+:
+
+dist-lite:
+Created dir: /build/ant/src/apache-ant-1.10.18/bootstrap
+Created dir: /build/ant/src/apache-ant-1.10.18/bootstrap/bin
+Created dir: /build/ant/src/apache-ant-1.10.18/bootstrap/lib
+Copying 26 files to /build/ant/src/apache-ant-1.10.18/bootstrap/lib
+Copying 13 files to /build/ant/src/apache-ant-1.10.18/bootstrap/bin
+
+BUILD SUCCESSFUL
+Total time: 5 seconds
+... Cleaning Up Build Directories
+... Done Bootstrapping Ant Distribution
+Buildfile: /build/ant/src/apache-ant-1.10.18/fetch.xml
+
+pick-dest:
+     [echo] Downloading to /build/ant/src/apache-ant-1.10.18/lib/optional
+
+probe-m2:
+
+download-m2:
+     [echo] Downloading to /build/ant/src/apache-ant-1.10.18/lib/optional
+      [get] Getting: https://repo1.maven.org/maven2/org/apache/maven/resolver/maven-resolver-ant-tasks/1.4.0/maven-resolver-ant-tasks-1.4.0-uber.jar
+      [get] To: /build/ant/src/apache-ant-1.10.18/lib/optional/maven-resolver-ant-tasks-1.4.0-uber.jar
+      [get] Error getting https://repo1.maven.org/maven2/org/apache/maven/resolver/maven-resolver-ant-tasks/1.4.0/maven-resolver-ant-tasks-1.4.0-uber.jar to /build/ant/src/apache-ant-1.10.18/lib/optional/maven-resolver-ant-tasks-1.4.0-uber.jar
+
+BUILD FAILED
+/build/ant/src/apache-ant-1.10.18/get-m2.xml:85: java.net.UnknownHostException: repo1.maven.org
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:570)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:284)
+	at java.base/java.net.Socket.connect(Socket.java:668)
+	at java.base/sun.security.ssl.SSLSocketImpl.connect(SSLSocketImpl.java:304)
+	at java.base/sun.security.ssl.BaseSSLSocketImpl.connect(BaseSSLSocketImpl.java:181)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:166)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:533)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:621)
+	at java.base/sun.net.www.protocol.https.HttpsClient.<init>(HttpsClient.java:205)
+	at java.base/sun.net.www.protocol.https.HttpsClient.New(HttpsClient.java:290)
+	at java.base/sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.getNewHttpClient(AbstractDelegateHttpsURLConnection.java:196)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:967)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:903)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:876)
+	at java.base/sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(AbstractDelegateHttpsURLConnection.java:181)
+	at java.base/sun.net.www.protocol.https.HttpsURLConnectionImpl.connect(HttpsURLConnectionImpl.java:141)
+	at org.apache.tools.ant.taskdefs.Get$GetThread.openConnection(Get.java:790)
+	at org.apache.tools.ant.taskdefs.Get$GetThread.get(Get.java:699)
+	at org.apache.tools.ant.taskdefs.Get$GetThread.run(Get.java:689)
+
+Total time: 0 seconds
+==> ERROR: A failure occurred in build().
+    Aborting...
+==> unit.log (last 16 lines)
+Running as unit: run-p25994-i21109174.service
+==> Synchronizing chroot copy [/var/lib/kbuild/v3/root] -> [copy]...done
+    apache-ant-1.10.18-src.tar.bz2 ... Passed
+    apache-ant-1.10.18-src.tar.bz2.asc ... Skipped
+    ant.conf ... Passed
+    apache-ant-1.10.18-src.tar.bz2 ... Passed
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+==> WARNING: Skipping all source file integrity checks.
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+==> WARNING: Using existing $srcdir/ tree
+==> ERROR: Build failed, check /var/lib/kbuild/v3/copy/build
+          Finished with result: exit-code
+Main processes terminated with: code=exited, status=255/EXCEPTION
+               Service runtime: 29.758s
+             CPU time consumed: 3.763s
+                   Memory peak: 22.1M (swap: 0B)
+==> chroot.log (last 18 lines)
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+gpg: Warning: using insecure memory!
+gpg: Warning: using insecure memory!
+==> Updating trust database...
+gpg: Warning: using insecure memory!
+gpg: next trustdb check due at 2026-12-31
+gpg: Warning: using insecure memory!
+  -> Locally signed 1 key.
+==> Updating trust database...
+gpg: Warning: using insecure memory!
+gpg: next trustdb check due at 2026-12-31
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+:: Synchronizing package databases...
+ train downloading...
+ kashira-v3-laptop downloading...
+ kashira-v3 downloading...
+:: Starting full system upgrade...
+ there is nothing to do

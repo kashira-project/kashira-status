@@ -1,0 +1,181 @@
+==> build.log (last 80 lines)
+  -> Found mte_teip5.zip
+  -> Found mwa_ppdb.zip
+  -> Found names.zip
+  -> Found nombank.1.0.zip
+  -> Found nonbreaking_prefixes.zip
+  -> Found nps_chat.zip
+  -> Found omw.zip
+  -> Found omw-1.4.zip
+  -> Found omw-2.0.zip
+  -> Found opinion_lexicon.zip
+  -> Found panlex_swadesh.zip
+  -> Found paradigms.zip
+  -> Found pe08.zip
+  -> Found perluniprops.zip
+  -> Found pil.zip
+  -> Found pl196x.zip
+  -> Found porter_test.zip
+  -> Found ppattach.zip
+  -> Found problem_reports.zip
+  -> Found product_reviews_1.zip
+  -> Found product_reviews_2.zip
+  -> Found propbank.zip
+  -> Found pros_cons.zip
+  -> Found ptb.zip
+  -> Found punkt.zip
+  -> Found punkt_tab.zip
+  -> Found qc.zip
+  -> Found reuters.zip
+  -> Found rslp.zip
+  -> Found rte.zip
+  -> Found sample_grammars.zip
+  -> Found semcor.zip
+  -> Found senseval.zip
+  -> Found sentence_polarity.zip
+  -> Found sentiwordnet.zip
+  -> Found shakespeare.zip
+  -> Found sinica_treebank.zip
+  -> Found smultron.zip
+  -> Found snowball_data.zip
+  -> Found spanish_grammars.zip
+  -> Found state_union.zip
+  -> Found stopwords.zip
+  -> Found subjectivity.zip
+  -> Found swadesh.zip
+  -> Found switchboard.zip
+  -> Found tagsets.zip
+  -> Found tagsets_json.zip
+  -> Found timit.zip
+  -> Found toolbox.zip
+  -> Found treebank.zip
+  -> Found twitter_samples.zip
+  -> Found udhr.zip
+  -> Found udhr2.zip
+  -> Found unicode_samples.zip
+  -> Found universal_tagset.zip
+  -> Found universal_treebanks_v20.zip
+  -> Found vader_lexicon.zip
+  -> Found verbnet.zip
+  -> Found verbnet3.zip
+  -> Found webtext.zip
+  -> Found wmt15_eval.zip
+  -> Found word2vec_sample.zip
+  -> Found wordnet.zip
+  -> Found wordnet2021.zip
+  -> Found wordnet2022.zip
+  -> Found wordnet31.zip
+  -> Found wordnet_ic.zip
+  -> Found words.zip
+  -> Found ycoe.zip
+  -> Found LICENSE
+  -> Found LICENSE-OVERVIEW.md
+  -> Found DATASET-LICENSES.md
+==> Validating source files with b2sums...
+==> Making package: nltk-data 3.10.0-1 (Fri Nov 27 10:41:03 2026)
+==> Checking runtime dependencies...
+==> Checking buildtime dependencies...
+==> Installing missing dependencies...
+==> Missing dependencies:
+  -> python-nltk
+  -> unzip
+==> unit.log (last 80 lines)
+    names.zip ... Passed
+    nombank.1.0.zip ... Passed
+    nonbreaking_prefixes.zip ... Passed
+    nps_chat.zip ... Passed
+    omw.zip ... Passed
+    omw-1.4.zip ... Passed
+    omw-2.0.zip ... Passed
+    opinion_lexicon.zip ... Passed
+    panlex_swadesh.zip ... Passed
+    paradigms.zip ... Passed
+    pe08.zip ... Passed
+    perluniprops.zip ... Passed
+    pil.zip ... Passed
+    pl196x.zip ... Passed
+    porter_test.zip ... Passed
+    ppattach.zip ... Passed
+    problem_reports.zip ... Passed
+    product_reviews_1.zip ... Passed
+    product_reviews_2.zip ... Passed
+    propbank.zip ... Passed
+    pros_cons.zip ... Passed
+    ptb.zip ... Passed
+    punkt.zip ... Passed
+    punkt_tab.zip ... Passed
+    qc.zip ... Passed
+    reuters.zip ... Passed
+    rslp.zip ... Passed
+    rte.zip ... Passed
+    sample_grammars.zip ... Passed
+    semcor.zip ... Passed
+    senseval.zip ... Passed
+    sentence_polarity.zip ... Passed
+    sentiwordnet.zip ... Passed
+    shakespeare.zip ... Passed
+    sinica_treebank.zip ... Passed
+    smultron.zip ... Passed
+    snowball_data.zip ... Passed
+    spanish_grammars.zip ... Passed
+    state_union.zip ... Passed
+    stopwords.zip ... Passed
+    subjectivity.zip ... Passed
+    swadesh.zip ... Passed
+    switchboard.zip ... Passed
+    tagsets.zip ... Passed
+    tagsets_json.zip ... Passed
+    timit.zip ... Passed
+    toolbox.zip ... Passed
+    treebank.zip ... Passed
+    twitter_samples.zip ... Passed
+    udhr.zip ... Passed
+    udhr2.zip ... Passed
+    unicode_samples.zip ... Passed
+    universal_tagset.zip ... Passed
+    universal_treebanks_v20.zip ... Passed
+    vader_lexicon.zip ... Passed
+    verbnet.zip ... Passed
+    verbnet3.zip ... Passed
+    webtext.zip ... Passed
+    wmt15_eval.zip ... Passed
+    word2vec_sample.zip ... Passed
+    wordnet.zip ... Passed
+    wordnet2021.zip ... Passed
+    wordnet2022.zip ... Passed
+    wordnet31.zip ... Passed
+    wordnet_ic.zip ... Passed
+    words.zip ... Passed
+    ycoe.zip ... Passed
+    LICENSE ... Passed
+    LICENSE-OVERVIEW.md ... Passed
+    DATASET-LICENSES.md ... Passed
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+error: target not found: python-nltk
+==> ERROR: 'pacman' failed to install missing dependencies.
+==> ERROR: Could not resolve all dependencies.
+==> ERROR: Build failed, check /var/lib/kbuild/v3/copy/build
+          Finished with result: exit-code
+Main processes terminated with: code=exited, status=255/EXCEPTION
+               Service runtime: 18.543s
+             CPU time consumed: 7.702s
+                   Memory peak: 193.4M (swap: 0B)
+==> chroot.log (last 18 lines)
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+gpg: Warning: using insecure memory!
+gpg: Warning: using insecure memory!
+==> Updating trust database...
+gpg: Warning: using insecure memory!
+gpg: next trustdb check due at 2026-12-31
+gpg: Warning: using insecure memory!
+  -> Locally signed 1 key.
+==> Updating trust database...
+gpg: Warning: using insecure memory!
+gpg: next trustdb check due at 2026-12-31
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+:: Synchronizing package databases...
+ train downloading...
+ kashira-v3-laptop downloading...
+ kashira-v3 downloading...
+:: Starting full system upgrade...
+ there is nothing to do

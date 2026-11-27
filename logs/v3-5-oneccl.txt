@@ -1,0 +1,149 @@
+==> build.log (last 80 lines)
+  -> Creating working copy of oneccl git repo...
+  -> Creating working copy of oneccl-googletest git repo...
+  -> Creating working copy of oneccl-ittapi git repo...
+  -> Creating working copy of oneccl-oneCCL git repo...
+==> Starting prepare()...
+Submodule 'deps/benchmark' (https://github.com/google/benchmark.git) registered for path 'deps/benchmark'
+Submodule 'deps/googletest' (https://github.com/google/googletest.git) registered for path 'deps/googletest'
+Submodule 'deps/ittapi' (https://github.com/intel/ittapi.git) registered for path 'deps/ittapi'
+Cloning into '/build/oneccl/src/oneccl/deps/benchmark'...
+Cloning into '/build/oneccl/src/oneccl/deps/googletest'...
+done.
+Cloning into '/build/oneccl/src/oneccl/deps/ittapi'...
+done.
+Submodule path 'deps/benchmark': checked out '192ef10025eb2c4cdd392bc502f0c852196baa48'
+Submodule path 'deps/googletest': checked out 'f8d7d77c06936315286eb55f8de22cd23c188571'
+Submodule path 'deps/ittapi': checked out '07c22596392a37e625f7f76aff6ad9deaf630cc1'
+patching file cmake/helpers.cmake
+==> Sources are ready.
+==> Making package: oneccl 2022.2.0-1 (Fri Nov 27 10:57:39 2026)
+==> Checking runtime dependencies...
+==> Checking buildtime dependencies...
+==> Starting build()...
+ 
+:: initializing oneAPI environment ...
+   makepkg: BASH_VERSION = 5.3.20(1)-release
+   args: Using "$@" for setvars.sh arguments: 
+:: compiler -- latest
+:: debugger -- latest
+:: tbb -- latest
+:: tcm -- latest
+:: umf -- latest
+:: oneAPI environment initialized ::
+ 
+Building oneCCL on CPU
+The no-dev option is deprecated.  Use -Wno-author instead.
+-- The CXX compiler identification is IntelLLVM 2026.0.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - failed
+-- Check for working CXX compiler: /opt/intel/oneapi/compiler/2026.0/bin/icpx
+-- Check for working CXX compiler: /opt/intel/oneapi/compiler/2026.0/bin/icpx - broken
+CMake Error at /usr/share/cmake/Modules/CMakeTestCXXCompiler.cmake:71 (message):
+  The C++ compiler
+
+    "/opt/intel/oneapi/compiler/2026.0/bin/icpx"
+
+  is not able to compile a simple test program.
+
+  It fails with the following output:
+
+    Change Dir: '/build/oneccl/src/build/CMakeFiles/CMakeScratch/TryCompile-9POVJx'
+    
+    Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_4c1e2/fast
+    /usr/bin/make  -f CMakeFiles/cmTC_4c1e2.dir/build.make CMakeFiles/cmTC_4c1e2.dir/build
+    make[1]: Entering directory '/build/oneccl/src/build/CMakeFiles/CMakeScratch/TryCompile-9POVJx'
+    Building CXX object CMakeFiles/cmTC_4c1e2.dir/testCXXCompiler.cxx.o
+    /opt/intel/oneapi/compiler/2026.0/bin/icpx   -march=x86-64-v3 -O3 -pipe -fno-plt -fexceptions         -Wp,-D_FORTIFY_SOURCE=3 -Wformat -Werror=format-security         -fstack-clash-protection -fcf-protection -mtls-dialect=gnu2 -Wp,-D_GLIBCXX_ASSERTIONS -Wno-error=unknown-warning-option -Wno-error=unused-command-line-argument -Wno-error=unused-but-set-variable -Wno-error=unused-but-set-global -Wno-error=deprecated-declarations -Wno-error=c2y-extensions -Wno-error=incompatible-pointer-types-discards-qualifiers -g -ffile-prefix-map=/build/oneccl/src=/usr/src/debug/oneccl  -MD -MT CMakeFiles/cmTC_4c1e2.dir/testCXXCompiler.cxx.o -MF CMakeFiles/cmTC_4c1e2.dir/testCXXCompiler.cxx.o.d -o CMakeFiles/cmTC_4c1e2.dir/testCXXCompiler.cxx.o -c /build/oneccl/src/build/CMakeFiles/CMakeScratch/TryCompile-9POVJx/testCXXCompiler.cxx
+    warning: unknown warning option '-Werror=unused-but-set-global'; did you mean '-Werror=unused-but-set-variable'? [-Wunknown-warning-option]
+    1 warning generated.
+    Linking CXX executable cmTC_4c1e2
+    /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4c1e2.dir/link.txt --verbose=1
+    ld: error: cannot open crtbegin.o: No such file or directory
+    ld: error: cannot open crtend.o: No such file or directory
+    icpx: error: linker command failed with exit code 1 (use -v to see invocation)
+    /opt/intel/oneapi/compiler/2026.0/bin/icpx -march=x86-64-v3 -O3 -pipe -fno-plt -fexceptions         -Wp,-D_FORTIFY_SOURCE=3 -Wformat -Werror=format-security         -fstack-clash-protection -fcf-protection -mtls-dialect=gnu2 -Wp,-D_GLIBCXX_ASSERTIONS -Wno-error=unknown-warning-option -Wno-error=unused-command-line-argument -Wno-error=unused-but-set-variable -Wno-error=unused-but-set-global -Wno-error=deprecated-declarations -Wno-error=c2y-extensions -Wno-error=incompatible-pointer-types-discards-qualifiers -g -ffile-prefix-map=/build/oneccl/src=/usr/src/debug/oneccl  -Wl,-O1 -Wl,--sort-common -Wl,--as-needed -Wl,-z,relro -Wl,-z,now          -Wl,-z,pack-relative-relocs -Wl,--build-id=sha1          -Wl,--undefined-version -Wl,--hash-style=gnu -Wl,--compress-debug-sections=zstd  CMakeFiles/cmTC_4c1e2.dir/testCXXCompiler.cxx.o -o cmTC_4c1e2
+    make[1]: *** [CMakeFiles/cmTC_4c1e2.dir/build.make:103: cmTC_4c1e2] Error 1
+    make[1]: Leaving directory '/build/oneccl/src/build/CMakeFiles/CMakeScratch/TryCompile-9POVJx'
+    make: *** [Makefile:134: cmTC_4c1e2/fast] Error 2
+    
+    
+
+
+
+  CMake will not be able to correctly generate this project.
+Call Stack (most recent call first):
+  CMakeLists.txt:4 (project)
+
+
+-- Configuring incomplete, errors occurred!
+==> ERROR: A failure occurred in build().
+    Aborting...
+==> unit.log (last 29 lines)
+Running as unit: run-p215445-i30107500.service
+==> Synchronizing chroot copy [/var/lib/kbuild/v3/root] -> [copy]...done
+    oneccl ... Passed
+    oneccl-googletest ... Skipped
+    oneccl-ittapi ... Skipped
+    oneccl-oneCCL ... Skipped
+    fix-legacy-sycl-level-zero-interface.patch ... Passed
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+error: command failed to execute correctly
+error: command failed to execute correctly
+error: command failed to execute correctly
+==> WARNING: Skipping all source file integrity checks.
+Cloning into 'oneccl'...
+done.
+Switched to a new branch 'makepkg'
+Cloning into 'oneccl-googletest'...
+done.
+Cloning into 'oneccl-ittapi'...
+done.
+Cloning into 'oneccl-oneCCL'...
+done.
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+==> WARNING: Using existing $srcdir/ tree
+==> ERROR: Build failed, check /var/lib/kbuild/v3/copy/build
+          Finished with result: exit-code
+Main processes terminated with: code=exited, status=255/EXCEPTION
+               Service runtime: 49.102s
+             CPU time consumed: 4.991s
+                   Memory peak: 84.9M (swap: 0B)
+==> chroot.log (last 37 lines)
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+gpg: Warning: using insecure memory!
+gpg: Warning: using insecure memory!
+==> Updating trust database...
+gpg: Warning: using insecure memory!
+gpg: next trustdb check due at 2026-12-31
+gpg: Warning: using insecure memory!
+  -> Locally signed 1 key.
+==> Updating trust database...
+gpg: Warning: using insecure memory!
+gpg: next trustdb check due at 2026-12-31
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+:: Synchronizing package databases...
+ train downloading...
+ kashira-v3-laptop downloading...
+ kashira-v3 downloading...
+:: Starting full system upgrade...
+resolving dependencies...
+looking for conflicting packages...
+
+Package (1)  Old Version  New Version  Net Change  Download Size
+
+train/lz4    1:1.10.0-3   1:1.11.1-1     0.03 MiB       0.16 MiB
+
+Total Download Size:   0.16 MiB
+Total Installed Size:  0.54 MiB
+Net Upgrade Size:      0.03 MiB
+
+:: Proceed with installation? [Y/n] 
+:: Retrieving packages...
+ lz4-1:1.11.1-1-x86_64 downloading...
+checking keyring...
+checking package integrity...
+loading package files...
+checking for file conflicts...
+:: Processing package changes...
+upgrading lz4...

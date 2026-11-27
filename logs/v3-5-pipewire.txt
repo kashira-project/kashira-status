@@ -1,0 +1,85 @@
+==> build.log (last 49 lines)
+==> Making package: pipewire 1:1.6.12-1 (Fri Nov 27 12:56:59 2026)
+==> Retrieving sources...
+  -> Cloning pipewire git repo...
+  -> Found pipewire-sysusers.conf
+==> Validating source files with b2sums...
+==> Making package: pipewire 1:1.6.12-1 (Fri Nov 27 12:58:54 2026)
+==> Checking runtime dependencies...
+==> Checking buildtime dependencies...
+==> Installing missing dependencies...
+==> Missing dependencies:
+  -> alsa-lib
+  -> avahi
+  -> bluez-libs
+  -> dbus
+  -> dconf
+  -> doxygen
+  -> fftw
+  -> git
+  -> glib2-devel
+  -> graphviz
+  -> gst-plugins-base
+  -> jack2
+  -> libcamera
+  -> libcanberra
+  -> libebur128
+  -> libfdk-aac
+  -> libffado
+  -> libfreeaptx
+  -> liblc3
+  -> libldac
+  -> libmysofa
+  -> libpulse
+  -> libsndfile
+  -> libxfixes
+  -> lilv
+  -> meson
+  -> onnxruntime
+  -> opus
+  -> python-docutils
+  -> roc-toolkit
+  -> rtkit
+  -> sbc
+  -> sdl2
+  -> spandsp
+  -> systemd
+  -> valgrind
+  -> webrtc-audio-processing-1
+  -> desktop-file-utils
+  -> openal
+==> unit.log (last 15 lines)
+Running as unit: run-p1068559-i32960487.service
+==> Synchronizing chroot copy [/var/lib/kbuild/v3/root] -> [copy]...done
+Cloning into bare repository '/srcdest/pipewire'...
+    pipewire ... Passed
+    pipewire-sysusers.conf ... Passed
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+error: target not found: jack2
+==> ERROR: 'pacman' failed to install missing dependencies.
+==> ERROR: Could not resolve all dependencies.
+==> ERROR: Build failed, check /var/lib/kbuild/v3/copy/build
+          Finished with result: exit-code
+Main processes terminated with: code=exited, status=255/EXCEPTION
+               Service runtime: 2min 1.775s
+             CPU time consumed: 13.547s
+                   Memory peak: 91M (swap: 0B)
+==> chroot.log (last 18 lines)
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+gpg: Warning: using insecure memory!
+gpg: Warning: using insecure memory!
+==> Updating trust database...
+gpg: Warning: using insecure memory!
+gpg: next trustdb check due at 2026-12-31
+gpg: Warning: using insecure memory!
+  -> Locally signed 1 key.
+==> Updating trust database...
+gpg: Warning: using insecure memory!
+gpg: next trustdb check due at 2026-12-31
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+:: Synchronizing package databases...
+ train downloading...
+ kashira-v3-laptop downloading...
+ kashira-v3 downloading...
+:: Starting full system upgrade...
+ there is nothing to do

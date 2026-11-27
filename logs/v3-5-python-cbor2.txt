@@ -1,0 +1,115 @@
+==> build.log (last 80 lines)
+    python-redis: for redis support
+    python-rich: for CLI
+    python-watchdog: for tracking file system events
+installing python-iniconfig...
+installing python-pluggy...
+installing python-pygments...
+installing python-pytest...
+==> Retrieving sources...
+  -> Found cbor2-6.3.0.tar.gz
+==> Extracting sources...
+  -> Extracting cbor2-6.3.0.tar.gz with bsdtar
+==> Sources are ready.
+==> Making package: python-cbor2 6.3.0-1 (Fri Nov 27 13:51:23 2026)
+==> Checking runtime dependencies...
+==> Checking buildtime dependencies...
+==> Starting build()...
+* Getting build dependencies for wheel...
+running egg_info
+creating python/cbor2.egg-info
+writing python/cbor2.egg-info/PKG-INFO
+writing dependency_links to python/cbor2.egg-info/dependency_links.txt
+writing entry points to python/cbor2.egg-info/entry_points.txt
+writing top-level names to python/cbor2.egg-info/top_level.txt
+writing manifest file 'python/cbor2.egg-info/SOURCES.txt'
+reading manifest file 'python/cbor2.egg-info/SOURCES.txt'
+adding license file 'LICENSE.txt'
+writing manifest file 'python/cbor2.egg-info/SOURCES.txt'
+* Building wheel...
+running bdist_wheel
+running build
+running build_py
+creating build/lib.linux-x86_64-cpython-314/cbor2
+copying python/cbor2/__init__.py -> build/lib.linux-x86_64-cpython-314/cbor2
+copying python/cbor2/tool.py -> build/lib.linux-x86_64-cpython-314/cbor2
+running egg_info
+writing python/cbor2.egg-info/PKG-INFO
+writing dependency_links to python/cbor2.egg-info/dependency_links.txt
+writing entry points to python/cbor2.egg-info/entry_points.txt
+writing top-level names to python/cbor2.egg-info/top_level.txt
+reading manifest file 'python/cbor2.egg-info/SOURCES.txt'
+adding license file 'LICENSE.txt'
+writing manifest file 'python/cbor2.egg-info/SOURCES.txt'
+copying python/cbor2/__init__.pyi -> build/lib.linux-x86_64-cpython-314/cbor2
+copying python/cbor2/py.typed -> build/lib.linux-x86_64-cpython-314/cbor2
+running build_ext
+running build_rust
+    Updating crates.io index
+warning: spurious network error (3 tries remaining): [6] Could not resolve hostname (Could not resolve host: index.crates.io)
+warning: spurious network error (2 tries remaining): [6] Could not resolve hostname (Could not resolve host: index.crates.io)
+warning: spurious network error (1 try remaining): [6] Could not resolve hostname (Could not resolve host: index.crates.io)
+warning: spurious network error (3 tries remaining): [6] Could not resolve hostname (Could not resolve host: index.crates.io)
+warning: spurious network error (2 tries remaining): [6] Could not resolve hostname (Could not resolve host: index.crates.io)
+warning: spurious network error (1 try remaining): [6] Could not resolve hostname (Could not resolve host: index.crates.io)
+warning: spurious network error (3 tries remaining): [6] Could not resolve hostname (Could not resolve host: index.crates.io)
+warning: spurious network error (2 tries remaining): [6] Could not resolve hostname (Could not resolve host: index.crates.io)
+warning: spurious network error (1 try remaining): [6] Could not resolve hostname (Could not resolve host: index.crates.io)
+warning: spurious network error (3 tries remaining): [6] Could not resolve hostname (Could not resolve host: index.crates.io)
+warning: spurious network error (2 tries remaining): [6] Could not resolve hostname (Could not resolve host: index.crates.io)
+warning: spurious network error (1 try remaining): [6] Could not resolve hostname (Could not resolve host: index.crates.io)
+error: failed to get `bigdecimal` as a dependency of package `cbor2 v0.1.0 (/build/python-cbor2/src/cbor2-6.3.0/rust)`
+
+Caused by:
+  failed to load source for dependency `bigdecimal`
+
+Caused by:
+  unable to update registry `crates-io`
+
+Caused by:
+  download of config.json failed
+
+Caused by:
+  [6] Could not resolve hostname (Could not resolve host: index.crates.io)
+error: `cargo metadata --manifest-path rust/Cargo.toml --format-version 1` failed with code 101
+-- Output captured from stdout:
+
+
+TIP pass --env-dir and --sdist-extract-dir to keep the build environment and sources, then see https://build.pypa.io/en/stable/how-to/troubleshooting.html#debug-a-failed-build for help debugging a failed build
+ERROR Backend subprocess exited when trying to invoke build_wheel
+==> ERROR: A failure occurred in build().
+    Aborting...
+==> unit.log (last 14 lines)
+Running as unit: run-p396045-i34629881.service
+==> Synchronizing chroot copy [/var/lib/kbuild/v3/root] -> [copy]...done
+    cbor2-6.3.0.tar.gz ... Passed
+    cbor2-6.3.0.tar.gz ... Passed
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+==> WARNING: Skipping all source file integrity checks.
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+==> WARNING: Using existing $srcdir/ tree
+==> ERROR: Build failed, check /var/lib/kbuild/v3/copy/build
+          Finished with result: exit-code
+Main processes terminated with: code=exited, status=255/EXCEPTION
+               Service runtime: 52.996s
+             CPU time consumed: 4.334s
+                   Memory peak: 14.2M (swap: 0B)
+==> chroot.log (last 18 lines)
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+gpg: Warning: using insecure memory!
+gpg: Warning: using insecure memory!
+==> Updating trust database...
+gpg: Warning: using insecure memory!
+gpg: next trustdb check due at 2026-12-31
+gpg: Warning: using insecure memory!
+  -> Locally signed 1 key.
+==> Updating trust database...
+gpg: Warning: using insecure memory!
+gpg: next trustdb check due at 2026-12-31
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+:: Synchronizing package databases...
+ train downloading...
+ kashira-v3-laptop downloading...
+ kashira-v3 downloading...
+:: Starting full system upgrade...
+ there is nothing to do

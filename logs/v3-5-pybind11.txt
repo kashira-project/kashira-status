@@ -1,0 +1,117 @@
+==> build.log (last 80 lines)
+-- Installing: /tmp/tmp63b28y28/wheel/purelib/pybind11/include/pybind11/eigen.h
+-- Installing: /tmp/tmp63b28y28/wheel/purelib/pybind11/include/pybind11/eigen
+-- Installing: /tmp/tmp63b28y28/wheel/purelib/pybind11/include/pybind11/eigen/common.h
+-- Installing: /tmp/tmp63b28y28/wheel/purelib/pybind11/include/pybind11/eigen/matrix.h
+-- Installing: /tmp/tmp63b28y28/wheel/purelib/pybind11/include/pybind11/eigen/tensor.h
+-- Installing: /tmp/tmp63b28y28/wheel/purelib/pybind11/include/pybind11/embed.h
+-- Installing: /tmp/tmp63b28y28/wheel/purelib/pybind11/include/pybind11/eval.h
+-- Installing: /tmp/tmp63b28y28/wheel/purelib/pybind11/include/pybind11/functional.h
+-- Installing: /tmp/tmp63b28y28/wheel/purelib/pybind11/include/pybind11/gil.h
+-- Installing: /tmp/tmp63b28y28/wheel/purelib/pybind11/include/pybind11/gil_safe_call_once.h
+-- Installing: /tmp/tmp63b28y28/wheel/purelib/pybind11/include/pybind11/gil_simple.h
+-- Installing: /tmp/tmp63b28y28/wheel/purelib/pybind11/include/pybind11/iostream.h
+-- Installing: /tmp/tmp63b28y28/wheel/purelib/pybind11/include/pybind11/native_enum.h
+-- Installing: /tmp/tmp63b28y28/wheel/purelib/pybind11/include/pybind11/numpy.h
+-- Installing: /tmp/tmp63b28y28/wheel/purelib/pybind11/include/pybind11/operators.h
+-- Installing: /tmp/tmp63b28y28/wheel/purelib/pybind11/include/pybind11/options.h
+-- Installing: /tmp/tmp63b28y28/wheel/purelib/pybind11/include/pybind11/pybind11.h
+-- Installing: /tmp/tmp63b28y28/wheel/purelib/pybind11/include/pybind11/pytypes.h
+-- Installing: /tmp/tmp63b28y28/wheel/purelib/pybind11/include/pybind11/stl.h
+-- Installing: /tmp/tmp63b28y28/wheel/purelib/pybind11/include/pybind11/stl
+-- Installing: /tmp/tmp63b28y28/wheel/purelib/pybind11/include/pybind11/stl/filesystem.h
+-- Installing: /tmp/tmp63b28y28/wheel/purelib/pybind11/include/pybind11/stl_bind.h
+-- Installing: /tmp/tmp63b28y28/wheel/purelib/pybind11/include/pybind11/subinterpreter.h
+-- Installing: /tmp/tmp63b28y28/wheel/purelib/pybind11/include/pybind11/trampoline_self_life_support.h
+-- Installing: /tmp/tmp63b28y28/wheel/purelib/pybind11/include/pybind11/type_caster_pyobject_ptr.h
+-- Installing: /tmp/tmp63b28y28/wheel/purelib/pybind11/include/pybind11/typing.h
+-- Installing: /tmp/tmp63b28y28/wheel/purelib/pybind11/include/pybind11/warnings.h
+-- Installing: /tmp/tmp63b28y28/wheel/purelib/pybind11/share/cmake/pybind11/pybind11Config.cmake
+-- Installing: /tmp/tmp63b28y28/wheel/purelib/pybind11/share/cmake/pybind11/pybind11ConfigVersion.cmake
+-- Installing: /tmp/tmp63b28y28/wheel/purelib/pybind11/share/cmake/pybind11/FindPythonLibsNew.cmake
+-- Installing: /tmp/tmp63b28y28/wheel/purelib/pybind11/share/cmake/pybind11/pybind11Common.cmake
+-- Installing: /tmp/tmp63b28y28/wheel/purelib/pybind11/share/cmake/pybind11/pybind11Tools.cmake
+-- Installing: /tmp/tmp63b28y28/wheel/purelib/pybind11/share/cmake/pybind11/pybind11NewTools.cmake
+-- Installing: /tmp/tmp63b28y28/wheel/purelib/pybind11/share/cmake/pybind11/pybind11GuessPythonExtSuffix.cmake
+-- Installing: /tmp/tmp63b28y28/wheel/purelib/pybind11/share/cmake/pybind11/pybind11Targets.cmake
+-- Installing: /tmp/tmp63b28y28/wheel/purelib/pybind11/share/pkgconfig/pybind11.pc
+-- Installing: /tmp/tmp63b28y28/wheel/purelib/pybind11/share/__init__.py
+-- Installing: /tmp/tmp63b28y28/wheel/purelib/pybind11/share/pkgconfig/__init__.py
+*** Making wheel...
+*** Created pybind11-3.1.0-py3-none-any.whl
+Successfully built pybind11-3.1.0-py3-none-any.whl
+-- The CXX compiler identification is Clang 23.1.5
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/lib/ccache/bin/clang++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- pybind11 v3.1.0 
+-- CMake 4.4.4
+-- Found Python: /usr/bin/python3.14 (found suitable version "3.14.10", minimum required is "3.9") found components: Interpreter Development.Module Development.Embed
+-- Python 3.14.10
+-- Performing Test HAS_FLTO_THIN
+-- Performing Test HAS_FLTO_THIN - Success
+-- Performing Test HAS_FLTO
+-- Performing Test HAS_FLTO - Success
+-- pybind11::lto enabled
+-- pybind11::thin_lto enabled
+-- Building tests with Eigen v5.0.1
+-- Found pytest 9.1.1
+-- Downloading catch v2.13.10...
+CMake Error at tools/FindCatch.cmake:44 (message):
+  Could not download URL:
+
+    https://github.com/philsquared/Catch/releases/download/v2.13.10/catch.hpp
+
+  Log:
+
+    Could not resolve host: github.com
+    Could not resolve host: github.com
+    Could not resolve: github.com:443
+    closing connection #0
+    
+Call Stack (most recent call first):
+  tools/FindCatch.cmake:63 (_download_catch)
+  tests/pure_cpp/CMakeLists.txt:1 (find_package)
+
+
+-- Configuring incomplete, errors occurred!
+==> ERROR: A failure occurred in build().
+    Aborting...
+==> unit.log (last 16 lines)
+Running as unit: run-p844445-i34028606.service
+==> Synchronizing chroot copy [/var/lib/kbuild/v3/root] -> [copy]...done
+    pybind11-3.1.0.tar.gz ... Passed
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+error: command failed to execute correctly
+error: command failed to execute correctly
+error: command failed to execute correctly
+==> WARNING: Skipping all source file integrity checks.
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+==> WARNING: Using existing $srcdir/ tree
+==> ERROR: Build failed, check /var/lib/kbuild/v3/copy/build
+          Finished with result: exit-code
+Main processes terminated with: code=exited, status=255/EXCEPTION
+               Service runtime: 19.186s
+             CPU time consumed: 2.836s
+                   Memory peak: 16.5M (swap: 0B)
+==> chroot.log (last 18 lines)
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+gpg: Warning: using insecure memory!
+gpg: Warning: using insecure memory!
+==> Updating trust database...
+gpg: Warning: using insecure memory!
+gpg: next trustdb check due at 2026-12-31
+gpg: Warning: using insecure memory!
+  -> Locally signed 1 key.
+==> Updating trust database...
+gpg: Warning: using insecure memory!
+gpg: next trustdb check due at 2026-12-31
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+:: Synchronizing package databases...
+ train downloading...
+ kashira-v3-laptop downloading...
+ kashira-v3 downloading...
+:: Starting full system upgrade...
+ there is nothing to do

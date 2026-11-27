@@ -1,0 +1,120 @@
+==> build.log (last 80 lines)
+ninja: no work to do.
+[1/6] /build/meson-python/src/meson-python/mesonpy/__init__.py
+[2/6] /build/meson-python/src/meson-python/mesonpy/_editable.py
+[3/6] /build/meson-python/src/meson-python/mesonpy/_rpath.py
+[4/6] /build/meson-python/src/meson-python/mesonpy/_tags.py
+[5/6] /build/meson-python/src/meson-python/mesonpy/_util.py
+[6/6] /build/meson-python/src/meson-python/mesonpy/_wheelfile.py
+Successfully built meson_python-0.22.1-py3-none-any.whl
+==> Starting check()...
+============================= test session starts ==============================
+platform linux -- Python 3.14.10, pytest-9.1.1, pluggy-1.7.0
+rootdir: /build/meson-python/src/meson-python
+configfile: pyproject.toml
+testpaths: tests
+plugins: platformdirs-4.13.5, mock-3.16.0
+collected 169 items
+
+tests/test_consistency.py ...                                            [  1%]
+tests/test_editable.py .....................                             [ 14%]
+tests/test_metadata.py .......                                           [ 18%]
+tests/test_options.py ...                                                [ 20%]
+tests/test_output.py .F.......                                           [ 25%]
+tests/test_pep517.py ...................                                 [ 36%]
+tests/test_project.py .................ssssss...................         [ 61%]
+tests/test_rpath.py .                                                    [ 62%]
+tests/test_sdist.py ...........                                          [ 68%]
+tests/test_tags.py .ssss.......                                          [ 75%]
+tests/test_wheel.py ..............s.........ss...........s               [ 98%]
+tests/test_wheelfile.py ...                                              [100%]
+
+=================================== FAILURES ===================================
+____________________ test_use_ansi_escapes[True-env1-True] _____________________
+
+mocker = <pytest_mock.plugin.MockerFixture object at 0x7ffb83b23610>
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7ffb83c5af50>
+tty = True, env = {}, colors = True
+
+    @pytest.mark.parametrize(('tty', 'env', 'colors'), [
+        (False, {}, False),
+        (True, {}, True),
+        (False, {'NO_COLOR': ''}, False),
+        (True, {'NO_COLOR': ''}, False),
+        (False, {'FORCE_COLOR': ''}, True),
+        (True, {'FORCE_COLOR': ''}, True),
+        (True, {'FORCE_COLOR': '', 'NO_COLOR': ''}, False),
+        (True, {'TERM': ''}, True),
+        (True, {'TERM': 'dumb'}, False),
+    ])
+    def test_use_ansi_escapes(mocker, monkeypatch, tty, env, colors):
+        mocker.patch('sys.stdout.isatty', return_value=tty)
+        mocker.patch('mesonpy._util.setup_windows_console', return_value=True)
+        monkeypatch.delenv('NO_COLOR', raising=False)
+        monkeypatch.delenv('FORCE_COLOR', raising=False)
+        for key, value in env.items():
+            monkeypatch.setenv(key, value)
+    
+        # Clear caching by functools.lru_cache().
+        mesonpy._use_ansi_escapes.cache_clear()
+    
+>       assert mesonpy._use_ansi_escapes() == colors
+E       assert False == True
+E        +  where False = <functools._lru_cache_wrapper object at 0x7ffb83f5ada0>()
+E        +    where <functools._lru_cache_wrapper object at 0x7ffb83f5ada0> = mesonpy._use_ansi_escapes
+
+tests/test_output.py:32: AssertionError
+=========================== short test summary info ============================
+SKIPPED [1] tests/test_project.py:336: requires MSVC
+SKIPPED [3] tests/test_project.py:348: macOS specific test
+SKIPPED [2] tests/test_project.py:365: macOS specific test
+SKIPPED [1] tests/test_tags.py:65: macOS specific test
+SKIPPED [1] tests/test_tags.py:82: macOS specific test
+SKIPPED [1] tests/test_tags.py:92: macOS specific test
+SKIPPED [1] tests/test_tags.py:100: macOS specific test
+SKIPPED [1] tests/test_wheel.py:276: requires GEOS
+SKIPPED [2] tests/test_wheel.py:393: macOS specific test
+SKIPPED [1] tests/test_wheel.py:528: Requires PEP 820 API, present since Python 3.15
+FAILED tests/test_output.py::test_use_ansi_escapes[True-env1-True] - assert F...
+============ 1 failed, 154 passed, 14 skipped in 184.16s (0:03:04) =============
+==> ERROR: A failure occurred in check().
+    Aborting...
+==> unit.log (last 19 lines)
+Running as unit: run-p60200-i22212799.service
+==> Synchronizing chroot copy [/var/lib/kbuild/v3/root] -> [copy]...done
+    meson-python ... Passed
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+error: command failed to execute correctly
+error: command failed to execute correctly
+error: command failed to execute correctly
+==> WARNING: Skipping all source file integrity checks.
+Cloning into 'meson-python'...
+done.
+Switched to a new branch 'makepkg'
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+==> WARNING: Using existing $srcdir/ tree
+==> ERROR: Build failed, check /var/lib/kbuild/v3/copy/build
+          Finished with result: exit-code
+Main processes terminated with: code=exited, status=255/EXCEPTION
+               Service runtime: 3min 21.262s
+             CPU time consumed: 3.223s
+                   Memory peak: 17.5M (swap: 0B)
+==> chroot.log (last 18 lines)
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+gpg: Warning: using insecure memory!
+gpg: Warning: using insecure memory!
+==> Updating trust database...
+gpg: Warning: using insecure memory!
+gpg: next trustdb check due at 2026-12-31
+gpg: Warning: using insecure memory!
+  -> Locally signed 1 key.
+==> Updating trust database...
+gpg: Warning: using insecure memory!
+gpg: next trustdb check due at 2026-12-31
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+:: Synchronizing package databases...
+ train downloading...
+ kashira-v3-laptop downloading...
+ kashira-v3 downloading...
+:: Starting full system upgrade...
+ there is nothing to do

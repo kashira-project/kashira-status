@@ -1,0 +1,167 @@
+==> build.log (last 80 lines)
+          status_code: 6
+          status_string: "Could not resolve hostname"
+          log:
+          --- LOG BEGIN ---
+          Could not resolve host: apache.jfrog.io
+
+  Could not resolve host: apache.jfrog.io
+
+  Could not resolve: apache.jfrog.io:443
+
+  closing connection #0
+
+
+
+          --- LOG END ---
+          error: downloading 'https://github.com/microsoft/mimalloc/archive/v3.4.1.tar.gz' failed
+          status_code: 6
+          status_string: "Could not resolve hostname"
+          log:
+          --- LOG BEGIN ---
+          Could not resolve host: github.com
+
+  Could not resolve host: github.com
+
+  Could not resolve: github.com:443
+
+  closing connection #0
+
+
+
+          --- LOG END ---
+          error: downloading 'https://apache.jfrog.io/artifactory/arrow/thirdparty/7.0.0/mimalloc-v3.4.1.tar.gz' failed
+          status_code: 6
+          status_string: "Could not resolve hostname"
+          log:
+          --- LOG BEGIN ---
+          Could not resolve host: apache.jfrog.io
+
+  Could not resolve host: apache.jfrog.io
+
+  Could not resolve: apache.jfrog.io:443
+
+  closing connection #0
+
+
+
+          --- LOG END ---
+          
+    
+
+
+CMake Error at mimalloc_ep-stamp/mimalloc_ep-download-RelWithDebInfo-impl.cmake:9 (message):
+  Command failed (1):
+
+   '/usr/bin/cmake' '-DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE' '-P' '/build/arrow/src/build/mimalloc_ep-prefix/src/mimalloc_ep-stamp/download-mimalloc_ep.cmake'
+
+
+
+CMake Error at mimalloc_ep-stamp/mimalloc_ep-download-RelWithDebInfo.cmake:47 (message):
+  Stopping after outputting logs.
+
+
+[142/870] Building CXX object src/arrow/CMakeFiles/arrow_compute_core.dir/compute/kernels/scalar_cast_nested.cc.o
+[143/870] Building CXX object src/arrow/CMakeFiles/arrow_compute_core.dir/compute/kernels/vector_selection.cc.o
+[144/870] Building CXX object src/arrow/CMakeFiles/arrow_compute_core.dir/compute/kernels/scalar_cast_temporal.cc.o
+[145/870] Building CXX object src/arrow/CMakeFiles/arrow_compute_core.dir/compute/expression.cc.o
+[146/870] Building CXX object src/arrow/CMakeFiles/arrow_compute_core.dir/compute/kernels/vector_selection_filter_internal.cc.o
+[147/870] Building CXX object src/arrow/CMakeFiles/arrow_compute_core.dir/compute/kernels/vector_selection_take_internal.cc.o
+[148/870] Building CXX object src/arrow/CMakeFiles/arrow_filesystem.dir/filesystem/localfs.cc.o
+[149/870] Building CXX object src/arrow/CMakeFiles/arrow_filesystem.dir/filesystem/path_util.cc.o
+[150/870] Building CXX object src/arrow/CMakeFiles/arrow_filesystem.dir/filesystem/mockfs.cc.o
+[151/870] Building CXX object src/arrow/CMakeFiles/arrow_compute_core.dir/compute/kernels/scalar_cast_numeric.cc.o
+[152/870] Building CXX object src/arrow/CMakeFiles/arrow_compute_core.dir/compute/kernels/vector_selection_internal.cc.o
+[153/870] Building CXX object src/arrow/CMakeFiles/arrow_filesystem.dir/filesystem/filesystem.cc.o
+[154/870] Building CXX object src/arrow/CMakeFiles/arrow_compute_core.dir/compute/kernels/vector_hash.cc.o
+[155/870] Building CXX object src/arrow/CMakeFiles/arrow_compute_core.dir/compute/kernels/scalar_cast_string.cc.o
+[156/870] Building CXX object src/arrow/CMakeFiles/arrow_compute_core.dir/compute/kernels/vector_swizzle.cc.o
+ninja: build stopped: subcommand failed.
+==> ERROR: A failure occurred in build().
+    Aborting...
+==> unit.log (last 26 lines)
+Running as unit: run-p1053704-i35239892.service
+==> Synchronizing chroot copy [/var/lib/kbuild/v3/root] -> [copy]...done
+    apache-arrow-26.0.1.tar.gz ... Passed
+    apache-arrow-26.0.1.tar.gz.asc ... Skipped
+    parquet-testing ... Passed
+    arrow-testing ... Passed
+    apache-arrow-26.0.1.tar.gz ... Passed
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+error: command failed to execute correctly
+error: command failed to execute correctly
+error: command failed to execute correctly
+==> WARNING: Skipping all source file integrity checks.
+Cloning into 'parquet-testing'...
+done.
+Switched to a new branch 'makepkg'
+Cloning into 'arrow-testing'...
+done.
+Switched to a new branch 'makepkg'
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+==> WARNING: Using existing $srcdir/ tree
+==> ERROR: Build failed, check /var/lib/kbuild/v3/copy/build
+          Finished with result: exit-code
+Main processes terminated with: code=exited, status=255/EXCEPTION
+               Service runtime: 3min 21.720s
+             CPU time consumed: 5.450s
+                   Memory peak: 117.2M (swap: 0B)
+==> chroot.log (last 58 lines)
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+gpg: Warning: using insecure memory!
+gpg: Warning: using insecure memory!
+==> Updating trust database...
+gpg: Warning: using insecure memory!
+gpg: next trustdb check due at 2026-12-31
+gpg: Warning: using insecure memory!
+  -> Locally signed 1 key.
+==> Updating trust database...
+gpg: Warning: using insecure memory!
+gpg: next trustdb check due at 2026-12-31
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+:: Synchronizing package databases...
+ train downloading...
+ kashira-v3-laptop downloading...
+ kashira-v3 downloading...
+:: Starting full system upgrade...
+resolving dependencies...
+looking for conflicting packages...
+
+Package (8)     Old Version  New Version  Net Change  Download Size
+
+train/iana-etc  20261015-2   20261119-1     0.00 MiB       0.12 MiB
+train/libldap   2.7.1-4      2.7.2-3        0.00 MiB       0.24 MiB
+train/lz4       1:1.10.0-3   1:1.11.1-1     0.03 MiB       0.16 MiB
+train/onetbb    2023.1.0-4   2023.2.0-1     0.14 MiB       0.45 MiB
+train/openmpi   5.0.11-6     5.0.11-7       0.00 MiB       2.75 MiB
+train/openpmix  5.0.11-2     5.0.11-3       0.00 MiB       0.84 MiB
+train/openucx   1.20.1-6     1.20.1-7       0.00 MiB       1.55 MiB
+train/patch     2.8-2        2.8.1-1        0.00 MiB       0.09 MiB
+
+Total Download Size:    6.20 MiB
+Total Installed Size:  26.45 MiB
+Net Upgrade Size:       0.17 MiB
+
+:: Proceed with installation? [Y/n] 
+:: Retrieving packages...
+ openmpi-5.0.11-7-x86_64 downloading...
+ openucx-1.20.1-7-x86_64 downloading...
+ openpmix-5.0.11-3-x86_64 downloading...
+ onetbb-2023.2.0-1-x86_64 downloading...
+ libldap-2.7.2-3-x86_64 downloading...
+ lz4-1:1.11.1-1-x86_64 downloading...
+ iana-etc-20261119-1-any downloading...
+ patch-2.8.1-1-x86_64 downloading...
+checking keyring...
+checking package integrity...
+loading package files...
+checking for file conflicts...
+:: Processing package changes...
+upgrading iana-etc...
+upgrading lz4...
+upgrading libldap...
+upgrading onetbb...
+upgrading openpmix...
+upgrading openucx...
+upgrading openmpi...
+upgrading patch...

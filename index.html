@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kashira builds</title>
+<style>
+:root { --bg:#f7f7f5; --fg:#1d1d1b; --muted:#6b6b66; --card:#fff; --line:#e3e3de; --ok:#1f7a3f; --bad:#b3261e;
+        --warn:#946200; --run:#1f5fa8; --bar:#e9e9e4; }
+@media (prefers-color-scheme: dark) { :root { --bg:#151514; --fg:#ecece8; --muted:#9a9a93; --card:#1e1e1c;
+        --line:#30302d; --ok:#5cc27e; --bad:#ff7b72; --warn:#e3b341; --run:#6ea8ff; --bar:#2a2a27; } }
+* { box-sizing:border-box } body { margin:0; background:var(--bg); color:var(--fg);
+  font:14px/1.45 system-ui,-apple-system,"Segoe UI",sans-serif } main { max-width:1100px; margin:0 auto; padding:16px }
+h1 { font-size:20px; margin:4px 0 2px } h2 { font-size:15px; margin:22px 0 8px } .muted { color:var(--muted) }
+.grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); gap:10px }
+.card { background:var(--card); border:1px solid var(--line); border-radius:8px; padding:10px 12px }
+.big { font-size:22px; font-weight:600; font-variant-numeric:tabular-nums }
+table { width:100%; border-collapse:collapse; background:var(--card); border:1px solid var(--line); border-radius:8px;
+  overflow:hidden; display:block; overflow-x:auto } th,td { text-align:left; padding:6px 10px; border-bottom:1px solid var(--line);
+  white-space:nowrap; font-variant-numeric:tabular-nums } th { color:var(--muted); font-weight:500 } td.wrap { white-space:normal }
+.ok { color:var(--ok) } .bad { color:var(--bad) } .warn { color:var(--warn) } .run { color:var(--run) }
+.bar { height:10px; background:var(--bar); border-radius:5px; overflow:hidden; display:flex; margin:6px 0 }
+.bar span { display:block; height:100% } a { color:var(--run) } code { font-size:12px }
+details { margin-top:6px } pre { white-space:pre-wrap; font-size:12px; background:var(--card); border:1px solid var(--line); padding:8px; border-radius:6px }
+</style>
+</head>
+<body>
+<main>
+<h1>Kashira builds</h1>
+<div class="muted" id="updated">loading…</div>
+<div id="err" class="bad"></div>
+<h2>Host</h2><div class="grid" id="host"></div>
+<h2>Trains</h2><div id="trains"></div>
+<h2>Running now</h2><div id="running"></div>
+<h2>Recently finished</h2><div id="recent"></div>
+<h2>Recipes</h2><div id="recipes"></div>
+<h2>Coordinator log</h2><pre id="coord"></pre>
+</main>
+<script>
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const gib = b => (b / 2**30).toFixed(1) + " GiB";
+const dur = s => s == null ? "" : s >= 3600 ? `${Math.floor(s/3600)}h ${Math.floor(s%3600/60)}m` : s >= 60 ? `${Math.floor(s/60)}m ${s%60}s` : `${s}s`;
+const ago = t => dur(Math.max(0, Math.round(Date.now()/1000 - t))) + " ago";
+const card = (label, value, sub="") => `<div class="card"><div class="muted">${label}</div><div class="big">${value}</div><div class="muted">${sub}</div></div>`;
+const table = (head, rows) => rows.length ? `<table><tr>${head.map(h=>`<th>${h}</th>`).join("")}</tr>${rows.join("")}</table>` : `<div class="muted">none</div>`;
+const COLORS = {done:"var(--ok)", running:"var(--run)", failed:"var(--bad)", held:"var(--warn)", pending:"var(--muted)"};
+function render(s) {
+  document.getElementById("updated").textContent = `updated ${ago(s.updated)} (${new Date(s.updated*1000).toLocaleString()}); the page refreshes every minute, the laptop pushes every 10 minutes`;
+  document.getElementById("err").textContent = s.error || "";
+  const h = s.host, w = s.workers || [];
+  document.getElementById("host").innerHTML =
+    card("Load (1/5/15 min)", h.load[0], `${h.load.join(" / ")} on ${h.cpus} threads`) +
+    card("Memory available", gib(h.mem_available), `of ${gib(h.mem_total)}`) +
+    card("Disk free", gib(h.disk_free), `of ${gib(h.disk_total)}`) +
+    card("Workers connected", `${w.filter(x=>x.connected).length} / ${w.length}`, w.map(x=>x.name).join(", ")) +
+    Object.entries(s.published||{}).map(([t,n]) => card(`Published ${t}`, n, "packages in the signed repo")).join("");
+  document.getElementById("trains").innerHTML = (s.trains||[]).map(t => {
+    const c = t.counts || {}, total = t.total || 0;
+    const bar = total ? `<div class="bar">${["done","running","failed","held","pending"].map(k => c[k] ? `<span title="${k}: ${c[k]}" style="width:${100*c[k]/total}%;background:${COLORS[k]}"></span>` : "").join("")}</div>` : "";
+    const fails = (t.failures||[]).map(f => `<tr><td>${esc(f.base)}</td><td class="${f.state=="failed"?"bad":"warn"}">${f.state}</td><td>${f.tries}</td><td class="wrap">${esc(f.reason)}</td><td>${f.log?`<a href="${f.log}">log</a>`:""}</td></tr>`);
+    return `<div class="card" style="margin-bottom:10px"><b>${esc(t.target)} #${t.seq}</b> <span class="muted">${esc(t.status)} · recipes ${esc(t.commit)} · bot rounds ${t.rounds ?? 0} · not owned/skipped ${t.skipped}</span>
+      ${bar}<div>${["done","running","failed","held","pending"].map(k=>`<span style="color:${COLORS[k]}">${k} ${c[k]||0}</span>`).join(" · ")} <span class="muted">of ${total}</span></div>
+      ${fails.length ? `<details><summary>${fails.length} failed or held</summary>${table(["package","state","tries","reason",""], fails)}</details>` : ""}
+      ${(t.report||[]).length ? `<details><summary>coordinator report</summary><pre>${esc(t.report.join("\n"))}</pre></details>` : ""}</div>`;
+  }).join("") || `<div class="muted">no train yet</div>`;
+  document.getElementById("running").innerHTML = table(["package","target","worker","running for"],
+    (s.running||[]).map(b => `<tr><td>${esc(b.pkgbase)}</td><td>${esc(b.target)}</td><td>${esc(b.worker)}</td><td>${dur(b.elapsed)}</td></tr>`));
+  document.getElementById("recent").innerHTML = table(["package","target","result","time","memory peak","worker","finished"],
+    (s.recent||[]).map(b => `<tr><td>${esc(b.pkgbase)}</td><td>${esc(b.target)}</td><td class="${b.failure?"bad":"ok"}">${b.failure?esc(b.failure+": "+b.detail):"built"}</td><td>${dur(b.secs)}</td><td>${esc(b.peak)}</td><td>${esc(b.worker)}</td><td>${b.ended?ago(b.ended):""}</td></tr>`));
+  document.getElementById("recipes").innerHTML = Object.entries(s.recipes||{}).map(([f,l]) => `<div class="muted">${esc(f)}</div><pre>${esc(l.join("\n"))}</pre>`).join("") || `<div class="muted">nothing running</div>`;
+  document.getElementById("coord").textContent = (s.coordinator||[]).join("\n") || "(empty)";
+}
+async function load() {
+  try { render(await (await fetch("status.json?t=" + Date.now())).json()); }
+  catch (e) { document.getElementById("err").textContent = "cannot load status.json: " + e; }
+}
+load(); setInterval(load, 60000);
+</script>
+</body>
+</html>

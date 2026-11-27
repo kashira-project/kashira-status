@@ -1,0 +1,181 @@
+==> build.log (last 80 lines)
+patching file support-files/tmpfiles.conf.in
+patching file support-files/sysusers.conf.in
+patching file scripts/mysql_install_db.sh
+==> Sources are ready.
+==> Making package: mariadb 13.1.2-1 (Fri Nov 27 12:37:16 2026)
+==> Checking runtime dependencies...
+==> Checking buildtime dependencies...
+==> Starting build()...
+The no-dev option is deprecated.  Use -Wno-author instead.
+-- The C compiler identification is Clang 23.1.5
+-- The CXX compiler identification is Clang 23.1.5
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/lib/ccache/bin/clang - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/lib/ccache/bin/clang++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Running cmake version 4.4.4
+-- Found Git: /usr/bin/git (found version "2.56.0")
+-- MariaDB 13.1.2
+-- Looking for sys/types.h
+-- Looking for sys/types.h - found
+-- Looking for stdint.h
+-- Looking for stdint.h - found
+-- Looking for stddef.h
+-- Looking for stddef.h - found
+-- Check size of void *
+-- Check size of void * - done
+-- Packaging as: mariadb-13.1.2-Linux-x86_64
+-- Performing Test HAVE_VISIBILITY_HIDDEN
+-- Performing Test HAVE_VISIBILITY_HIDDEN - Success
+-- Looking for sys/sdt.h
+-- Looking for sys/sdt.h - not found
+-- Performing Test have_C__fno_omit_frame_pointer
+-- Performing Test have_C__fno_omit_frame_pointer - Success
+-- Performing Test have_CXX__fno_omit_frame_pointer
+-- Performing Test have_CXX__fno_omit_frame_pointer - Success
+-- Performing Test have_C__pie__fPIC
+-- Performing Test have_C__pie__fPIC - Failed
+-- Performing Test have_CXX__pie__fPIC
+-- Performing Test have_CXX__pie__fPIC - Failed
+-- Performing Test HAVE_LINK_FLAG__Wl__z_relro__z_now
+-- Performing Test HAVE_LINK_FLAG__Wl__z_relro__z_now - Success
+-- Performing Test have_C__fstack_protector___param_ssp_buffer_size_4
+-- Performing Test have_C__fstack_protector___param_ssp_buffer_size_4 - Success
+-- Performing Test have_CXX__fstack_protector___param_ssp_buffer_size_4
+-- Performing Test have_CXX__fstack_protector___param_ssp_buffer_size_4 - Success
+-- Performing Test have_C__D_FORTIFY_SOURCE_2
+-- Performing Test have_C__D_FORTIFY_SOURCE_2 - Success
+-- Performing Test have_CXX__D_FORTIFY_SOURCE_2
+-- Performing Test have_CXX__D_FORTIFY_SOURCE_2 - Success
+-- Performing Test have_C__ggdb3
+-- Performing Test have_C__ggdb3 - Success
+-- Performing Test have_CXX__ggdb3
+-- Performing Test have_CXX__ggdb3 - Success
+-- Downloading /build/mariadb/src/mariadb/wsrep-lib submodule...
+Submodule 'wsrep-API/v26' (https://github.com/codership/wsrep-API.git) registered for path 'wsrep-lib/wsrep-API/v26'
+Cloning into '/build/mariadb/src/mariadb/wsrep-lib/wsrep-API/v26'...
+fatal: unable to access 'https://github.com/codership/wsrep-API.git/': Could not resolve host: github.com
+fatal: clone of 'https://github.com/codership/wsrep-API.git' into submodule path '/build/mariadb/src/mariadb/wsrep-lib/wsrep-API/v26' failed
+Failed to clone 'wsrep-API/v26'. Retry scheduled
+Cloning into '/build/mariadb/src/mariadb/wsrep-lib/wsrep-API/v26'...
+fatal: unable to access 'https://github.com/codership/wsrep-API.git/': Could not resolve host: github.com
+fatal: clone of 'https://github.com/codership/wsrep-API.git' into submodule path '/build/mariadb/src/mariadb/wsrep-lib/wsrep-API/v26' failed
+Failed to clone 'wsrep-API/v26' a second time, aborting
+fatal: Failed to recurse into submodule path 'wsrep-lib'
+CMake Error at cmake/submodules.cmake:46 (MESSAGE):
+  Failed to download /build/mariadb/src/mariadb/wsrep-lib submodule
+Call Stack (most recent call first):
+  cmake/wsrep.cmake:38 (ADD_SUBMODULE)
+  CMakeLists.txt:392 (INCLUDE)
+
+
+-- Configuring incomplete, errors occurred!
+==> ERROR: A failure occurred in build().
+    Aborting...
+==> unit.log (last 80 lines)
+Cloning into 'mariadb'...
+done.
+Updating files:  48% (13498/27972)
+Updating files:  48% (13540/27972)
+Updating files:  49% (13707/27972)
+Updating files:  50% (13986/27972)
+Updating files:  51% (14266/27972)
+Updating files:  52% (14546/27972)
+Updating files:  53% (14826/27972)
+Updating files:  54% (15105/27972)
+Updating files:  55% (15385/27972)
+Updating files:  56% (15665/27972)
+Updating files:  57% (15945/27972)
+Updating files:  58% (16224/27972)
+Updating files:  59% (16504/27972)
+Updating files:  60% (16784/27972)
+Updating files:  61% (17063/27972)
+Updating files:  62% (17343/27972)
+Updating files:  63% (17623/27972)
+Updating files:  64% (17903/27972)
+Updating files:  65% (18182/27972)
+Updating files:  66% (18462/27972)
+Updating files:  67% (18742/27972)
+Updating files:  68% (19021/27972)
+Updating files:  69% (19301/27972)
+Updating files:  70% (19581/27972)
+Updating files:  71% (19861/27972)
+Updating files:  72% (20140/27972)
+Updating files:  73% (20420/27972)
+Updating files:  74% (20700/27972)
+Updating files:  75% (20979/27972)
+Updating files:  76% (21259/27972)
+Updating files:  77% (21539/27972)
+Updating files:  78% (21819/27972)
+Updating files:  79% (22098/27972)
+Updating files:  80% (22378/27972)
+Updating files:  81% (22658/27972)
+Updating files:  82% (22938/27972)
+Updating files:  83% (23217/27972)
+Updating files:  84% (23497/27972)
+Updating files:  85% (23777/27972)
+Updating files:  86% (24056/27972)
+Updating files:  87% (24336/27972)
+Updating files:  88% (24616/27972)
+Updating files:  89% (24896/27972)
+Updating files:  90% (25175/27972)
+Updating files:  91% (25455/27972)
+Updating files:  92% (25735/27972)
+Updating files:  93% (26014/27972)
+Updating files:  94% (26294/27972)
+Updating files:  95% (26574/27972)
+Updating files:  96% (26854/27972)
+Updating files:  97% (27133/27972)
+Updating files:  98% (27413/27972)
+Updating files:  99% (27693/27972)
+Updating files: 100% (27972/27972)
+Updating files: 100% (27972/27972), done.
+Switched to a new branch 'makepkg'
+Cloning into 'wsrep-lib'...
+done.
+Cloning into 'duckdb'...
+done.
+Cloning into 'rocksdb'...
+done.
+Cloning into 'libmarias3'...
+done.
+Cloning into 'mariadb-columnstore-engine'...
+done.
+Cloning into 'mariadb-connector-c'...
+done.
+Cloning into 'wolfssl'...
+done.
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+==> WARNING: Using existing $srcdir/ tree
+==> ERROR: Build failed, check /var/lib/kbuild/v3/copy/build
+          Finished with result: exit-code
+Main processes terminated with: code=exited, status=255/EXCEPTION
+               Service runtime: 2h 15min 58.287s
+             CPU time consumed: 9min 32.303s
+                   Memory peak: 2.6G (swap: 109.7M)
+==> chroot.log (last 18 lines)
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+gpg: Warning: using insecure memory!
+gpg: Warning: using insecure memory!
+==> Updating trust database...
+gpg: Warning: using insecure memory!
+gpg: next trustdb check due at 2026-12-31
+gpg: Warning: using insecure memory!
+  -> Locally signed 1 key.
+==> Updating trust database...
+gpg: Warning: using insecure memory!
+gpg: next trustdb check due at 2026-12-31
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+:: Synchronizing package databases...
+ train downloading...
+ kashira-v3-laptop downloading...
+ kashira-v3 downloading...
+:: Starting full system upgrade...
+ there is nothing to do

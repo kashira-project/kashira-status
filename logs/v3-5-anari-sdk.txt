@@ -1,0 +1,120 @@
+==> build.log (last 80 lines)
+          Could not resolve host: github.com
+
+  Could not resolve host: github.com
+
+  Could not resolve: github.com:443
+
+  closing connection #0
+
+
+
+          --- LOG END ---
+          error: downloading 'https://github.com/RenderKit/embree/archive/refs/tags/v4.3.3.zip' failed
+          status_code: 6
+          status_string: "Could not resolve hostname"
+          log:
+          --- LOG BEGIN ---
+          Could not resolve host: github.com
+
+  Could not resolve host: github.com
+
+  Could not resolve: github.com:443
+
+  closing connection #0
+
+
+
+          --- LOG END ---
+          error: downloading 'https://github.com/RenderKit/embree/archive/refs/tags/v4.3.3.zip' failed
+          status_code: 6
+          status_string: "Could not resolve hostname"
+          log:
+          --- LOG BEGIN ---
+          Could not resolve host: github.com
+
+  Could not resolve host: github.com
+
+  Could not resolve: github.com:443
+
+  closing connection #0
+
+
+
+          --- LOG END ---
+          error: downloading 'https://github.com/RenderKit/embree/archive/refs/tags/v4.3.3.zip' failed
+          status_code: 6
+          status_string: "Could not resolve hostname"
+          log:
+          --- LOG BEGIN ---
+          Could not resolve host: github.com
+
+  Could not resolve host: github.com
+
+  Could not resolve: github.com:443
+
+  closing connection #0
+
+
+
+          --- LOG END ---
+          
+    
+
+
+make[2]: *** [CMakeFiles/anari_helide_embree-populate.dir/build.make:100: anari_helide_embree-populate-prefix/src/anari_helide_embree-populate-stamp/anari_helide_embree-populate-download] Error 1
+make[1]: *** [CMakeFiles/Makefile2:87: CMakeFiles/anari_helide_embree-populate.dir/all] Error 2
+make: *** [Makefile:91: all] Error 2
+CMake Error at /usr/share/cmake/Modules/FetchContent.cmake:1933 (message):
+  Build step for anari_helide_embree failed: 2
+Call Stack (most recent call first):
+  /usr/share/cmake/Modules/FetchContent.cmake:1622 (__FetchContent_populateSubbuild)
+  /usr/share/cmake/Modules/FetchContent.cmake:2012 (__FetchContent_doPopulation)
+  /usr/share/cmake/Modules/FetchContent.cmake:1993:EVAL:1 (__FetchContent_Populate)
+  /usr/share/cmake/Modules/FetchContent.cmake:1993 (cmake_language)
+  cmake/anari_sdk_fetch_project.cmake:20 (FetchContent_Populate)
+  src/devices/helide/external/embree/CMakeLists.txt:43 (anari_sdk_fetch_project)
+
+
+-- Configuring incomplete, errors occurred!
+==> ERROR: A failure occurred in build().
+    Aborting...
+==> unit.log (last 19 lines)
+Running as unit: run-p29182-i21093299.service
+==> Synchronizing chroot copy [/var/lib/kbuild/v3/root] -> [copy]...done
+    ANARI-SDK ... Passed
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+error: command failed to execute correctly
+error: command failed to execute correctly
+error: command failed to execute correctly
+==> WARNING: Skipping all source file integrity checks.
+Cloning into 'ANARI-SDK'...
+done.
+Switched to a new branch 'makepkg'
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+==> WARNING: Using existing $srcdir/ tree
+==> ERROR: Build failed, check /var/lib/kbuild/v3/copy/build
+          Finished with result: exit-code
+Main processes terminated with: code=exited, status=255/EXCEPTION
+               Service runtime: 1min 53.024s
+             CPU time consumed: 3.514s
+                   Memory peak: 17.3M (swap: 0B)
+==> chroot.log (last 18 lines)
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+gpg: Warning: using insecure memory!
+gpg: Warning: using insecure memory!
+==> Updating trust database...
+gpg: Warning: using insecure memory!
+gpg: next trustdb check due at 2026-12-31
+gpg: Warning: using insecure memory!
+  -> Locally signed 1 key.
+==> Updating trust database...
+gpg: Warning: using insecure memory!
+gpg: next trustdb check due at 2026-12-31
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+:: Synchronizing package databases...
+ train downloading...
+ kashira-v3-laptop downloading...
+ kashira-v3 downloading...
+:: Starting full system upgrade...
+ there is nothing to do

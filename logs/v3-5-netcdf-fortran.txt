@@ -1,0 +1,120 @@
+==> build.log (last 80 lines)
+Quantize:  			yes
+
+-- ATTENTION: NO HDF5_PLUGIN_PATH SET
+CMake Warning at CMakeLists.txt:1148 (MESSAGE):
+  libnetcdf was built with zstd support, but HDF5_PLUGIN_PATH is not set.
+  Please set the HDF5_PLUGIN_PATH environmental variable if zstandard tests
+  fail.
+
+
+CMake Warning at CMakeLists.txt:1149 (MESSAGE):
+  You can use `nc-config --plugindir` to determine the appropriate value for
+  HDF5_PLUGIN_PATH
+
+
+-- Configuring done (5.8s)
+-- Generating done (0.1s)
+-- Build files have been written to: /build/netcdf-fortran/src/build
+make: Entering directory '/build/netcdf-fortran/src/build'
+[  1%] Building C object fortran/CMakeFiles/netcdff_c.dir/nf_lib.c.o
+[  1%] Building C object fortran/CMakeFiles/netcdff_c.dir/nf_v2compat.c.o
+[  1%] Built target netcdff_c
+[  2%] Building Fortran object fortran/CMakeFiles/netcdff.dir/module_netcdf_nc_data.F90.o
+/build/netcdf-fortran/src/netcdf-fortran/fortran/module_netcdf_nc_data.F90:317:0:
+
+  317 | #define USE_NETCDF4
+Warning: ‘USE_NETCDF4’ redefined
+<command-line>:16:0:
+
+note: this is the location of the previous definition
+[  2%] Building Fortran object fortran/CMakeFiles/netcdff.dir/module_netcdf_nc_interfaces.F90.o
+[  3%] Building Fortran object fortran/CMakeFiles/netcdff.dir/module_netcdf4_nc_interfaces.F90.o
+[  4%] Building Fortran object fortran/CMakeFiles/netcdff.dir/module_netcdf_nf_data.F90.o
+[  4%] Building Fortran object fortran/CMakeFiles/netcdff.dir/module_netcdf4_nf_interfaces.F90.o
+[  5%] Building Fortran object fortran/CMakeFiles/netcdff.dir/module_netcdf_nf_interfaces.F90.o
+[  6%] Building Fortran object fortran/CMakeFiles/netcdff.dir/module_netcdf4_f03.F90.o
+[  6%] Building Fortran object fortran/CMakeFiles/netcdff.dir/module_netcdf_f03.F90.o
+[  7%] Building Fortran object fortran/CMakeFiles/netcdff.dir/module_netcdf_fortv2_c_interfaces.F90.o
+[  8%] Building Fortran object fortran/CMakeFiles/netcdff.dir/typeSizes.F90.o
+[  9%] Building Fortran object fortran/CMakeFiles/netcdff.dir/netcdf4.F90.o
+/build/netcdf-fortran/src/netcdf-fortran/fortran/netcdf4_func.F90:797:75:
+
+  797 |     nf90_inq_var_fill_FourByteReal = nf_inq_var_fill(ncid, varid, no_fill, fill)
+      |                                                                           1
+......
+  807 |     nf90_inq_var_fill_EightByteReal = nf_inq_var_fill(ncid, varid, no_fill, fill)
+      |                                                                            2
+Warning: Type mismatch between actual argument at (1) and actual argument at (2) (REAL(4)/REAL(8)).
+/build/netcdf-fortran/src/netcdf-fortran/fortran/netcdf4_func.F90:737:75:
+
+  737 |     nf90_def_var_fill_FourByteReal = nf_def_var_fill(ncid, varid, no_fill, fill)
+      |                                                                           1
+......
+  747 |     nf90_def_var_fill_EightByteReal = nf_def_var_fill(ncid, varid, no_fill, fill)
+      |                                                                            2
+Warning: Type mismatch between actual argument at (1) and actual argument at (2) (REAL(4)/REAL(8)).
+[ 10%] Building Fortran object fortran/CMakeFiles/netcdff.dir/nf_attio.F90.o
+[ 11%] Building Fortran object fortran/CMakeFiles/netcdff.dir/nf_control.F90.o
+[ 11%] Building Fortran object fortran/CMakeFiles/netcdff.dir/nf_dim.F90.o
+[ 12%] Building Fortran object fortran/CMakeFiles/netcdff.dir/nf_misc.F90.o
+[ 13%] Building Fortran object fortran/CMakeFiles/netcdff.dir/nf_genatt.F90.o
+[ 13%] Building Fortran object fortran/CMakeFiles/netcdff.dir/nf_geninq.F90.o
+[ 14%] Building Fortran object fortran/CMakeFiles/netcdff.dir/nf_genvar.F90.o
+[ 15%] Building Fortran object fortran/CMakeFiles/netcdff.dir/nf_vario.F90.o
+[ 15%] Building Fortran object fortran/CMakeFiles/netcdff.dir/nf_var1io.F90.o
+[ 16%] Building Fortran object fortran/CMakeFiles/netcdff.dir/nf_varaio.F90.o
+[ 17%] Building Fortran object fortran/CMakeFiles/netcdff.dir/nf_varmio.F90.o
+[ 17%] Building Fortran object fortran/CMakeFiles/netcdff.dir/nf_varsio.F90.o
+[ 18%] Building Fortran object fortran/CMakeFiles/netcdff.dir/nf_nc_noparallel.F90.o
+[ 19%] Building Fortran object fortran/CMakeFiles/netcdff.dir/nf_nc4.F90.o
+[ 19%] Building Fortran object fortran/CMakeFiles/netcdff.dir/nf_logging.F90.o
+[ 19%] Building Fortran object fortran/CMakeFiles/netcdff.dir/nf_fortv2.F90.o
+[ 20%] Linking Fortran shared library libnetcdff.so
+CMakeFiles/netcdff_c.dir/nf_lib.c.o: file not recognized: file format not recognized
+collect2: error: ld returned 1 exit status
+make[2]: *** [fortran/CMakeFiles/netcdff.dir/build.make:495: fortran/libnetcdff.so.7.1.0] Error 1
+make[1]: *** [CMakeFiles/Makefile2:1421: fortran/CMakeFiles/netcdff.dir/all] Error 2
+make: *** [Makefile:146: all] Error 2
+make: Leaving directory '/build/netcdf-fortran/src/build'
+==> ERROR: A failure occurred in build().
+    Aborting...
+==> unit.log (last 19 lines)
+Running as unit: run-p284221-i29051647.service
+==> Synchronizing chroot copy [/var/lib/kbuild/v3/root] -> [copy]...done
+    netcdf-fortran ... Passed
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+error: command failed to execute correctly
+error: command failed to execute correctly
+error: command failed to execute correctly
+==> WARNING: Skipping all source file integrity checks.
+Cloning into 'netcdf-fortran'...
+done.
+Switched to a new branch 'makepkg'
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+==> WARNING: Using existing $srcdir/ tree
+==> ERROR: Build failed, check /var/lib/kbuild/v3/copy/build
+          Finished with result: exit-code
+Main processes terminated with: code=exited, status=255/EXCEPTION
+               Service runtime: 39.798s
+             CPU time consumed: 3.047s
+                   Memory peak: 19.7M (swap: 0B)
+==> chroot.log (last 18 lines)
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+gpg: Warning: using insecure memory!
+gpg: Warning: using insecure memory!
+==> Updating trust database...
+gpg: Warning: using insecure memory!
+gpg: next trustdb check due at 2026-12-31
+gpg: Warning: using insecure memory!
+  -> Locally signed 1 key.
+==> Updating trust database...
+gpg: Warning: using insecure memory!
+gpg: next trustdb check due at 2026-12-31
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+:: Synchronizing package databases...
+ train downloading...
+ kashira-v3-laptop downloading...
+ kashira-v3 downloading...
+:: Starting full system upgrade...
+ there is nothing to do

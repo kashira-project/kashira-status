@@ -1,0 +1,136 @@
+==> build.log (last 80 lines)
+      |                                                 ^     ~~~~~~~~~~~~~~~~~~~~~
+source/helpers/pkcs7/pkcs7-openssl.c:640:19: warning: initializing 'X509_NAME_ENTRY *' (aka 'struct X509_name_entry_st *') with an expression of type 'const X509_NAME_ENTRY *' (aka 'const struct X509_name_entry_st *') discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+  640 |         X509_NAME_ENTRY *entry = X509_NAME_get_entry(name, idx);
+      |                          ^       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+source/helpers/pkcs7/pkcs7-openssl.c:641:15: warning: initializing 'ASN1_STRING *' (aka 'struct asn1_string_st *') with an expression of type 'const ASN1_STRING *' (aka 'const struct asn1_string_st *') discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+  641 |         ASN1_STRING *data = X509_NAME_ENTRY_get_data(entry);
+      |                      ^      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+source/helpers/pkcs7/pkcs7-openssl.c:656:14: warning: initializing 'X509_NAME *' (aka 'struct X509_name_st *') with an expression of type 'const X509_NAME *' (aka 'const struct X509_name_st *') discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+  656 |                 X509_NAME *subj = X509_get_subject_name(x509);
+      |                            ^      ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+source/helpers/pkcs7/pkcs7-openssl.c:680:14: warning: initializing 'X509_NAME *' (aka 'struct X509_name_st *') with an expression of type 'const X509_NAME *' (aka 'const struct X509_name_st *') discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+  680 |                 X509_NAME *subj = X509_get_subject_name(x509);
+      |                            ^      ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+5 warnings generated.
+    AR build/shared-release/libmupdf-pkcs7.a
+    CC build/shared-release/source/helpers/mu-threads/mu-threads.o
+    AR build/shared-release/libmupdf-threads.a
+    LINK build/shared-release/mutool
+    CC build/shared-release/platform/gl/gl-annotate.o
+    CC build/shared-release/platform/gl/gl-file.o
+    CC build/shared-release/platform/gl/gl-font.o
+    CC build/shared-release/platform/gl/gl-form.o
+    CC build/shared-release/platform/gl/gl-input.o
+    CC build/shared-release/platform/gl/gl-main.o
+    CC build/shared-release/platform/gl/gl-ui.o
+    CC build/shared-release/platform/gl/gl-win32.o
+    LINK build/shared-release/mupdf-gl
+    CC build/shared-release/platform/x11/pdfapp.o
+    CC build/shared-release/platform/x11/x11_main.o
+    CC build/shared-release/platform/x11/x11_image.o
+    LINK build/shared-release/mupdf-x11
+    CC build/shared-release/source/tools/muraster.o
+    LINK build/shared-release/muraster
+    CC build/shared-release/platform/x11/curl/pdfapp.o
+    CC build/shared-release/platform/x11/curl/x11_main.o
+    CC build/shared-release/platform/x11/curl/x11_image.o
+    CC build/shared-release/platform/x11/curl/curl_stream.o
+    CC build/shared-release/platform/x11/curl/prog_stream.o
+    LINK build/shared-release/mupdf-x11-curl
+ld.lld: warning: call to Wcurl_easy_setopt_err_long.llvm.4679541663853138004 marked "dontcall-warn": curl_easy_setopt expects a long argument
+ld.lld: warning: call to Wcurl_easy_setopt_err_long.llvm.4679541663853138004 marked "dontcall-warn": curl_easy_setopt expects a long argument
+ld.lld: warning: call to Wcurl_easy_setopt_err_long.llvm.4679541663853138004 marked "dontcall-warn": curl_easy_setopt expects a long argument
+ld.lld: warning: call to Wcurl_easy_setopt_err_long.llvm.4679541663853138004 marked "dontcall-warn": curl_easy_setopt expects a long argument
+ld.lld: warning: call to Wcurl_easy_setopt_err_curl_off_t.llvm.4679541663853138004 marked "dontcall-warn": curl_easy_setopt expects a curl_off_t argument
+ld.lld: warning: call to Wcurl_easy_setopt_err_error_buffer.llvm.4679541663853138004 marked "dontcall-warn": curl_easy_setopt expects a char buffer of CURL_ERROR_SIZE as argument
+ld.lld: warning: call to Wcurl_easy_setopt_err_long.llvm.4679541663853138004 marked "dontcall-warn": curl_easy_setopt expects a long argument
+ld.lld: warning: call to Wcurl_easy_setopt_err_long.llvm.4679541663853138004 marked "dontcall-warn": curl_easy_setopt expects a long argument
+make shared=yes build=release
+make[1]: Entering directory '/build/mupdf/src/mupdf'
+make[1]: Nothing to be done for 'default'.
+make[1]: Leaving directory '/build/mupdf/src/mupdf'
+./scripts/mupdfwrap.py  -d build/shared-release -b 01
+autovenv [+5.5]: 
+WARNING: Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("HTTPSConnection(host='pypi.org', port=443): Failed to resolve 'pypi.org' ([Errno -3] Temporary failure in name resolution)")': /simple/pipcl/
+WARNING: Retrying (Retry(total=3, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("HTTPSConnection(host='pypi.org', port=443): Failed to resolve 'pypi.org' ([Errno -3] Temporary failure in name resolution)")': /simple/pipcl/
+WARNING: Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("HTTPSConnection(host='pypi.org', port=443): Failed to resolve 'pypi.org' ([Errno -3] Temporary failure in name resolution)")': /simple/pipcl/
+WARNING: Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("HTTPSConnection(host='pypi.org', port=443): Failed to resolve 'pypi.org' ([Errno -3] Temporary failure in name resolution)")': /simple/pipcl/
+WARNING: Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("HTTPSConnection(host='pypi.org', port=443): Failed to resolve 'pypi.org' ([Errno -3] Temporary failure in name resolution)")': /simple/pipcl/
+ERROR: Could not find a version that satisfies the requirement pipcl (from versions: none)
+ERROR: No matching distribution found for pipcl
+Traceback (most recent call last):
+  File "/build/mupdf/src/mupdf/scripts/wrap/__main__.py", line 935, in <module>
+    import pipcl
+ModuleNotFoundError: No module named 'pipcl'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/build/mupdf/src/mupdf/./scripts/mupdfwrap.py", line 3, in <module>
+    import wrap.__main__
+  File "/build/mupdf/src/mupdf/scripts/wrap/__main__.py", line 937, in <module>
+    subprocess.run(f'pip install --upgrade pipcl', shell=1, check=1)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/subprocess.py", line 578, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command 'pip install --upgrade pipcl' returned non-zero exit status 1.
+make: *** [Makefile:655: c++-release] Error 1
+==> ERROR: A failure occurred in build().
+    Aborting...
+==> unit.log (last 35 lines)
+Running as unit: run-p131651-i24916706.service; invocation ID: 8eba806f4f804f91b086bfe7ef3ed6c9
+==> Synchronizing chroot copy [/var/lib/kbuild/v3/root] -> [copy]...done
+    mupdf ... Passed
+    mujs ... Skipped
+    thirdparty-lcms2 ... Skipped
+    extract ... Skipped
+    mupdf.desktop ... Passed
+    mupdf.xpm ... Passed
+    mupdf.pc ... Passed
+    mupdf-1.23.9-install_targets.patch ... Passed
+    mupdf-1.28.0-system-cmark-gfm.patch ... Passed
+    mupdf-1.28.0-fix-build-with-recent-clang.patch ... Passed
+    mupdf-1.28.3-autovenv-system-site-packages.patch ... Passed
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+error: command failed to execute correctly
+error: command failed to execute correctly
+error: command failed to execute correctly
+==> WARNING: Skipping all source file integrity checks.
+Cloning into 'mupdf'...
+done.
+Switched to a new branch 'makepkg'
+Cloning into 'mujs'...
+done.
+Cloning into 'thirdparty-lcms2'...
+done.
+Cloning into 'extract'...
+done.
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+==> WARNING: Using existing $srcdir/ tree
+==> ERROR: Build failed, check /var/lib/kbuild/v3/copy/build
+          Finished with result: exit-code
+Main processes terminated with: code=exited, status=255/EXCEPTION
+               Service runtime: 4min 5.404s
+             CPU time consumed: 10.583s
+                   Memory peak: 153.5M (swap: 836K)
+==> chroot.log (last 18 lines)
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+gpg: Warning: using insecure memory!
+gpg: Warning: using insecure memory!
+==> Updating trust database...
+gpg: Warning: using insecure memory!
+gpg: next trustdb check due at 2026-12-31
+gpg: Warning: using insecure memory!
+  -> Locally signed 1 key.
+==> Updating trust database...
+gpg: Warning: using insecure memory!
+gpg: next trustdb check due at 2026-12-31
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+:: Synchronizing package databases...
+ train downloading...
+ kashira-v3-laptop downloading...
+ kashira-v3 downloading...
+:: Starting full system upgrade...
+ there is nothing to do

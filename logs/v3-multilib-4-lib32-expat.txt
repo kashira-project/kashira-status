@@ -1,0 +1,49 @@
+==> build.log (last 11 lines)
+==> Making package: lib32-expat 2.10.0-1 (Fri Nov 27 08:30:25 2026)
+==> Retrieving sources...
+  -> Updating expat git repo...
+==> Validating source files with sha512sums...
+==> Validating source files with b2sums...
+==> Verifying source file signatures with gpg...
+==> Making package: lib32-expat 2.10.0-1 (Fri Nov 27 08:30:28 2026)
+==> Checking runtime dependencies...
+==> Installing missing dependencies...
+==> Missing dependencies:
+  -> expat=2.10.0
+==> unit.log (last 17 lines)
+Running as unit: run-p173182-i20530025.service
+==> Synchronizing chroot copy [/var/lib/kbuild/v3-multilib/root] -> [copy]...done
+    expat ... Passed
+    expat ... Passed
+    expat git repo ... Passed (WARNING: the key has expired.)
+==> WARNING: Warnings have occurred while verifying the signatures.
+    Please make sure you really trust them.
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+error: target not found: expat=2.10.0
+==> ERROR: 'pacman' failed to install missing dependencies.
+==> ERROR: Could not resolve all dependencies.
+==> ERROR: Build failed, check /var/lib/kbuild/v3-multilib/copy/build
+          Finished with result: exit-code
+Main processes terminated with: code=exited, status=255/EXCEPTION
+               Service runtime: 4.467s
+             CPU time consumed: 2.397s
+                   Memory peak: 121M (swap: 0B)
+==> chroot.log (last 18 lines)
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+gpg: Warning: using insecure memory!
+gpg: Warning: using insecure memory!
+==> Updating trust database...
+gpg: Warning: using insecure memory!
+gpg: next trustdb check due at 2026-12-31
+gpg: Warning: using insecure memory!
+  -> Locally signed 1 key.
+==> Updating trust database...
+gpg: Warning: using insecure memory!
+gpg: next trustdb check due at 2026-12-31
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+:: Synchronizing package databases...
+ kashira-v3-laptop downloading...
+ kashira-v3-multilib downloading...
+ kashira-v3 downloading...
+:: Starting full system upgrade...
+ there is nothing to do

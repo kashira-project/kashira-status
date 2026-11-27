@@ -1,0 +1,120 @@
+==> build.log (last 80 lines)
+228/260 Test #228: nczarr_test_test_put_vars_two_unlim_dim ...   Passed    0.05 sec
+        Start 229: nczarr_test_run_ut_map
+229/260 Test #229: nczarr_test_run_ut_map ....................   Passed    1.72 sec
+        Start 230: nczarr_test_run_ut_mapapi
+230/260 Test #230: nczarr_test_run_ut_mapapi .................   Passed    1.15 sec
+        Start 231: nczarr_test_run_ut_misc
+231/260 Test #231: nczarr_test_run_ut_misc ...................   Passed    0.34 sec
+        Start 232: nczarr_test_run_ncgen4
+232/260 Test #232: nczarr_test_run_ncgen4 ....................   Passed    1.93 sec
+        Start 233: nczarr_test_run_nccopyz
+233/260 Test #233: nczarr_test_run_nccopyz ...................   Passed    1.39 sec
+        Start 234: nczarr_test_run_unlim_io
+234/260 Test #234: nczarr_test_run_unlim_io ..................   Passed    0.62 sec
+        Start 235: nczarr_test_run_nccopy5
+235/260 Test #235: nczarr_test_run_nccopy5 ...................   Passed    2.48 sec
+        Start 236: nczarr_test_run_mud
+236/260 Test #236: nczarr_test_run_mud .......................   Passed    0.31 sec
+        Start 237: nczarr_test_run_cachetest
+237/260 Test #237: nczarr_test_run_cachetest .................   Passed    7.51 sec
+        Start 238: nczarr_test_run_chunkcases
+238/260 Test #238: nczarr_test_run_chunkcases ................   Passed    0.40 sec
+        Start 239: nczarr_test_run_purezarr
+239/260 Test #239: nczarr_test_run_purezarr ..................   Passed    0.15 sec
+        Start 240: nczarr_test_run_misc
+240/260 Test #240: nczarr_test_run_misc ......................   Passed    0.08 sec
+        Start 241: nczarr_test_run_nczarr_fill
+241/260 Test #241: nczarr_test_run_nczarr_fill ...............   Passed    0.16 sec
+        Start 242: nczarr_test_run_jsonconvention
+242/260 Test #242: nczarr_test_run_jsonconvention ............   Passed    0.13 sec
+        Start 243: nczarr_test_run_strings
+243/260 Test #243: nczarr_test_run_strings ...................   Passed    0.14 sec
+        Start 244: nczarr_test_run_scalar
+244/260 Test #244: nczarr_test_run_scalar ....................   Passed    0.13 sec
+        Start 245: nczarr_test_run_nulls
+245/260 Test #245: nczarr_test_run_nulls .....................   Passed    0.15 sec
+        Start 246: nczarr_test_run_external
+246/260 Test #246: nczarr_test_run_external ..................   Passed    0.03 sec
+        Start 247: nczarr_test_run_s3_credentials
+247/260 Test #247: nczarr_test_run_s3_credentials ............   Passed    0.03 sec
+        Start 248: nczarr_test_run_quantize
+248/260 Test #248: nczarr_test_run_quantize ..................   Passed    0.12 sec
+        Start 249: nczarr_test_run_notzarr
+249/260 Test #249: nczarr_test_run_notzarr ...................   Passed    0.07 sec
+        Start 250: nczarr_test_run_oldkeys
+250/260 Test #250: nczarr_test_run_oldkeys ...................   Passed    0.05 sec
+        Start 251: nczarr_test_run_interop
+251/260 Test #251: nczarr_test_run_interop ...................   Passed    0.10 sec
+        Start 252: nczarr_test_run_fillonlyz
+252/260 Test #252: nczarr_test_run_fillonlyz .................   Passed    0.06 sec
+        Start 253: nczarr_test_run_filter_errors
+253/260 Test #253: nczarr_test_run_filter_errors .............   Passed    0.06 sec
+        Start 254: nczarr_test_run_nczfilter
+254/260 Test #254: nczarr_test_run_nczfilter .................   Passed    0.03 sec
+        Start 255: nczarr_test_run_filter
+255/260 Test #255: nczarr_test_run_filter ....................   Passed    0.34 sec
+        Start 256: nczarr_test_run_specific_filters
+256/260 Test #256: nczarr_test_run_specific_filters ..........   Passed    0.49 sec
+        Start 257: nczarr_test_run_filter_vlen
+257/260 Test #257: nczarr_test_run_filter_vlen ...............   Passed    0.06 sec
+        Start 258: nczarr_test_run_newformat
+258/260 Test #258: nczarr_test_run_newformat .................   Passed    0.13 sec
+        Start 259: nczarr_test_run_corrupt
+259/260 Test #259: nczarr_test_run_corrupt ...................   Passed    0.04 sec
+        Start 260: nczarr_test_run_xarray_misc
+260/260 Test #260: nczarr_test_run_xarray_misc ...............   Passed    0.04 sec
+
+99% tests passed, 2 tests failed out of 260
+
+Total Test time (real) = 671.04 sec
+
+The following tests FAILED:
+	210 - dap4_test_test_remote (Failed)
+	211 - dap4_test_test_dap4url (Failed)
+Errors while running CTest
+Output from these tests are in: /build/netcdf/src/build/Testing/Temporary/LastTest.log
+Use "--rerun-failed --output-on-failure" to re-run the failed cases verbosely.
+make: *** [Makefile:91: test] Error 8
+make: Leaving directory '/build/netcdf/src/build'
+==> ERROR: A failure occurred in check().
+    Aborting...
+==> unit.log (last 19 lines)
+Running as unit: run-p176309-i29162317.service
+==> Synchronizing chroot copy [/var/lib/kbuild/v3/root] -> [copy]...done
+    netcdf-c ... Passed
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+error: command failed to execute correctly
+error: command failed to execute correctly
+error: command failed to execute correctly
+==> WARNING: Skipping all source file integrity checks.
+Cloning into 'netcdf-c'...
+done.
+Switched to a new branch 'makepkg'
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+==> WARNING: Using existing $srcdir/ tree
+==> ERROR: Build failed, check /var/lib/kbuild/v3/copy/build
+          Finished with result: exit-code
+Main processes terminated with: code=exited, status=255/EXCEPTION
+               Service runtime: 13min 13.211s
+             CPU time consumed: 3.899s
+                   Memory peak: 83.3M (swap: 132K)
+==> chroot.log (last 18 lines)
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+gpg: Warning: using insecure memory!
+gpg: Warning: using insecure memory!
+==> Updating trust database...
+gpg: Warning: using insecure memory!
+gpg: next trustdb check due at 2026-12-31
+gpg: Warning: using insecure memory!
+  -> Locally signed 1 key.
+==> Updating trust database...
+gpg: Warning: using insecure memory!
+gpg: next trustdb check due at 2026-12-31
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+:: Synchronizing package databases...
+ train downloading...
+ kashira-v3-laptop downloading...
+ kashira-v3 downloading...
+:: Starting full system upgrade...
+ there is nothing to do

@@ -1,0 +1,140 @@
+==> build.log (last 80 lines)
+  Could not resolve: www.apache.org:443
+
+  closing connection #0
+
+
+
+          --- LOG END ---
+          error: downloading 'https://www.apache.org/dyn/closer.lua/orc/orc-format-1.1.1/orc-format-1.1.1.tar.gz?action=download' failed
+          status_code: 6
+          status_string: "Could not resolve hostname"
+          log:
+          --- LOG BEGIN ---
+          Could not resolve host: www.apache.org
+
+  Could not resolve host: www.apache.org
+
+  Could not resolve: www.apache.org:443
+
+  closing connection #0
+
+
+
+          --- LOG END ---
+          error: downloading 'https://www.apache.org/dyn/closer.lua/orc/orc-format-1.1.1/orc-format-1.1.1.tar.gz?action=download' failed
+          status_code: 6
+          status_string: "Could not resolve hostname"
+          log:
+          --- LOG BEGIN ---
+          Could not resolve host: www.apache.org
+
+  Could not resolve host: www.apache.org
+
+  Could not resolve: www.apache.org:443
+
+  closing connection #0
+
+
+
+          --- LOG END ---
+          error: downloading 'https://www.apache.org/dyn/closer.lua/orc/orc-format-1.1.1/orc-format-1.1.1.tar.gz?action=download' failed
+          status_code: 6
+          status_string: "Could not resolve hostname"
+          log:
+          --- LOG BEGIN ---
+          Could not resolve host: www.apache.org
+
+  Could not resolve host: www.apache.org
+
+  Could not resolve: www.apache.org:443
+
+  closing connection #0
+
+
+
+          --- LOG END ---
+          error: downloading 'https://www.apache.org/dyn/closer.lua/orc/orc-format-1.1.1/orc-format-1.1.1.tar.gz?action=download' failed
+          status_code: 6
+          status_string: "Could not resolve hostname"
+          log:
+          --- LOG BEGIN ---
+          Could not resolve host: www.apache.org
+
+  Could not resolve host: www.apache.org
+
+  Could not resolve: www.apache.org:443
+
+  closing connection #0
+
+
+
+          --- LOG END ---
+          
+    
+
+
+make[2]: *** [CMakeFiles/orc-format_ep.dir/build.make:100: orc-format_ep-prefix/src/orc-format_ep-stamp/orc-format_ep-download] Error 1
+make[1]: *** [CMakeFiles/Makefile2:264: CMakeFiles/orc-format_ep.dir/all] Error 2
+make: *** [Makefile:166: all] Error 2
+==> ERROR: A failure occurred in build().
+    Aborting...
+==> unit.log (last 20 lines)
+Running as unit: run-p33344-i21161400.service; invocation ID: 73a122c464924f05b9a198b9e536d00c
+==> Synchronizing chroot copy [/var/lib/kbuild/v3/root] -> [copy]...done
+    apache-orc ... Passed
+    fix-find-package-mode.patch ... Passed
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+error: command failed to execute correctly
+error: command failed to execute correctly
+error: command failed to execute correctly
+==> WARNING: Skipping all source file integrity checks.
+Cloning into 'apache-orc'...
+done.
+Switched to a new branch 'makepkg'
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+==> WARNING: Using existing $srcdir/ tree
+==> ERROR: Build failed, check /var/lib/kbuild/v3/copy/build
+          Finished with result: exit-code
+Main processes terminated with: code=exited, status=255/EXCEPTION
+               Service runtime: 1min 58.801s
+             CPU time consumed: 4.848s
+                   Memory peak: 33M (swap: 0B)
+==> chroot.log (last 37 lines)
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+gpg: Warning: using insecure memory!
+gpg: Warning: using insecure memory!
+==> Updating trust database...
+gpg: Warning: using insecure memory!
+gpg: next trustdb check due at 2026-12-31
+gpg: Warning: using insecure memory!
+  -> Locally signed 1 key.
+==> Updating trust database...
+gpg: Warning: using insecure memory!
+gpg: next trustdb check due at 2026-12-31
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+:: Synchronizing package databases...
+ train downloading...
+ kashira-v3-laptop downloading...
+ kashira-v3 downloading...
+:: Starting full system upgrade...
+resolving dependencies...
+looking for conflicting packages...
+
+Package (1)   Old Version  New Version  Net Change  Download Size
+
+train/tzdata  2026e-2      2026f-1        0.00 MiB       0.39 MiB
+
+Total Download Size:   0.39 MiB
+Total Installed Size:  1.86 MiB
+Net Upgrade Size:      0.00 MiB
+
+:: Proceed with installation? [Y/n] 
+:: Retrieving packages...
+ tzdata-2026f-1-x86_64 downloading...
+checking keyring...
+checking package integrity...
+loading package files...
+checking for file conflicts...
+:: Processing package changes...
+upgrading tzdata...

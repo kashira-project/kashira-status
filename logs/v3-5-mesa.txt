@@ -1,0 +1,178 @@
+==> build.log (last 77 lines)
+==> Making package: mesa 1:26.3.1-1 (Fri Nov 27 09:23:52 2026)
+==> Retrieving sources...
+  -> Found mesa-26.3.1.tar.xz
+  -> Found mesa-26.3.1.tar.xz.sig
+  -> Found 0001-panfrost-Fix-types-of-panfrost_vdrm-functions.patch
+  -> Found xml-1.2.1.tar.gz
+  -> Found zerocopy-0.8.13.tar.gz
+  -> Found ucd-trie-0.1.6.tar.gz
+  -> Found pest_meta-2.8.0.tar.gz
+  -> Found libc-0.2.185.tar.gz
+  -> Found indexmap-2.2.6.tar.gz
+  -> Found hashbrown-0.14.1.tar.gz
+  -> Found log-0.4.27.tar.gz
+  -> Found zerocopy-derive-0.8.13.tar.gz
+  -> Found windows-link-0.2.0.tar.gz
+  -> Found rustc-hash-2.1.1.tar.gz
+  -> Found cfg-if-1.0.0.tar.gz
+  -> Found remain-0.2.12.tar.gz
+  -> Found proc-macro2-1.0.86.tar.gz
+  -> Found pest_derive-2.8.0.tar.gz
+  -> Found thiserror-impl-2.0.11.tar.gz
+  -> Found unicode-ident-1.0.12.tar.gz
+  -> Found bitflags-2.9.1.tar.gz
+  -> Found windows-sys-0.61.1.tar.gz
+  -> Found quote-1.0.35.tar.gz
+  -> Found roxmltree-0.20.0.tar.gz
+  -> Found mach2-0.7.0.tar.gz
+  -> Found paste-1.0.14.tar.gz
+  -> Found errno-0.3.12.tar.gz
+  -> Found rustix-1.1.4.tar.gz
+  -> Found pest-2.8.0.tar.gz
+  -> Found thiserror-2.0.11.tar.gz
+  -> Found equivalent-1.0.1.tar.gz
+  -> Found pest_generator-2.8.0.tar.gz
+  -> Found once_cell-1.8.0.tar.gz
+  -> Found syn-2.0.87.tar.gz
+==> Validating source files with sha256sums...
+==> Validating source files with b2sums...
+==> Verifying source file signatures with gpg...
+==> Making package: mesa 1:26.3.1-1 (Fri Nov 27 09:24:01 2026)
+==> Checking runtime dependencies...
+==> Checking buildtime dependencies...
+==> Installing missing dependencies...
+==> Missing dependencies:
+  -> directx-headers
+  -> libdisplay-info
+  -> libdrm
+  -> libglvnd
+  -> libva
+  -> libxrandr
+  -> libxshmfence
+  -> libxxf86vm
+  -> lm_sensors
+  -> rust
+  -> spirv-llvm-translator
+  -> spirv-tools
+  -> vulkan-icd-loader
+  -> wayland
+  -> xcb-util-keysyms
+  -> cbindgen
+  -> cmake
+  -> glslang
+  -> libclc
+  -> meson
+  -> python-lxml
+  -> python-mako
+  -> python-packaging
+  -> python-ply
+  -> python-pycparser
+  -> python-yaml
+  -> rust-bindgen
+  -> venus-protocol
+  -> wayland-protocols
+  -> valgrind
+  -> graphviz
+  -> python-sphinx
+  -> python-sphinx-hawkmoth
+==> unit.log (last 80 lines)
+==> Synchronizing chroot copy [/var/lib/kbuild/v3/root] -> [copy]...done
+    mesa-26.3.1.tar.xz ... Passed
+    mesa-26.3.1.tar.xz.sig ... Skipped
+    0001-panfrost-Fix-types-of-panfrost_vdrm-functions.patch ... Passed
+    xml-1.2.1.tar.gz ... Passed
+    zerocopy-0.8.13.tar.gz ... Passed
+    ucd-trie-0.1.6.tar.gz ... Passed
+    pest_meta-2.8.0.tar.gz ... Passed
+    libc-0.2.185.tar.gz ... Passed
+    indexmap-2.2.6.tar.gz ... Passed
+    hashbrown-0.14.1.tar.gz ... Passed
+    log-0.4.27.tar.gz ... Passed
+    zerocopy-derive-0.8.13.tar.gz ... Passed
+    windows-link-0.2.0.tar.gz ... Passed
+    rustc-hash-2.1.1.tar.gz ... Passed
+    cfg-if-1.0.0.tar.gz ... Passed
+    remain-0.2.12.tar.gz ... Passed
+    proc-macro2-1.0.86.tar.gz ... Passed
+    pest_derive-2.8.0.tar.gz ... Passed
+    thiserror-impl-2.0.11.tar.gz ... Passed
+    unicode-ident-1.0.12.tar.gz ... Passed
+    bitflags-2.9.1.tar.gz ... Passed
+    windows-sys-0.61.1.tar.gz ... Passed
+    quote-1.0.35.tar.gz ... Passed
+    roxmltree-0.20.0.tar.gz ... Passed
+    mach2-0.7.0.tar.gz ... Passed
+    paste-1.0.14.tar.gz ... Passed
+    errno-0.3.12.tar.gz ... Passed
+    rustix-1.1.4.tar.gz ... Passed
+    pest-2.8.0.tar.gz ... Passed
+    thiserror-2.0.11.tar.gz ... Passed
+    equivalent-1.0.1.tar.gz ... Passed
+    pest_generator-2.8.0.tar.gz ... Passed
+    once_cell-1.8.0.tar.gz ... Passed
+    syn-2.0.87.tar.gz ... Passed
+    mesa-26.3.1.tar.xz ... Passed
+    mesa-26.3.1.tar.xz.sig ... Skipped
+    0001-panfrost-Fix-types-of-panfrost_vdrm-functions.patch ... Passed
+    xml-1.2.1.tar.gz ... Passed
+    zerocopy-0.8.13.tar.gz ... Passed
+    ucd-trie-0.1.6.tar.gz ... Passed
+    pest_meta-2.8.0.tar.gz ... Passed
+    libc-0.2.185.tar.gz ... Passed
+    indexmap-2.2.6.tar.gz ... Passed
+    hashbrown-0.14.1.tar.gz ... Passed
+    log-0.4.27.tar.gz ... Passed
+    zerocopy-derive-0.8.13.tar.gz ... Passed
+    windows-link-0.2.0.tar.gz ... Passed
+    rustc-hash-2.1.1.tar.gz ... Passed
+    cfg-if-1.0.0.tar.gz ... Passed
+    remain-0.2.12.tar.gz ... Passed
+    proc-macro2-1.0.86.tar.gz ... Passed
+    pest_derive-2.8.0.tar.gz ... Passed
+    thiserror-impl-2.0.11.tar.gz ... Passed
+    unicode-ident-1.0.12.tar.gz ... Passed
+    bitflags-2.9.1.tar.gz ... Passed
+    windows-sys-0.61.1.tar.gz ... Passed
+    quote-1.0.35.tar.gz ... Passed
+    roxmltree-0.20.0.tar.gz ... Passed
+    mach2-0.7.0.tar.gz ... Passed
+    paste-1.0.14.tar.gz ... Passed
+    errno-0.3.12.tar.gz ... Passed
+    rustix-1.1.4.tar.gz ... Passed
+    pest-2.8.0.tar.gz ... Passed
+    thiserror-2.0.11.tar.gz ... Passed
+    equivalent-1.0.1.tar.gz ... Passed
+    pest_generator-2.8.0.tar.gz ... Passed
+    once_cell-1.8.0.tar.gz ... Passed
+    syn-2.0.87.tar.gz ... Passed
+    mesa-26.3.1.tar.xz ... Passed
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+error: target not found: venus-protocol
+==> ERROR: 'pacman' failed to install missing dependencies.
+==> ERROR: Could not resolve all dependencies.
+==> ERROR: Build failed, check /var/lib/kbuild/v3/copy/build
+          Finished with result: exit-code
+Main processes terminated with: code=exited, status=255/EXCEPTION
+               Service runtime: 29.265s
+             CPU time consumed: 14.859s
+                   Memory peak: 17M (swap: 0B)
+==> chroot.log (last 18 lines)
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+gpg: Warning: using insecure memory!
+gpg: Warning: using insecure memory!
+==> Updating trust database...
+gpg: Warning: using insecure memory!
+gpg: next trustdb check due at 2026-12-31
+gpg: Warning: using insecure memory!
+  -> Locally signed 1 key.
+==> Updating trust database...
+gpg: Warning: using insecure memory!
+gpg: next trustdb check due at 2026-12-31
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+:: Synchronizing package databases...
+ train downloading...
+ kashira-v3-laptop downloading...
+ kashira-v3 downloading...
+:: Starting full system upgrade...
+ there is nothing to do

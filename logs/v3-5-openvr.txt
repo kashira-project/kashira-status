@@ -1,0 +1,138 @@
+==> build.log (last 80 lines)
+==> Starting build()...
+-- The C compiler identification is Clang 23.1.5
+-- The CXX compiler identification is Clang 23.1.5
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/lib/ccache/bin/clang - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/lib/ccache/bin/clang++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Using libc++
+-- Configuring done (0.8s)
+-- Generating done (0.0s)
+-- Build files have been written to: /build/openvr/src/build
+make: Entering directory '/build/openvr/src/build'
+[ 55%] Building CXX object src/CMakeFiles/openvr_api.dir/vrcore/hmderrors_public.cpp.o
+[ 33%] Building CXX object src/CMakeFiles/openvr_api.dir/vrcore/pathtools_public.cpp.o
+[ 55%] Building CXX object src/CMakeFiles/openvr_api.dir/vrcore/envvartools_public.cpp.o
+[ 55%] Building CXX object src/CMakeFiles/openvr_api.dir/openvr_api_public.cpp.o
+[ 55%] Building CXX object src/CMakeFiles/openvr_api.dir/vrcore/vrpathregistry_public.cpp.o
+[ 77%] Building CXX object src/CMakeFiles/openvr_api.dir/vrcore/dirtools_public.cpp.o
+[ 77%] Building CXX object src/CMakeFiles/openvr_api.dir/vrcore/sharedlibtools_public.cpp.o
+[ 88%] Building CXX object src/CMakeFiles/openvr_api.dir/vrcore/strtools_public.cpp.o
+In file included from /build/openvr/src/openvr-2.15.6/src/vrcore/sharedlibtools_public.cpp:2:
+/build/openvr/src/openvr-2.15.6/src/vrcore/sharedlibtools_public.h:5:10: fatal error: 'string' file not found
+    5 | #include <string>
+      |          ^~~~~~~~
+In file included from /build/openvr/src/openvr-2.15.6/src/vrcore/envvartools_public.cpp:2:
+/build/openvr/src/openvr-2.15.6/src/vrcore/envvartools_public.h:4:10: fatal error: 'string' file not found
+    4 | #include <string>
+      |          ^~~~~~~~
+In file included from /build/openvr/src/openvr-2.15.6/src/vrcore/vrpathregistry_public.cpp:3:
+/build/openvr/src/openvr-2.15.6/src/vrcore/vrpathregistry_public.h:4:10: fatal error: 'string' file not found
+    4 | #include <string>
+      |          ^~~~~~~~
+In file included from /build/openvr/src/openvr-2.15.6/src/vrcore/strtools_public.cpp:2:
+/build/openvr/src/openvr-2.15.6/src/vrcore/strtools_public.h:4:10: fatal error: 'string' file not found
+    4 | #include <string>
+      |          ^~~~~~~~
+In file included from /build/openvr/src/openvr-2.15.6/src/openvr_api_public.cpp:3:
+/build/openvr/src/openvr-2.15.6/src/../headers/openvr.h:2883:10: fatal error: 'string' file not found
+ 2883 | #include <string>
+      |          ^~~~~~~~
+In file included from /build/openvr/src/openvr-2.15.6/src/vrcore/hmderrors_public.cpp:2:
+/build/openvr/src/openvr-2.15.6/src/../headers/openvr.h:2883:10: fatal error: 'string' file not found
+ 2883 | #include <string>
+      |          ^~~~~~~~
+In file included from /build/openvr/src/openvr-2.15.6/src/vrcore/pathtools_public.cpp:2:
+/build/openvr/src/openvr-2.15.6/src/vrcore/strtools_public.h:4:10: fatal error: 'string' file not found
+    4 | #include <string>
+      |          ^~~~~~~~
+In file included from /build/openvr/src/openvr-2.15.6/src/vrcore/dirtools_public.cpp:2:
+/build/openvr/src/openvr-2.15.6/src/vrcore/dirtools_public.h:5:10: fatal error: 'string' file not found
+    5 | #include <string>
+      |          ^~~~~~~~
+1 error generated.
+1 error generated.
+make[2]: *** [src/CMakeFiles/openvr_api.dir/build.make:135: src/CMakeFiles/openvr_api.dir/vrcore/sharedlibtools_public.cpp.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+make[2]: *** [src/CMakeFiles/openvr_api.dir/build.make:107: src/CMakeFiles/openvr_api.dir/vrcore/envvartools_public.cpp.o] Error 1
+1 error generated.
+1 error generated.
+make[2]: *** [src/CMakeFiles/openvr_api.dir/build.make:177: src/CMakeFiles/openvr_api.dir/vrcore/strtools_public.cpp.o] Error 1
+1 error generated.
+make[2]: *** [src/CMakeFiles/openvr_api.dir/build.make:149: src/CMakeFiles/openvr_api.dir/vrcore/hmderrors_public.cpp.o] Error 1
+make[2]: *** [src/CMakeFiles/openvr_api.dir/build.make:121: src/CMakeFiles/openvr_api.dir/vrcore/pathtools_public.cpp.o] Error 1
+1 error generated.
+1 error generated.
+1 error generated.
+make[2]: *** [src/CMakeFiles/openvr_api.dir/build.make:93: src/CMakeFiles/openvr_api.dir/vrcore/dirtools_public.cpp.o] Error 1
+make[2]: *** [src/CMakeFiles/openvr_api.dir/build.make:79: src/CMakeFiles/openvr_api.dir/openvr_api_public.cpp.o] Error 1
+make[2]: *** [src/CMakeFiles/openvr_api.dir/build.make:163: src/CMakeFiles/openvr_api.dir/vrcore/vrpathregistry_public.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:106: src/CMakeFiles/openvr_api.dir/all] Error 2
+make: *** [Makefile:136: all] Error 2
+make: Leaving directory '/build/openvr/src/build'
+==> ERROR: A failure occurred in build().
+    Aborting...
+==> unit.log (last 18 lines)
+Running as unit: run-p753469-i31990438.service
+==> Synchronizing chroot copy [/var/lib/kbuild/v3/root] -> [copy]...done
+    openvr-2.15.6.tar.gz ... Passed
+    openvr-fix-vsprintf_s.patch ... Passed
+    openvr-use-system-jsoncpp-1.23.7.patch ... Passed
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+error: command failed to execute correctly
+error: command failed to execute correctly
+error: command failed to execute correctly
+==> WARNING: Skipping all source file integrity checks.
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+==> WARNING: Using existing $srcdir/ tree
+==> ERROR: Build failed, check /var/lib/kbuild/v3/copy/build
+          Finished with result: exit-code
+Main processes terminated with: code=exited, status=255/EXCEPTION
+               Service runtime: 1min 24.159s
+             CPU time consumed: 3.218s
+                   Memory peak: 73.6M (swap: 0B)
+==> chroot.log (last 37 lines)
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+gpg: Warning: using insecure memory!
+gpg: Warning: using insecure memory!
+==> Updating trust database...
+gpg: Warning: using insecure memory!
+gpg: next trustdb check due at 2026-12-31
+gpg: Warning: using insecure memory!
+  -> Locally signed 1 key.
+==> Updating trust database...
+gpg: Warning: using insecure memory!
+gpg: next trustdb check due at 2026-12-31
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+:: Synchronizing package databases...
+ train downloading...
+ kashira-v3-laptop downloading...
+ kashira-v3 downloading...
+:: Starting full system upgrade...
+resolving dependencies...
+looking for conflicting packages...
+
+Package (1)    Old Version  New Version  Net Change  Download Size
+
+train/openucx  1.20.1-6     1.20.1-7       0.00 MiB       1.55 MiB
+
+Total Download Size:   1.55 MiB
+Total Installed Size:  5.17 MiB
+Net Upgrade Size:      0.00 MiB
+
+:: Proceed with installation? [Y/n] 
+:: Retrieving packages...
+ openucx-1.20.1-7-x86_64 downloading...
+checking keyring...
+checking package integrity...
+loading package files...
+checking for file conflicts...
+:: Processing package changes...
+upgrading openucx...

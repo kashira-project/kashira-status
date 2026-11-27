@@ -1,0 +1,39 @@
+==> build.log (last 3 lines)
+==> Making package: poppler-data 0.4.12-3 (Fri Nov 27 08:28:02 2026)
+==> Retrieving sources...
+  -> Downloading poppler-data-0.4.12.tar.gz...
+==> unit.log (last 16 lines)
+Running as unit: run-p325554-i20436384.service
+==> Synchronizing chroot copy [/var/lib/kbuild/v3/root] -> [copy]...done
+** Resuming transfer from byte position 3623128
+  % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current
+                                 Dload  Upload  Total   Spent   Left   Speed
+
+  0      0   0      0   0      0      0      0                              0
+curl: (33) HTTP server does not seem to support byte ranges. Cannot resume.
+==> ERROR: Failure while downloading https://poppler.freedesktop.org/poppler-data-0.4.12.tar.gz
+    Aborting...
+==> ERROR: Could not download sources.
+          Finished with result: exit-code
+Main processes terminated with: code=exited, status=255/EXCEPTION
+               Service runtime: 856ms
+             CPU time consumed: 626ms
+                   Memory peak: 17.2M (swap: 0B)
+==> chroot.log (last 17 lines)
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+gpg: Warning: using insecure memory!
+gpg: Warning: using insecure memory!
+==> Updating trust database...
+gpg: Warning: using insecure memory!
+gpg: next trustdb check due at 2026-12-31
+gpg: Warning: using insecure memory!
+  -> Locally signed 1 key.
+==> Updating trust database...
+gpg: Warning: using insecure memory!
+gpg: next trustdb check due at 2026-12-31
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+:: Synchronizing package databases...
+ train downloading...
+ kashira-v3 downloading...
+:: Starting full system upgrade...
+ there is nothing to do

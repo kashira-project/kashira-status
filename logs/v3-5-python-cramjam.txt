@@ -1,0 +1,117 @@
+==> build.log (last 80 lines)
+    python-faker: for fakefactory and django module
+    python-lark-parser: for lark module
+    python-libcst: for codemods module
+    python-numpy: for numpy module [pending]
+    python-pandas: for pandas support
+    python-pytest: for pytest module [pending]
+    python-pytz: for datetime and django module
+    python-redis: for redis support
+    python-rich: for CLI
+    python-watchdog: for tracking file system events
+installing blas...
+installing cblas...
+installing lapack...
+installing python-numpy...
+Optional dependencies for python-numpy
+    blas-openblas: faster linear algebra
+installing python-iniconfig...
+installing python-pluggy...
+installing python-pygments...
+installing python-pytest...
+:: Running post-transaction hooks...
+( 1/11) Updating the MIME type database...
+( 2/11) Updating fontconfig configuration...
+( 3/11) Reloading system bus configuration...
+call to execv failed (No such file or directory)
+( 4/11) Checking for old perl modules...
+( 5/11) Updating fontconfig cache...
+( 6/11) Updating GIO module cache...
+( 7/11) Compiling GSettings XML schema files...
+( 8/11) Updating GTK 3 input method module cache...
+( 9/11) Updating icon theme caches...
+(10/11) Updating the info directory file...
+(11/11) Updating the desktop file MIME type cache...
+==> Retrieving sources...
+  -> Found cramjam-2.13.0.tar.gz
+==> Extracting sources...
+  -> Extracting cramjam-2.13.0.tar.gz with bsdtar
+==> Sources are ready.
+==> Making package: python-cramjam 2.13.0-1 (Fri Nov 27 13:55:00 2026)
+==> Checking runtime dependencies...
+==> Checking buildtime dependencies...
+==> Starting build()...
+* Getting build dependencies for wheel...
+* Building wheel...
+Running `maturin pep517 build-wheel -i /usr/bin/python --compatibility off`
+    Updating crates.io index
+warning: spurious network error (3 tries remaining): [6] Could not resolve hostname (Could not resolve host: index.crates.io)
+warning: spurious network error (2 tries remaining): [6] Could not resolve hostname (Could not resolve host: index.crates.io)
+warning: spurious network error (1 try remaining): [6] Could not resolve hostname (Could not resolve host: index.crates.io)
+warning: spurious network error (3 tries remaining): [6] Could not resolve hostname (Could not resolve host: index.crates.io)
+warning: spurious network error (2 tries remaining): [6] Could not resolve hostname (Could not resolve host: index.crates.io)
+warning: spurious network error (1 try remaining): [6] Could not resolve hostname (Could not resolve host: index.crates.io)
+warning: spurious network error (3 tries remaining): [6] Could not resolve hostname (Could not resolve host: index.crates.io)
+warning: spurious network error (2 tries remaining): [6] Could not resolve hostname (Could not resolve host: index.crates.io)
+warning: spurious network error (1 try remaining): [6] Could not resolve hostname (Could not resolve host: index.crates.io)
+warning: spurious network error (3 tries remaining): [6] Could not resolve hostname (Could not resolve host: index.crates.io)
+warning: spurious network error (2 tries remaining): [6] Could not resolve hostname (Could not resolve host: index.crates.io)
+warning: spurious network error (1 try remaining): [6] Could not resolve hostname (Could not resolve host: index.crates.io)
+error: failed to get `libcramjam` as a dependency of package `cramjam v0.1.0 (/build/python-cramjam/src/cramjam-2.13.0/cramjam-js)`
+
+Caused by:
+  failed to load source for dependency `libcramjam`
+
+Caused by:
+  unable to update registry `crates-io`
+
+Caused by:
+  download of config.json failed
+
+Caused by:
+  [6] Could not resolve hostname (Could not resolve host: index.crates.io)
+💥 maturin failed
+  Caused by: Cargo metadata failed. Does your crate compile with `cargo build`?
+  Caused by: `cargo metadata` exited with an error: 
+Error: command ['maturin', 'pep517', 'build-wheel', '-i', '/usr/bin/python', '--compatibility', 'off'] returned non-zero exit status 1
+
+TIP pass --env-dir and --sdist-extract-dir to keep the build environment and sources, then see https://build.pypa.io/en/stable/how-to/troubleshooting.html#debug-a-failed-build for help debugging a failed build
+ERROR Backend subprocess exited when trying to invoke build_wheel
+==> ERROR: A failure occurred in build().
+    Aborting...
+==> unit.log (last 16 lines)
+Running as unit: run-p417137-i34836545.service
+==> Synchronizing chroot copy [/var/lib/kbuild/v3/root] -> [copy]...done
+    cramjam-2.13.0.tar.gz ... Passed
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+error: command failed to execute correctly
+error: command failed to execute correctly
+error: command failed to execute correctly
+==> WARNING: Skipping all source file integrity checks.
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+==> WARNING: Using existing $srcdir/ tree
+==> ERROR: Build failed, check /var/lib/kbuild/v3/copy/build
+          Finished with result: exit-code
+Main processes terminated with: code=exited, status=255/EXCEPTION
+               Service runtime: 1min 235ms
+             CPU time consumed: 3.115s
+                   Memory peak: 16.5M (swap: 0B)
+==> chroot.log (last 18 lines)
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+gpg: Warning: using insecure memory!
+gpg: Warning: using insecure memory!
+==> Updating trust database...
+gpg: Warning: using insecure memory!
+gpg: next trustdb check due at 2026-12-31
+gpg: Warning: using insecure memory!
+  -> Locally signed 1 key.
+==> Updating trust database...
+gpg: Warning: using insecure memory!
+gpg: next trustdb check due at 2026-12-31
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+:: Synchronizing package databases...
+ train downloading...
+ kashira-v3-laptop downloading...
+ kashira-v3 downloading...
+:: Starting full system upgrade...
+ there is nothing to do

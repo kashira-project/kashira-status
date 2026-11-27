@@ -1,0 +1,117 @@
+==> build.log (last 80 lines)
++ gyp verb cli '/build/node-gyp/src/node-gyp/bin/node-gyp.js',
++ gyp verb cli 'rebuild',
++ gyp verb cli '-C',
++ gyp verb cli '/build/node-gyp/src/node-gyp/test/node_modules/hello_world',
++ gyp verb cli '--loglevel=verbose'
++ gyp verb cli ]
++ gyp info using node-gyp@13.1.0
++ gyp info using node@26.12.0 | linux | x64
++ gyp info chdir /build/node-gyp/src/node-gyp/test/node_modules/hello_world
++ gyp verb clean removing "build" directory
++ gyp verb find Python --python was not set on the command line
++ gyp verb find Python Python is not set from environment variable PYTHON
++ gyp verb find Python checking if "python3" can be used
++ gyp verb find Python - executing "python3" to get executable path
++ gyp verb find Python - executable path is "/usr/bin/python3"
++ gyp verb find Python - executing "/usr/bin/python3" to get version
++ gyp verb find Python - version is "3.14.10"
++ gyp info find Python using Python version 3.14.10 found at "/usr/bin/python3"
++ gyp verb get node dir no --target version specified, falling back to host node version: 26.12.0
++ gyp verb install input version string "26.12.0"
++ gyp verb install installing version: 26.12.0
++ gyp verb install --ensure was passed, so won't reinstall if already installed
++ gyp verb install version not already installed, continuing with install 26.12.0
++ gyp verb ensuring devDir is created /build/.cache/node-gyp/26.12.0
++ gyp verb created devDir /build/.cache/node-gyp/26.12.0
++ gyp http GET https://nodejs.org/download/release/v26.12.0/node-v26.12.0-headers.tar.gz
++ gyp WARN install got an error, rolling back install
++ gyp verb remove using node-gyp dir: /build/.cache/node-gyp
++ gyp verb remove removing target version: 26.12.0
++ gyp verb remove removing development files for version: 26.12.0
++ gyp ERR! configure error 
++ gyp ERR! stack Error: getaddrinfo EAI_AGAIN nodejs.org
++ gyp ERR! stack at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)
++ gyp ERR! System Linux 7.2.6-1-cachyos
++ gyp ERR! command "/usr/bin/node" "/build/node-gyp/src/node-gyp/bin/node-gyp.js" "rebuild" "-C" "/build/node-gyp/src/node-gyp/test/node_modules/hello_world" "--loglevel=verbose"
++ gyp ERR! cwd /build/node-gyp/src/node-gyp/test/node_modules/hello_world
++ gyp ERR! node -v v26.12.0
++ gyp ERR! node-gyp -v v13.1.0
++ gyp ERR! $npm_package_name node-gyp
++ gyp ERR! $npm_package_version 13.1.0
++ gyp ERR! not ok 
++ 
++     at genericNodeError (node:internal/errors:999:15)
++     at wrappedFn (node:internal/errors:544:14)
++     at ChildProcess.exithandler (node:child_process:420:12)
++     at ChildProcess.emit (node:events:514:20)
++     at maybeClose (node:internal/child_process:1156:16)
++     at ChildProcess._handle.onexit (node:internal/child_process:334:5) {
++   cmd: '/usr/bin/node /build/node-gyp/src/node-gyp/bin/node-gyp.js rebuild -C /build/node-gyp/src/node-gyp/test/node_modules/hello_world --loglevel=verbose',
++   code: 1,
++   killed: false,
++   signal: null
++ }
+- null
+
+      at Context.<anonymous> (test/test-addon.js:154:12)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+
+  3) configure-python
+       configure PYTHONPATH with no existing env:
+     Error: Timeout of 30000ms exceeded. For async tests and hooks, ensure "done()" is called; if returning a Promise, ensure it resolves. (/build/node-gyp/src/node-gyp/test/test-configure-python.js)
+      at listOnTimeout (node:internal/timers:685:17)
+      at process.processTimers (node:internal/timers:618:7)
+
+  4) configure-python
+       configure PYTHONPATH with existing env of one dir:
+     Error: Timeout of 30000ms exceeded. For async tests and hooks, ensure "done()" is called; if returning a Promise, ensure it resolves. (/build/node-gyp/src/node-gyp/test/test-configure-python.js)
+      at listOnTimeout (node:internal/timers:685:17)
+      at process.processTimers (node:internal/timers:618:7)
+
+  5) configure-python
+       configure PYTHONPATH with existing env of multiple dirs:
+     Error: Timeout of 30000ms exceeded. For async tests and hooks, ensure "done()" is called; if returning a Promise, ensure it resolves. (/build/node-gyp/src/node-gyp/test/test-configure-python.js)
+      at listOnTimeout (node:internal/timers:685:17)
+      at process.processTimers (node:internal/timers:618:7)
+
+
+
+==> ERROR: A failure occurred in check().
+    Aborting...
+==> unit.log (last 16 lines)
+Running as unit: run-p201457-i29378625.service
+==> Synchronizing chroot copy [/var/lib/kbuild/v3/root] -> [copy]...done
+    node-gyp ... Passed
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+==> WARNING: Skipping all source file integrity checks.
+Cloning into 'node-gyp'...
+done.
+Switched to a new branch 'makepkg'
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+==> WARNING: Using existing $srcdir/ tree
+==> ERROR: Build failed, check /var/lib/kbuild/v3/copy/build
+          Finished with result: exit-code
+Main processes terminated with: code=exited, status=255/EXCEPTION
+               Service runtime: 3min 18.635s
+             CPU time consumed: 3.791s
+                   Memory peak: 49.3M (swap: 0B)
+==> chroot.log (last 18 lines)
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+gpg: Warning: using insecure memory!
+gpg: Warning: using insecure memory!
+==> Updating trust database...
+gpg: Warning: using insecure memory!
+gpg: next trustdb check due at 2026-12-31
+gpg: Warning: using insecure memory!
+  -> Locally signed 1 key.
+==> Updating trust database...
+gpg: Warning: using insecure memory!
+gpg: next trustdb check due at 2026-12-31
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+:: Synchronizing package databases...
+ train downloading...
+ kashira-v3-laptop downloading...
+ kashira-v3 downloading...
+:: Starting full system upgrade...
+ there is nothing to do

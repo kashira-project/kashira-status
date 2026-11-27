@@ -1,0 +1,126 @@
+==> build.log (last 80 lines)
+  CC       test-c32rtomb.o
+  CC       test-c32rtomb-w32.o
+  CC       test-c32tolower.o
+  CC       test-c32width.o
+  CC       test-calloc-gnu.o
+  CC       test-calloc-posix.o
+  CC       test-canonicalize-lgpl.o
+  CC       test-canonicalize.o
+  CC       test-chdir.o
+  CC       test-cloexec.o
+  CC       test-close.o
+  CC       test-closein.o
+  CC       test-connect.o
+  CC       test-creat.o
+  CC       test-ctype-h.o
+  CC       test-dirent-h.o
+  CC       test-dirfd.o
+  CC       test-dirname.o
+  CC       test-dup.o
+  CC       test-dup2.o
+  CC       test-environ.o
+  CC       test-errno-h.o
+  CC       test-error.o
+  CC       test-execute-main.o
+  CC       test-execute-child.o
+  CC       test_execute_script-test-execute-script.o
+  CC       test-fchdir.o
+  CC       test-fclose.o
+  CC       test-fcntl-h.o
+  CC       test-fcntl.o
+  CC       test-fdopen.o
+  CC       test-fdopendir.o
+  CC       test-fflush.o
+  CC       test-fflush2.o
+  CC       test-fgetc.o
+  CC       test-filenamecat.o
+  CC       test-float-h.o
+  CC       test-fopen-gnu.o
+  CC       test-fopen-safer.o
+  CC       test-fopen.o
+  CC       test-fpending.o
+  CC       test-fpurge.o
+  CC       test-fputc.o
+  CC       test-fread.o
+test-float-h.c:39:5: error: use of undeclared identifier 'FLT_IS_IEC_60559'
+   39 |     FLT_IS_IEC_60559 /* added in ISO C 23 */
+      |     ^~~~~~~~~~~~~~~~
+test-float-h.c:60:5: error: use of undeclared identifier 'DBL_IS_IEC_60559'
+   60 |     DBL_IS_IEC_60559 /* added in ISO C 23 */
+      |     ^~~~~~~~~~~~~~~~
+test-float-h.c:81:5: error: use of undeclared identifier 'LDBL_IS_IEC_60559'
+   81 |     LDBL_IS_IEC_60559 /* added in ISO C 23 */
+      |     ^~~~~~~~~~~~~~~~~
+test-float-h.c:284:11: error: use of undeclared identifier 'FLT_IS_IEC_60559'
+  284 |   ASSERT (FLT_IS_IEC_60559);
+      |           ^~~~~~~~~~~~~~~~
+test-float-h.c:381:11: error: use of undeclared identifier 'DBL_IS_IEC_60559'
+  381 |   ASSERT (DBL_IS_IEC_60559);
+      |           ^~~~~~~~~~~~~~~~
+test-float-h.c:459:7: error: use of undeclared identifier 'LDBL_IS_IEC_60559'
+  459 |   if (LDBL_IS_IEC_60559)
+      |       ^~~~~~~~~~~~~~~~~
+test-float-h.c:522:7: error: use of undeclared identifier 'LDBL_IS_IEC_60559'
+  522 |   if (LDBL_IS_IEC_60559)
+      |       ^~~~~~~~~~~~~~~~~
+7 errors generated.
+make[5]: *** [Makefile:8894: test-float-h.o] Error 1
+make[5]: *** Waiting for unfinished jobs....
+make[5]: Leaving directory '/build/m4/src/m4/tests'
+make[4]: *** [Makefile:12366: check-am] Error 2
+make[4]: Leaving directory '/build/m4/src/m4/tests'
+make[3]: *** [Makefile:9009: check-recursive] Error 1
+make[3]: Leaving directory '/build/m4/src/m4/tests'
+make[2]: *** [Makefile:12369: check] Error 2
+make[2]: Leaving directory '/build/m4/src/m4/tests'
+make[1]: *** [Makefile:2563: check-recursive] Error 1
+make[1]: Leaving directory '/build/m4/src/m4'
+make: *** [Makefile:2913: check] Error 2
+==> ERROR: A failure occurred in check().
+    Aborting...
+==> unit.log (last 25 lines)
+Running as unit: run-p8815-i22008589.service
+==> Synchronizing chroot copy [/var/lib/kbuild/v3/root] -> [copy]...done
+warning: redirecting to https://https.git.savannah.gnu.org/git/m4.git/
+warning: redirecting to https://https.git.savannah.gnu.org/git/gnulib.git/
+    m4 ... Passed
+    gnulib ... Skipped
+    m4-1.4.21.tar.xz ... Passed
+    m4-1.4.21.tar.xz.sig ... Skipped
+    m4 git repo ... Passed
+    m4-1.4.21.tar.xz ... Passed
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+==> WARNING: Skipping all source file integrity checks.
+Cloning into 'm4'...
+done.
+Switched to a new branch 'makepkg'
+Cloning into 'gnulib'...
+done.
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+==> WARNING: Using existing $srcdir/ tree
+==> ERROR: Build failed, check /var/lib/kbuild/v3/copy/build
+          Finished with result: exit-code
+Main processes terminated with: code=exited, status=255/EXCEPTION
+               Service runtime: 1min 17.361s
+             CPU time consumed: 3.402s
+                   Memory peak: 16.3M (swap: 0B)
+==> chroot.log (last 18 lines)
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+gpg: Warning: using insecure memory!
+gpg: Warning: using insecure memory!
+==> Updating trust database...
+gpg: Warning: using insecure memory!
+gpg: next trustdb check due at 2026-12-31
+gpg: Warning: using insecure memory!
+  -> Locally signed 1 key.
+==> Updating trust database...
+gpg: Warning: using insecure memory!
+gpg: next trustdb check due at 2026-12-31
+Note: in a future version of systemd-nspawn the default set of permitted socket address families will be restricted to AF_INET, AF_INET6 and AF_UNIX. Use --restrict-address-families= to configure the set of permitted socket address families, or set RestrictAddressFamilies= in a .nspawn file.
+:: Synchronizing package databases...
+ train downloading...
+ kashira-v3-laptop downloading...
+ kashira-v3 downloading...
+:: Starting full system upgrade...
+ there is nothing to do
